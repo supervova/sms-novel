@@ -1,1 +1,165 @@
-Первая страница
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<!--
+*************
+
+После того, как закончу разбираться с  jQM, надо пернести все data-атрибуты в jquery-mobile.htm
+data-role, data-rel (data-filter, data-transition, data-dom-cache)
+Закомментировать jQM script, удалить из styles.css 22-jqm-transitions.css и т.д.
+
+Оставить только совместивые классы и принципы разметки, например
+<div class="group">
+<label for="i-01">Text Input:</label>
+<input type="text" name="textinput" id="i-01" value="">
+</div>
+
+*************
+TODO, extras and alerts — /_construction-set/extended.htm
+- Test on IE6-8 without respond.js
+- Test on Android (Samsung Galaxy) and MS Windows Phone (HTC/Nokia)
+	- Touch-icon for Android
+- offline.manifest for offline web app
+- iOS web app 
+- Open Graph basic metadata - www.nb.dev/pro/sales-n-marketing/internet/smm/01-facebook.htm#open_graph
+- Schema.org metadata
+- Twitter Card
+- ClearType technology activation in Mobile IE
+- IE9 pinned sites
+- Skype buttons
+- Apple-touch and animated favicons
+- Styles with Min
+- Modernizr/respond.js IE alert
+- English NOSCRIPT and Google Frame alert
+- jQuery Mobile Facebook-like menu
+- Schema.org markup for person and company in footer - www.nb.dev/pro/sales-n-marketing/internet/seo/03-rich-snippets-schema-org.htm
+-->
+
+<title></title>
+<meta name="description" content="">
+
+<!-- Mobile -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width">
+
+<link rel="canonical" href="">
+
+<!-- For Nokia devices -->
+<link rel="shortcut icon" href="/apple-touch-icon-57x57.png">
+
+<link rel="stylesheet" href="/a/css/styles.css?v1">
+
+<!-- Development styles. Remove on production -->
+<style type="text/css">
+.page {
+	padding-top: 4px;
+	padding-top: .4rem; }
+
+.page:hover { background: url(/a/img/_grid-bl20.png) 0 0 repeat-y #FFF; }
+
+#grid-system .row [class*="span"] {
+	background: rgb(235,238,242);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	text-align: center;
+	min-height: 20px;
+	line-height: 20px; }
+
+#grid-system .row [class*="span"]:nth-child(odd) { background: rgb(228,231,235)}
+
+#grid-system .row:hover [class*="span"] { background: rgb(221,224,228); }
+
+#grid-system .row:hover [class*="span"]:nth-child(odd) { background: rgb(214,217,221); }
+
+#grid-system .row .row  { margin-bottom: 0; }
+
+.illustration { height: 300px; }
+
+@media only screen and (min-width: 768px) {
+.page {
+	padding-top: 6px;
+	padding-top: .6rem; }
+
+.page:hover { background: url(/a/img/_grid-bl24.png) 50% 0 repeat-y #FFF; }
+
+#grid-system .row  {
+	margin-bottom: 2.4rem; }
+
+#grid-system .row [class*="span"] {
+	min-height: 24px;
+	line-height: 24px; }
+
+.illustration { height: 312px; }
+
+IMG.left { width: 160px; }
+
+DIV.video { width: 520px; }
+}
+</style>
+<link href="/a/css/_extended.css" rel="stylesheet">
+<link href="/a/css/_mediaquery-reporter.css" rel="stylesheet">
+<!-- / Development styles. Remove on production -->
+
+<script src="/a/js/modernizr-2.5.3.min.js"></script>
+<!-- Media Queries Polyfill — load respond.js to implement media queries in old browser -->
+<script>Modernizr.mq('(min-width:0)') || document.write('<script src="/a/js/respond.min.js">\x3C/script>')</script>
+</head>
+
+<body>
+<!--<noindex>-->
+<!--[if lt IE 7]>
+<div class="warning-gl">
+<p><em>Предупреждение.</em> Ваш браузер <strong>сильно устарел</strong>. Установите <a href="http://browsehappy.com/?locale=ru">любой из современных браузеров</a> или <a href="http://www.google.com/chromeframe/?redirect=true">бесплатный подключаемый модуль для Internet Explorer</a>, — внешний вид веб-сайтов и удобство их использования сразу же улучшатся.</p>
+</div>
+<![endif]-->
+
+<noscript>
+<div class="warning-gl">
+<p><em>Предупреждение.</em> В вашем браузере выключен Javascript, поэтому сайт может выглядеть не лучшим образом. Но вы всегда можете <a href="http://www.google.com/adsense/support/bin/answer.py?hl=ru&amp;answer=12654" target="_blank" rel="nofollow">включить Javascript</a>.</p>
+</div>
+</noscript>
+<!--/noindex-->
+
+<div data-role="page" class="page">
+
+<!-- HEADER ============================================================= -->
+<!--<header data-role="header" class="doc-header" role="banner">
+<a href="/" class="btn">Cancel</a>
+<hgroup>
+<h2><a href="/" title="________. Первая страница"></a></h2>
+<h1>Заголовок экрана</h1>
+</hgroup>
+<a href="/" class="btn">Save</a> -->
+
+<!--Main Menu-->
+<!--<nav role="navigation">
+<ul>
+<li class="menu"><a href="/" class="label"></a>
+<ul>
+<li><a href=""></a></li>
+</ul>
+</li>
+</ul>
+</nav>--><!--/main menu-->
+<!--</header> -->
+
+<!-- CONTENT ============================================================ -->
+<div class="doc-body" data-role="content">
+<article class="doc-main solid">
+<h1>Моя первая страница</h1>
+
+</article><!-- / doc-main -->
+</div><!-- / doc-body -->
+
+<!-- FOOTER ============================================================= -->
+<footer data-role="footer" class="doc-footer" role="contentinfo">
+</footer>
+
+</div><!--/ page -->
+
+<!--#include virtual="/_snips/scripts.htm" -->
+</body>
+</html>
