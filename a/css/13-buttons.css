@@ -1,0 +1,129 @@
+BUTTON, .btn {
+	background-color: #8C8CF2;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#99F), to(#66C)); /* 20% gradient */
+	background-image: -webkit-linear-gradient(top, #99F, #66C);
+	background-image: -ms-linear-gradient(top, #99F, #66C);
+	background-image: -o-linear-gradient(top, #99F, #66C);
+	background-image: linear-gradient(top, #99F, #66C);
+	background-image: -moz-linear-gradient(top, #99F, #66C);
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#99F', endColorstr='#66C', GradientType=0);
+ 	/*filter: progid:dximagetransform.microsoft.gradient(enabled=false);*/ /* Disable rule */
+	background-repeat: repeat-x;
+	border: 1px solid #8080E5;
+	*border: 0;
+	border-color: #8080E5 #8080E5 #5959BF; /* Light gradient -10%; Dark gradient -5% */
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32), 0 1px 2px rgba(0, 0, 0, 0.16);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32), 0 1px 2px rgba(0, 0, 0, 0.16);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32), 0 1px 2px rgba(0, 0, 0, 0.16);
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 100%;
+	line-height: 1;
+	text-align: center;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, .44);
+	margin: 8px 20px 8px;
+	margin: .8rem 2rem .8rem;
+	padding: 13px 10px;
+	*overflow: visible;
+	vertical-align: middle;
+	*zoom: 1 }
+
+FORM BUTTON, FORM .btn {
+	margin-left: 0;
+	margin-right: 0;
+	}
+
+BUTTON { 
+	*padding: 11px 10px; /* Standart top and bottom padding -2px */
+	-webkit-appearance: button; }
+
+.f-actions BUTTON, .f-actions .btn, .f-inline BUTTON, .f-inline .btn {
+	display: inline-block;
+	*display: inline; }
+
+/*	==================================================
+	Buttons states
+	==================================================	*/
+
+.btn:visited, .btn:hover { color: #FFF; }
+
+.btn:hover {
+	background-color: #66C; /* Gradient goes up to uncover its dark side */
+	background-position: 0 -15px;
+	text-decoration: none;
+	-webkit-transition: background-position 0.1s linear;
+	-moz-transition: background-position 0.1s linear;
+	-ms-transition: background-position 0.1s linear;
+	-o-transition: background-position 0.1s linear;
+	transition: background-position 0.1s linear; }
+
+BUTTON:focus {
+outline: thin dotted #CCCFD3;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px; }
+
+BUTTON::-moz-focus-inner {
+	border: 0;
+	padding: 0; }
+
+.btn.active, .btn:active { /* Replace gradient with darker color. Add deep inner shade */
+	background-color: #66C;
+	background-image: none;
+	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+	-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12);
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.12); 
+	outline: 0; }
+
+BUTTON[disabled], .btn.disabled  {
+	background-position: 0 0;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	cursor: default;
+	opacity: .44;
+	filter: alpha(opacity=44); }
+
+.btn.disabled  { /* die6 */
+	cursor: default;
+	filter: alpha(opacity=44); }
+
+/*	==================================================
+	Btn-sizes
+	==================================================	*/
+
+.btn-large {
+	font-size:; 
+	padding:;
+	*padding:; /* Standart top and bottom padding -2px */ }
+
+.btn-small {
+	padding: 6px 10px;
+	*padding: 4px 10px; }
+
+TABLE BUTTON, TABLE .btn { *overflow: auto; }
+
+/*	==================================================
+	Clear and close
+	==================================================	*/
+
+BUTTON.clear, BUTTON.close {
+	-webkit-appearance: none;
+	background: #ABAEB2; }
+
+
+/*	**************************************************
+	!! BL SHIFT !!
+	Tablets and desktops: 768px+
+	**************************************************	*/
+
+@media only screen and (min-width: 768px) {
+
+BUTTON, .btn {
+	margin: 38px 0;
+	margin: 3.8rem 0; }
+
+}

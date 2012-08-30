@@ -1,0 +1,57 @@
+HTML {
+	font-size: 62.5%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;	}
+
+HTML, BODY { height: 100%; }
+
+BODY {
+	background: #FFF;
+	counter-reset: section;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.25;
+	text-align: center;
+	margin: 0;
+	padding: 0; }
+
+.page {
+	text-align: left;
+	position: relative;
+	min-height: 100%;
+	height: 100%;
+	*zoom: 1; }
+
+	HTML>BODY .page { height: auto; }
+
+
+/*	**************************************************
+	!! BL SHIFT !!
+	Tablets and desktops: 768px+
+	**************************************************	*/
+
+@media only screen and (min-width: 768px) {
+
+BODY {
+	background: #FFF url(/a/img/bg.png) repeat-x;
+	line-height: 1.5; }
+/* If IE8 will crush with BODY image background reassign background to HTML using some hacks */
+/* HTML {
+background-color: #FFF\0/;
+background-image: url(/a/img/bg.png)\0/;
+background-repeat: repeat-x\0/; }
+ 
+BODY {
+background: none\0/; }
+ */
+
+.page {
+	margin: 0 auto;
+	max-width: 960px;
+	width: 960px; }
+
+	HTML>BODY .page { width: auto; }
+
+}

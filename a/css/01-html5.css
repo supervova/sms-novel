@@ -1,0 +1,10 @@
+ARTICLE, ASIDE, DETAILS, FIGCAPTION, FIGURE, FOOTER, HEADER, HGROUP, NAV, SECTION { display: block; }
+
+AUDIO, CANVAS, VIDEO {
+	display: inline-block; 
+	*display: inline;
+	*zoom: 1; }
+
+AUDIO:not([controls]) { display: none; }
+
+[hidden] { display: none; }

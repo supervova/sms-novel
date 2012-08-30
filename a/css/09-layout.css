@@ -1,0 +1,131 @@
+.doc-header:before, .doc-header:after,
+.doc-body:before, .doc-body:after,
+.doc-footer:before, .doc-footer:after,
+.cfx:before, .cfx:after,
+.row:before, .row:after {
+	content: '';
+	display: table; }
+
+.doc-header:after, .doc-body:after, .doc-footer:after, .cfx:after, .row:after {
+	clear: both; }
+
+.doc-header, .doc-body, .doc-footer, .cfx, .row {
+	*zoom: 1; }
+
+
+/*	**************************************************
+	Landscape smartphones and up: 480px+
+	**************************************************	*/
+
+@media only screen and (min-width: 480px) {
+
+.left, .right { max-width: 50%; }
+.left { float: left; }
+.right { float: right; }
+
+.row { width: 100%; }
+
+/* .row [class*='span'], - die6 */
+.solid, .span1, .span2, .span3, .span4, .span4d5,
+.span5, .span6, .span7, .span8,
+.span9, .span10, .span11, .span12 {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	*behavior: url(/a/js/boxsizing.htc);
+	display: block;
+	padding: 0 20px;
+	position: relative;
+	min-height: 1px;
+	width: 100%;
+	*zoom: 1; }
+
+.tsr {
+	float: left; /* Only teasers lay out in 2 columns */
+	width: 50% ; }
+
+}
+
+
+/*	**************************************************
+	!! BL SHIFT !!
+	Tablets and desktops: 768px+
+	**************************************************	*/
+
+@media only screen and (min-width: 768px) {
+
+/* .row [class*='span'], - die6 */
+.span1, .span2, .span3, .span4, .span4d5,
+.span5, .span6, .span7, .span8,
+.span9, .span10, .span11, .span12 {
+	float: left; }
+
+.row [class*='span']:last-child {
+	/* There are two solutions for disguising webkit rounding bug
+	1) This is the first and the second is...
+	2) .row [class*='span']:last-child { float: right; } */
+	float: none;
+	overflow: hidden;
+	width: auto; }
+
+.span1 { /* 80 — Based on 960px max-width / TODO — The cure for the IE rounding bug is narrowing pixel width by 1px. I.e. 40-1=39=4.06% in this case */
+	width: 8.33%; }
+
+.span2 { /* 160 - 1/6 */
+	width: 16.67%; }
+
+.span3 { /* 240 - QUARTERS - 1/4 */
+	width: 25%; }
+	
+.span4 { /* 320 - THIRDS - 1/3 */
+	width: 33.33%; }
+
+.span5 { /* 400 */
+	width: 41.67%; }
+
+.span6 { /* 480 - QUARTERS - 1/2 */
+	width: 50%; }
+
+.span7 { /* 560 */
+	width: 58.33%; }
+
+.span8 { /* 640 - THIRDS - 2/3 */
+	width: 66.67%; }
+
+.span9 { /* 720 - QUARTERS - 3/4 */
+	width: 75%; }
+	
+.span10 { /* 800 */
+	width: 83.33%; }
+	
+.span11 { /* 880 */
+	width: 91.67%; }
+
+.span12 { /* 960 */
+	width: 100%; }
+
+/* 4 columns layout based on 960px .doc-body max-width and 720px .doc-main maximum width */
+
+.doc-sidebar { /* 240 - 1/4 .doc-body */
+	width: 25%; }
+
+.doc-main { /* 720 - QUARTERS - 3/4 */
+	width: 75%; }
+
+	.doc-main .span1 { /* 80 — 1/9 .doc-main */
+		width: 11.11%; }
+	
+	.doc-main .span3 { /* 240 — 1/3 .doc-main */
+		width: 33.33%; }
+	
+	.doc-main .span4d5 { /* 360 — 1/2 .doc-main */
+		width: 50%; }
+	
+	.doc-main .span6 { /* 480 — 2/3 .doc-main */
+		width: 66.67%; }
+	
+	.doc-main .span9 { /* 720 - 100% .doc-main */
+		width: 100%; }
+
+}

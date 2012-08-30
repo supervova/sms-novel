@@ -1,0 +1,176 @@
+/*	==================================================
+	Links
+	==================================================	*/
+
+A {
+	color: #00F;
+	text-decoration: none; }
+
+A:visited { color: #800080; }
+
+A:hover {
+	color: #008000;
+	text-decoration: underline; }
+
+A:link { -webkit-tap-highlight-color: #E1FFE1; }
+
+A:focus {
+	outline: thin dotted #CCCFD3;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px; }
+
+A:hover, A:active { outline: 0; }
+
+A[href^="#"], A[href^="javascript:"] { -webkit-touch-callout: none; }
+
+/*	==================================================
+	Typography
+	==================================================	*/
+
+ADDRESS {
+	display: block;
+	font-style: normal;
+	margin-bottom: 20px;
+	margin-bottom: 2rem; }
+
+BODY, BUTTON, INPUT, LABEL, SELECT, TEXTAREA { /* Normal */
+	color: #535659;
+	font-family: 'HelveticaNeue', 'Helvetica Neue', 'HelveticaNeueRoman', 'HelveticaNeue-Roman', 'Helvetica Neue Roman', Helvetica, Roboto, Arial, sans-serif;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased; }
+
+B, STRONG { font-weight: bold; }
+
+.brevier { font-size: 13px; }
+
+H1, H2 { letter-spacing: -.03em; }
+
+H1, H2, H3, H4 {
+	margin: 0;
+	text-rendering: optimizelegibility; }
+
+H1, H2, H3, H4, DL, .doc-main HEADER SMALL, P {
+	padding-right: 20px;
+	padding-left: 20px; }
+
+H1 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: normal;
+	line-height: 1.25;
+	padding-top: 32pх;
+	padding-top: 3.2rem;
+	padding-bottom: 8px;
+	padding-bottom: .8rem; }
+	
+	H1 B, H1 STRONG { /* Bold */
+		font-family: 'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+		font-weight: 600}
+	
+	H1 + P, HGROUP + P, .kicker + P, .doc-main>HEADER + P, P.lead { font-weight: 600; }
+
+H2 {/* Light. TODO - create mixin */
+	font-family: 'HelveticaNeueLight', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+	font-size: 20px;
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 1;
+	padding-top: 18px;
+	padding-top: 1.8rem;
+	padding-bottom: 2px;
+	padding-bottom: .2rem; }
+
+H3, .h3, H4, .h4 { font-size: 100%; }
+
+H4, .h4 { color: #008000; }
+
+HGROUP, .doc-main>HEADER, P {
+	margin: 0 0 20px;
+	margin: 0 0 2rem; }
+
+	HGROUP H2 {
+			margin-top: -2px;
+			margin-top: -.2rem;
+			padding-top: 0; }
+
+HR {
+	border: 0;
+	border-top: 1px solid #CCCFD3;
+	clear: both;
+	display: block;
+	margin: 35px 0 43px;
+	margin: 3.5rem 0 4.3rem;
+	padding: 0;
+	height: 1px; }
+
+SMALL {
+	/* There is a color in the Shared:variables section */
+	font-size: 100%; }
+	
+	H1 SMALL, H2 SMALL, H3 SMALL, H4 SMALL { font-weight: 300; }
+
+SUB, SUP {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline; }
+
+	SUP { top: -0.5em; }
+
+	SUB { bottom: -0.25em; }
+
+::-moz-selection {
+	background: #F66;
+	color: #FFF;
+	text-shadow: none; }
+
+::selection {
+	background: #F66;
+	color: #FFF;
+	text-shadow: none; }
+	
+/*	**************************************************
+	!! BL SHIFT !!
+	Tablets and desktops: 768px+
+	**************************************************	*/
+
+@media only screen and (min-width: 768px) {
+
+:focus { outline: none; }
+
+H1, H2, H3, H4, DL, .doc-main HEADER SMALL, P {
+	padding-right: 0;
+	padding-left: 0; }
+
+H1 {
+	font-size: 42px;
+	font-size: 4.2rem;
+	line-height: 1.143;
+	padding-top: 50px;
+	padding-top: 5rem;
+	padding-bottom: 22px;
+	padding-bottom: 2.2rem; }
+
+H2 {
+	font-size: 26px;
+	font-size: 2.6rem;
+	line-height: .93;
+	padding-top: 20px;
+	padding-top: 2rem;
+	padding-bottom: 4px;
+	padding-bottom: .4rem; }
+
+HGROUP, .doc-main>HEADER, P {
+	margin: 0 0 24px;
+	margin: 0 0 2.4rem; }
+	
+	HGROUP H2 {
+		margin-top: -4px;
+		margin-top: -.4rem;
+		padding-top: 0; }
+
+HR {
+	margin: 41px 0 53px;
+	margin: 4.1rem 0 5.3rem; }
+
+}

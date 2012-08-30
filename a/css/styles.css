@@ -1,0 +1,166 @@
+@charset "UTF-8";
+/*	==================================================
+	Naming convention 
+
+	Use > to target direct descendant in main styles and use wide scope rules (.doc-sidebar LI IMG;
+	.doc-sidebar LI IMG.right) in IE6 styles
+	
+	Prefixes in selectorsors
+	a — link
+	box — box
+	bnr — banner
+	btn — button
+	cbx — checkbox
+	doc — document 
+	f — form
+	fls - flip switch
+	ftr — feature
+	gl - global
+	i — input
+	ico — icon
+	m — menu
+	mob — mobile, i.e. smartphones
+	p — page
+	pc - desktop computer
+	plc - placeholder
+	rb — radio button
+	s — select
+	sec — page section
+	sl - slider
+	sm — submenu
+	ta — textarea
+	tbl — tablet
+	tbn — thumbnail
+	tbns — thumbnails
+	tsr — teaser
+	txt - text
+	
+	Misc
+	die6 — done for IE6 compability
+ */
+
+/*	==================================================
+	Extended.css 
+	
+	@font-face
+	
+	ABBR
+	CODE
+	DFN
+	INS
+	KBD
+	MARK
+	PRE
+	Q
+	SAMP
+	
+	OL.chapter
+	UL.inline
+	OL.unstyled, UL.unstyled
+	Legacy rules for lists as a reserve
+	
+	3 columns layout
+	12 columns grid
+	Columns offsets
+	
+	Buttons coloring
+	
+	.i-uneditable
+	.ta-uneditable
+	.i-append
+	.i-prepend
+	.help-block
+	
+	Widgets:
+	accordion
+	badges
+	breadcrumbs
+	carousel
+	modals
+	pagination
+	popover
+	progress
+	tabs
+	tooltip
+	thumbnails
+	
+	Helpers:
+	hidden, visual hidden, hidden gifs
+
+	Large displays MQ
+ */
+
+/*	==================================================
+	IE bugs and hacks 
+
+1) IE: hasLayout — *zoom: 1
+Need for most of relative positioned elements, but it some cases it's already
+established either by default or by the setting triggers like height+width,
+display: inline-block + width or float: left|right
+
+2) Inline-block for IE — *display: inline; *zoom: 1;
+
+3) IE6 Float/Margin Bug — _display: inline;
+
+4) IE6 Across Block Width Bug — Set max width
+_width: expression(this.width > 577 ? 577: true);
+
+5) IE6 ignores rules which contain CSS3 selectors, e.g. .row [class*='span']
+
+6) To provide box-sizing: border-box feature in IE6/7 use polyfill
+box-sizing: border-box;
+*behavior: url(/a/js/boxsizing.htc);
+
+7) IE8 ignores the rules that use this pseudo-selectors.
+So we should separate common rules into two parts: for modern browsers and IE8. Here it is:
+A { background: #FFC; }
+A:after { background: #FFC; }
+
+*HTML, _property — IE6
+*+HTML — IE7
+*property — IE6, IE7
+property: value\0/ — IE8
+property: value \9 — IE6-9 
+ */
+ 
+@import url('/a/css/01-html5.css');
+@import url('/a/css/02-shared.css');
+@import url('/a/css/03-page.css');
+@import url('/a/css/04-typography.css');
+@import url('/a/css/06-boxes.css');
+@import url('/a/css/07-lists.css');
+@import url('/a/css/08-media.css');
+@import url('/a/css/09-layout.css');
+@import url('/a/css/13-buttons.css');
+@import url('/a/css/14-forms.css');
+@import url('/a/css/15-tables.css');
+@import url('/a/css/05-alerts-gl.css');
+@import url('/a/css/16-customization.css');
+@import url('/a/css/17-widgets/01-pagination.css');
+@import url('/a/css/18-helpers.css');
+@import url('/a/css/19-print.css');
+@import url('/a/css/20-high-pixel-density.css');
+
+/* _tmp */
+@import url('/a/css/21-jqm/02-loader.css');
+
+
+.f-search {
+	padding: 0 7px; }
+
+.i-search {
+	background: #FFF;
+	border-color: ;
+	font-size: 87.5%;
+	padding: 0 7px;
+	outline: none; }
+	
+.i-search {
+	
+	/* There is a border in the Shared:variables section */
+	/* There are rounded corners in the Shared:snips section */
+	display: inline-block;
+	font-size: 100%;
+	margin: .5em 0;
+	vertical-align: baseline;
+	*vertical-align: middle;}

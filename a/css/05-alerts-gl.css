@@ -1,0 +1,33 @@
+.warning-gl { background: #FFFFE1; }
+
+.warning-gl P {
+	background: #FFFFE1;
+	*behavior: url(/a/js/boxsizing.htc);
+	*display: inline;
+	text-align: left;
+	margin: 0 auto;
+	padding: 45px 40px 34px 80px;
+	padding: 4.5rem 40px 3.4rem 80px;
+	position: relative; 
+	*zoom: 1; }
+
+.warning-gl EM {
+	/* There is a background in the Shared:snips section */
+	margin-top: -15px;
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	height: 40px;
+	width: 40px; }
+
+
+/*	**************************************************
+	!! BL SHIFT !!
+	Tablets and desktops: 768px+
+	**************************************************	*/
+
+@media only screen and (min-width: 768px) {
+
+.warning-gl P { width: 840px; }
+
+}

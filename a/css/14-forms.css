@@ -1,0 +1,479 @@
+/*
+TODO - CHECK
+Margins - .f-actions, .group, LEGEND, LABEL, INPUT, SELECT, TEXTAREA, .i-uneditable, INPUT[type="checkbox"], INPUT[type="image"], INPUT[type="radio"], #i-captcha
+Padding - SELECT, .f-actions
+Height - SELECT, INPUT-image
+Width - SELECT
+*/
+
+FORM {
+	margin: 0;
+	padding: 0 20px; }
+
+FIELDSET {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	*zoom: 1; }
+
+	LEGEND {
+		display: block;
+		border: 0;
+		font-weight: bold;
+		text-align: left;
+		margin-bottom: 1.25em;
+		*margin-left: -7px;
+		padding: 0;
+		white-space: normal;
+		width: 100%; }
+
+/*	==================================================
+	Buttons container
+	==================================================	*/
+
+.f-actions {
+	margin-top: 1.25em;
+	margin-bottom: 1.25em;
+	padding: 1.25em 0;
+	*zoom: 1; }
+
+.f-actions:before, .f-actions:after {
+	content: '';
+	display: table; }
+
+.f-actions:after { clear: both; }
+
+/*	==================================================
+	Labels and placeholders
+	==================================================	*/
+
+LABEL B {
+	display: none; /* Hide label text marked as bold and use placeholder attribute instead. */
+	display: inline \9; }
+
+/*	We have to use few rules, because browsers ignore a rule with an unknown selector.
+	TODO — create variable — the same color is used for note, date etc */
+:-moz-placeholder { color: #888B8F; }
+:focus:-moz-placeholder {
+	color: #C5C8CC;
+	-moz-transition: background-position 0.1s linear; }
+
+:-ms-input-placeholder { color: #888B8F; }
+:focus:-ms-input-placeholder {
+	color: #C5C8CC;
+	-ms-transition: background-position 0.1s linear; }
+
+::-webkit-input-placeholder { color: #888B8F; }
+:focus::-webkit-input-placeholder {
+	color: #C5C8CC;
+	-webkit-transition: color 0.1s linear; }
+
+/*	==================================================
+	Text inputs and textareas
+	==================================================	*/
+
+INPUT {
+	*overflow: visible;
+	_vertical-align: text-bottom; }
+
+	TABLE INPUT {
+		*overflow: auto; }
+
+INPUT.txt, /*.i-uneditable, */ SELECT, TEXTAREA {
+	background: #FFF;
+	/* There is a border in the Shared:variables section */
+	/* There are rounded corners in the Shared:snips section */
+	display: inline-block;
+	font-size: 100%;
+	margin: .5em 0;
+	vertical-align: baseline;
+	*vertical-align: middle;}
+
+/* INPUT[type="text"], - die6 */ INPUT.txt, .txt INPUT, TEXTAREA {
+	padding: 12px 7px;
+	outline: none; }
+
+INPUT, TEXTAREA {
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	transition: border linear 0.2s, box-shadow linear 0.2s; }
+
+TEXTAREA {
+	overflow: auto;
+	resize: vertical;
+	vertical-align: top; }
+
+TEXTAREA[contenteditable] { -webkit-appearance: none; }
+
+/*	==================================================
+	Checkboxes, radiobuttons, input-images nad input-files
+	==================================================	*/
+
+.rb, .cbx { /* Labels-containers */
+	margin-bottom: .25em; /* Maybe it's need only for .f-lot */
+	padding-left: 18px;
+	position: relative;
+	*zoom: 1; }
+
+INPUT[type="checkbox"], INPUT[type="image"], INPUT[type="radio"] {
+	cursor: pointer;
+	*width: 13px;
+	*height: 13px; }
+
+/* .rb INPUT[type="radio"], .cbx INPUT[type="checkbox"], - die6 */
+.rb INPUT, .cbx INPUT {
+	position: absolute;
+	top: 1px;
+	top: .1rem;
+	left: 0; }
+
+INPUT[type="radio"] { vertical-align: text-bottom; }
+
+FORM > DIV > .cbx:first-child, FORM > DIV > .rb:first-child { padding-top: 5px; }
+
+.rb.inline, .cbx.inline {
+	display: inline-block;
+	padding-top: 5px;
+	margin-bottom: 0;
+	vertical-align: middle; }
+
+.cbx.inline + .cbx.inline, .rb.inline + .rb.inline { margin-left: 10px; }
+
+INPUT[type="image"] {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border: 0; }
+
+INPUT[type="file"] {
+	background: initial;
+	border: initial;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	padding: initial;
+	height: 28px;
+	width: auto; }
+
+/*	==================================================
+	Select
+	There are background, display, font-size, margin and vertical-align
+	rules in the INPUTs section
+	==================================================	*/
+
+SELECT {
+	background: #FFF;
+	line-height: 28px;
+	padding: 5px;
+	height: 28px; /* In IE7, the height of the SELECT element cannot be changed by height, only font-size */
+	width: 240px; }
+
+SELECT[multiple], SELECT[size] { height: auto; }
+
+/*	==================================================
+	Search
+	==================================================	*/
+
+.f-search {
+	padding-right: 0 10em 0 7px;
+	position: relative;
+	*zoom: 1; }
+
+.f-search BUTTON {
+	display: none; }
+
+.i-search {
+	background: #FFF;
+	border-color: ;
+	font-size: 87.5%;
+	padding: 0 7px;
+	outline: none; }
+
+
+INPUT[type="search"], .i-search {
+	-webkit-appearance: textfield;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box; }
+
+	INPUT[type="search"]::-webkit-search-decoration, INPUT[type="search"]::-webkit-search-cancel-button {
+		-webkit-appearance: none; }
+
+/*	==================================================
+	Capthca
+	==================================================	*/
+
+
+/*	==================================================
+	Grouping
+	==================================================	*/
+
+FORM .group { margin-bottom: 9px; }
+
+LEGEND + .group {
+	margin-top: 18px;
+	-webkit-margin-top-collapse: separate; }
+
+/*	==================================================
+	Sizing
+	==================================================	*/
+
+/* INPUT[type="text"], - die6 */ .f-lot INPUT.txt, .f-lot .txt INPUT, .f-lot TEXTAREA {
+	width: 100%; }
+
+/*	==================================================
+	Input states
+	==================================================	*/
+
+INPUT:focus, TEXTAREA:focus {
+	border-color: rgba(82, 168, 236, 0.8);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	outline: 0;
+	outline: thin dotted \9; /* IE6-9	*/ }
+
+INPUT[type="file"]:focus, INPUT[type="radio"]:focus, INPUT[type="checkbox"]:focus, SELECT:focus {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px; }
+
+INPUT[disabled], SELECT[disabled], TEXTAREA[disabled], INPUT[readonly], SELECT[readonly], TEXTAREA[readonly] {
+	background-color: #EEE;
+	border-color: #DDD;
+	cursor: default;
+	cursor: not-allowed; }
+
+INPUT[type="radio"][disabled], INPUT[type="checkbox"][disabled], INPUT[type="radio"][readonly],
+INPUT[type="checkbox"][readonly] { background-color: transparent; }
+
+INPUT[type="hidden"] { display: none; }
+
+/*	==================================================
+	Alerts
+	==================================================	*/
+
+/* .error .help-block, */ .error .help, .error INPUT,
+/* .error .i-append .add-on, .error .i-prepend .add-on, */ 
+.error > LABEL, .error SELECT, .error TEXTAREA   {
+	/* TODO — Create variable */
+	color: #B94A48; }
+	
+.error INPUT, /* .error .i-append .add-on, .error .i-prepend .add-on, */ .error SELECT, .error TEXTAREA {
+	/* TODO — Create variable */
+	border-color: #B94A48; }
+	
+.error INPUT:focus, .error SELECT:focus, .error TEXTAREA:focus {
+	/* TODO — Create variable */
+	border-color: #953B39;
+	/* TODO — Create variable */
+	-webkit-box-shadow: 0 0 6px #D59392;
+	-moz-box-shadow: 0 0 6px #D59392;
+	box-shadow: 0 0 6px #D59392; }
+
+INPUT:invalid, TEXTAREA:invalid { background: #FFFFE1; }
+
+INPUT:focus:required:invalid, SELECT:focus:required:invalid, TEXTAREA:focus:required:invalid {
+	/* TODO — Create variable */
+	border-color: #EE5F5B;
+	/* TODO — Create variable */
+	color: #B94A48; }
+ 
+INPUT:focus:required:invalid:focus, SELECT:focus:required:invalid:focus,TEXTAREA:focus:required:invalid:focus {
+	 /* TODO — Create variable */
+	 border-color: #E9322D;
+	 -webkit-box-shadow: 0 0 6px #F8B9B7;
+	 -moz-box-shadow: 0 0 6px #F8B9B7;
+	 /* TODO — Create variable */
+	 box-shadow: 0 0 6px #F8B9B7; }
+
+/* .success .help-block, */ .success .help, .success INPUT,
+/* .success .i-append .add-on, .success .i-prepend .add-on, */
+.success > LABEL, .success SELECT, .success TEXTAREA   {
+	/* TODO — Create variable */
+	color: #468847; }
+	
+.success INPUT, /* .success .i-append .add-on, .success .i-prepend .add-on, */ .success SELECT, .success TEXTAREA {
+	/* TODO — Create variable */
+	border-color: #468847; }
+	
+.success INPUT:focus, .success SELECT:focus, .success TEXTAREA:focus {
+	/* TODO — Create variable */
+	border-color: #356635;
+	/* TODO — Create variable */
+	-webkit-box-shadow: 0 0 6px #7ABA7B;
+	-moz-box-shadow: 0 0 6px #7ABA7B;
+	box-shadow: 0 0 6px #7ABA7B; }
+
+/*.warning .help-block, */ .warning .help, .warning INPUT,
+/* .warning .i-append .add-on, .warning .i-prepend .add-on, */
+.warning > LABEL, .warning SELECT, .warning TEXTAREA   {
+	/* TODO — Create variable */
+	color: #C09853; }
+	
+.warning INPUT, /* .warning .i-append .add-on, .warning .i-prepend .add-on, */ .warning SELECT, .warning TEXTAREA {
+	/* TODO — Create variable */
+	border-color: #C09853; }
+	
+.warning INPUT:focus, .warning SELECT:focus, .warning TEXTAREA:focus {
+	/* TODO — Create variable */
+	border-color: #A47E3C;
+	/* TODO — Create variable */
+	-webkit-box-shadow: 0 0 6px #DBC59E;
+	-moz-box-shadow: 0 0 6px #DBC59E;
+	box-shadow: 0 0 6px #DBC59E; }
+
+/*	==================================================
+	Help
+	==================================================	*/
+
+/*.help-block, */ .help {
+	/* There is a color in the Shared:variables section */ }
+	
+.help { display: block; }
+
+
+/*	**************************************************
+	Landscape smartphones and up: 480px+
+	**************************************************	*/
+
+@media only screen and (min-width: 480px) {
+
+FORM { margin: 0; }
+
+/* INPUT[class*="span"], SELECT[class*="span"], TEXTAREA[class*="span"], .i-uneditable[class*="span"],
+.row INPUT[class*="span"], .row SELECT[class*="span"], .row TEXTAREA[class*="span"], .row .i-uneditable[class*="SPAN"] - die6 */
+INPUT.span1, INPUT.span2, INPUT.span3, INPUT.span4, INPUT.span4d5, INPUT.span5, INPUT.span6,
+INPUT.span7, INPUT.span8, INPUT.span9, INPUT.span10, INPUT.span11, INPUT.span12,
+SELECT.span1, SELECT.span2, SELECT.span3, SELECT.span4, SELECT.span4d5, SELECT.span5, SELECT.span6,
+SELECT.span7, SELECT.span8, SELECT.span9, SELECT.span10, SELECT.span11, SELECT.span12,
+TEXTAREA.span1, TEXTAREA.span2, TEXTAREA.span3, TEXTAREA.span4, TEXTAREA.span4d5, TEXTAREA.span5, TEXTAREA.span6,
+TEXTAREA.span7, TEXTAREA.span8, TEXTAREA.span9, TEXTAREA.span10, TEXTAREA.span11, TEXTAREA.span12
+/*, .i-uneditable.span1, .i-uneditable.span2, .i-uneditable.span3, .i-uneditable.span4, .i-uneditable.span4d5,
+.i-uneditable.span5, .i-uneditable.span6, .i-uneditable.span7, .i-uneditable.span8,
+.i-uneditable.span9, .i-uneditable.span10, .i-uneditable.span11, .i-uneditable.span12 */ {
+	float: none;
+	margin-left: 0; }
+
+}
+
+
+/*	**************************************************
+	!! BL SHIFT !!
+	Tablets and desktops: 768px+
+	**************************************************	*/
+
+@media only screen and (min-width: 768px) {
+
+FORM { padding: 0; }
+
+/* Labels and placeholders ---------- */
+
+LABEL {
+	cursor: pointer;
+	display: block; }
+	
+	LABEL B {
+		display: inline; /* Show labels text on big screens */
+		font-weight: normal; }
+
+.f-lot LABEL { margin-top: 1.5em ; }
+	
+	.f-lot LABEL.first, .f-lot LABEL:first-child { margin-top: 0 ; }
+
+:-moz-placeholder { color: #FFF; }
+::-webkit-input-placeholder { color: #FFF; }
+
+SELECT { *margin-top: 4px; /* For IE6/7 add top margin to align SELECT with LABELs	*/ }
+
+/* Text inputs and textareas ---------- */
+
+INPUT.txt, /*.i-uneditable, */ SELECT, TEXTAREA { margin: 0 0 .25em; }
+
+/* Checkboxes, radiobuttons, input-images nad input-files ---------- */
+
+.rb INPUT, .cbx INPUT {
+	top: 4px;
+	top: .4rem; }
+
+/* Capthca ---------- */
+
+#i-captcha {
+	float: left;
+	margin: 0 20px 0 0;
+	width: 44%; }
+
+/* Grouping ---------- */
+
+.f .group {
+	margin-bottom: 18px;
+	*zoom: 1; }
+
+.f .group:before, .f .group:after {
+	content: '';
+	display: table; }
+
+.f .group:after { clear: both; }
+
+.f LABEL {
+	float: left;
+	width: 140px;
+	padding-top: 5px;
+	text-align: right; }
+
+.f .group DIV {
+	*display: inline-block;
+	margin-left: 160px;
+	*margin-left: 0;
+	*padding-left: 20px; }
+
+.f .group DIV:first-child {	*padding-left: 160px; }
+
+.f .f-actions { padding-left: 160px; }
+
+/* Standart (labels-on-left) and inline forms ---------- */
+
+INPUT[type="search"], .i-search { margin-bottom: 0; }
+
+.f-inline LABEL { display: inline-block; }
+
+.f-inline INPUT, .f INPUT,
+.f-inline TEXTAREA, .f TEXTAREA,
+.f-inline SELECT, .f SELECT,
+.f-inline .help, .f .help
+/*, .f-inline .i-uneditable, .f .i-uneditable,
+.f-inline .i-append, .f .i-append,
+.f-inline .i-prepend, .f .i-prepend */ {
+	display: inline-block;
+	*display: inline;
+	margin-bottom: 0;
+	*zoom: 1; }
+	
+.f-inline .cbx, .f-inline .rb {
+	margin-bottom: 0;
+	vertical-align: middle; }
+	
+/* .f-inline .cbx INPUT[type="checkbox"], .f-inline .rb INPUT[type="radio"] - die6 */
+.f-inline .cbx INPUT, .f-inline .rb INPUT  {
+	float: left;
+	margin-right: 3px;
+	margin-left: 0; }
+
+/* Help ---------- */
+.help {
+	display: inline-block;
+	*display: inline;
+	padding-left: 5px;
+	vertical-align: middle;
+	*zoom: 1; }
+
+}
