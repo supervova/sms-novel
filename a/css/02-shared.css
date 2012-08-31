@@ -31,13 +31,20 @@ BLOCKQUOTE, .box, .doc-header .menu UL, .pagination A:hover, .pagination .curren
 
 .doc-header H1 A, I.co, .warning-gl EM {
 	background: transparent url(/a/img/base-graphics.png) no-repeat;
-	border: 0 none;
+	border: 0;
 	display: block;
 	direction: ltr;
 	*line-height: 0;
 	text-align: left;
 	text-indent: -4000em;
 	overflow: hidden; }
+	
+	/* Advanced image replacement */
+	.doc-header H1 A:before, I.co:before, .warning-gl EM:before {
+    	content: '';
+    	display: block;
+    	height: 100%;
+		width: 0; }
 
 .box {
 	margin-bottom: 20px;
