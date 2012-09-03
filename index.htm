@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html itemscope itemtype="http://schema.org/CreativeWork" lang="ru">
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <!--
 TODO
 - Animated favicon
 - jQuery Mobile Facebook-like menu
-- Schema.org markup for person - www.nb.dev/pro/sales-n-marketing/internet/seo/03-rich-snippets-schema-org.htm
 -->
 
 <title></title>
@@ -70,7 +69,7 @@ IMG {
 <script>Modernizr.mq('(min-width:0)') || document.write('<script src="/a/js/respond.min.js">\x3C/script>')</script>
 </head>
 
-<body>
+<body itemscope itemtype="http://schema.org/WebPage">
 <!--<noindex>-->
 <!--[if lt IE 7]>
 <div class="warning-gl">
@@ -120,8 +119,9 @@ IMG {
 <img src="/a/img/cover-coming-soon.jpg" alt="Роман в SMSках">
 <h1>Книга Владимира&nbsp;Никишина<br>
 <strong>«Роман в SMSках»</strong></h1>
-<p>С 18 сентября на этом сайте — бесплатные, а&nbsp;также недорогие подарочные издания.<br>
-А пока на Фейсбуке можно <a href="https://www.facebook.com/smsroman" target="_blank">почитать отрывок</a>.</p>
+<p>С 18 сентября на этом сайте — бесплатные,<br>
+а также недорогие подарочные издания.<br>
+И уже сейчас на Фейсбуке можно <a href="https://www.facebook.com/smsroman" target="_blank">почитать отрывок</a>.</p>
 
 </article><!-- / doc-main -->
 </div><!-- / doc-body -->
@@ -133,6 +133,33 @@ IMG {
 
 </div><!--/ page -->
 
-<!--#include virtual="/_snips/scripts.htm" -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> 
+<script>window.jQuery || document.write('<script src="/a/js/jquery-1.8.0.min.js"><\/script>')</script>
+<!--Test fallback disabling internet connection or using wrong CDN address-->
+<script src="//code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="/a/js/jquery.mobile-1.1.0.min.js"><\/script>')</script>
+
+<!-- There are functions to improve mobile user experience --> 
+<script src="/a/js/helper.js"></script>
+
+<script src="/a/js/scripts.js"></script>
+<!--[if lt IE 7 ]>
+<script type="text/javascript" src="/a/js/png.js"></script>
+<script type="text/javascript"> DD_belatedPNG.fix('img, .png');</script>
+<![endif]-->
+
+<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to site's ID. -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34526368-1']);
+  _gaq.push(['_setDomainName', 'sms-roman.ru']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 </body>
 </html>
