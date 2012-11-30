@@ -7,6 +7,10 @@ Crawl-delay: 10
 # URLs with parameters
 Disallow: /*?
 
+# Directories
+Disallow: /_snips/
+Disallow: /_stock/
+
 # Patterns
 # To match a sequence of characters, use an asterisk (*). For instance,
 # Disallow: /private* — block any URLs starting with private
