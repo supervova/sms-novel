@@ -1,9 +1,17 @@
-# Souce Folders
+# Auxiliary Folders
+_notes/
 _stock/
-a/less
+a/css/*
+!a/css/styles.css
+a/less/
+a/type/
 
-#Source Files
-.esproj
+# Auxiliary Files
+*.sublime-*
+*.zip
+a/img/_grid-bl20.png
+a/img/_grid-bl24.png
+coming-soon.htm
 
 # OS generated files
 .DS_Store
@@ -14,3 +22,4 @@ a/less
 Icon?
 ehthumbs.db
 Thumbs.db
+_tmp.htm
