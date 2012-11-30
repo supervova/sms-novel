@@ -8,11 +8,17 @@ Crawl-delay: 10
 Disallow: /*?
 
 # Directories
+Disallow: /.git/
 Disallow: /_snips/
 Disallow: /_stock/
 
-# Patterns
-# To match a sequence of characters, use an asterisk (*). For instance,
-# Disallow: /private* — block any URLs starting with private
-# To specify matching the end of a URL, use $.
-# Disallow: /*.xls$
+# Files
+Disallow: .gitignore
+Disallow: BingSiteAuth.xml
+Disallow: .nojekyll
+Disallow: CNAME
+Disallow: *.DS_Store
+Disallow: google*.html
+Disallow: *.sublime-project
+Disallow: *.sublime-workspace
+Disallow: yandex*.html

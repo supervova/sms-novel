@@ -9,11 +9,13 @@ a/type/
 
 # Auxiliary Files
 *.sublime-*
-*.sublime-projectcompletions
 *.zip
 a/img/_grid-bl20.png
 a/img/_grid-bl24.png
 coming-soon.htm
+Drupal.sublime-projectcompletions
+sms-novel.sublime-project
+sms-novel.sublime-workspace
 
 # OS generated files
 .DS_Store
@@ -25,3 +27,5 @@ Icon?
 ehthumbs.db
 Thumbs.db
 _tmp.htm
+
+
