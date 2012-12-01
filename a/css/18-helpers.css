@@ -1,5 +1,0 @@
-
-.mob,.tbl,.tbl-mob{display:none;}
-.tel{color:#47494c;cursor:default;white-space:nowrap;}.tel:hover{color:#47494c;text-decoration:none;}
-.tel I{color:#adafb2;font-style:normal;}
-@media only screen and (min-width:768px) and (max-width:979px){.pc,.mob{display:none !important;} .tel{color:#018de6;cursor:pointer;}.tel I{color:#4fbafe;}}@media only screen and (max-width:767px){.mob,.tbl-mob{display:block !important;} .tbl,.tbl-pc,.pc{display:none !important;} .tel{color:#018de6;cursor:pointer;}.tel I{color:#4fbafe;}}

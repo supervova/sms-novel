@@ -1,5 +1,0 @@
-
-HTML{overflow-y:scroll;}
-BODY{background:#ffffff url(/a/img/bg.gif) repeat-x;counter-reset:section;text-align:center;margin:0;padding:0;}
-.page{background:#ffffff url(/a/img/bg.gif) repeat-x;text-align:left;position:relative;margin:0 auto;min-height:100%;height:auto;*height:100%;max-width:960px;width:auto;*width:960px;*zoom:1;}
-@media only screen and (min-width:768px) and (max-width:979px){}@media only screen and (max-width:767px){HTML{overflow-y:auto;} BODY{background-image:none;} .page{background-image:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;*behavior:url(/a/js/boxsizing.htc);padding:0 20px;max-width:none;width:auto;} BODY{overflow-x:hidden;} .page{width:100%;}}
