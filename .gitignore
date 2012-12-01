@@ -2,10 +2,9 @@
 _notes/
 _stock/
 /_stock/
-!a/css/*
+a/css/*
 !a/css/styles.css
-a/less/*
-!/a/less/_stock/
+a/less/
 a/type/
 
 # Auxiliary Files
@@ -28,5 +27,3 @@ Icon?
 ehthumbs.db
 Thumbs.db
 _tmp.htm
-
-
