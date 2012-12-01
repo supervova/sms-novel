@@ -1,3 +1,2 @@
 ARTICLE,ASIDE,DETAILS,FIGCAPTION,FIGURE,FOOTER,HEADER,HGROUP,NAV,SECTION,SUMMARY{display:block}AUDIO,CANVAS,VIDEO{display:inline-block;*display:inline;*zoom:1}
-AUDIO:not([controls]){display:none;height:0}[hidden]{display:none}HTML{font-size:100%;-webkit-overflow-scrolling:touch;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
-HTML,BODY{height:100%}
+AUDIO:not([controls]){display:none;height:0}[hidden]{display:none}
