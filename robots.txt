@@ -13,6 +13,7 @@ Disallow: /_snips/
 Disallow: /_stock/
 
 # Files
+Disallow: _temp.html
 Disallow: .gitignore
 Disallow: BingSiteAuth.xml
 Disallow: .nojekyll
