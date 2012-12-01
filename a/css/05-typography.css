@@ -1,0 +1,32 @@
+
+:focus{outline:none;}
+A{color:#018de6;text-decoration:none;}A:visited{color:#660066;}
+A:hover{color:#015b95;text-decoration:underline;}
+A:link{-webkit-tap-highlight-color:#E1FFE1;}
+A.a-cta{white-space:nowrap;}A.a-cta:after{background-position:-200px -50px;content:'';background-color:transparent;border-width:0;display:inline-block;direction:ltr;text-align:left;text-indent:-4000em;overflow:hidden;margin-left:.4em;height:9px;width:8px;}
+H1 A,H1 A:visited{color:#000000;}
+H2 A,H2 A:visited{color:#000000;}
+BODY{color:#000000;font-family:Georgia,'Times New Roman',Times,serif;font-size:106.25%;line-height:1.411764705882353em;}
+ADDRESS{display:block;font-style:normal;margin-bottom:1.411764705882353em;}
+B,STRONG{font-weight:bold;}
+.byline,FIGCAPTION,.help,.note,TIME{color:#909295;}
+.byline{font-style:italic;margin-bottom:0;}
+H1,H2,H3,H4{margin:0;text-rendering:optimizelegibility;}H1 SMALL,H2 SMALL,H3 SMALL,H4 SMALL{font-size:100%;font-weight:normal;}
+H1{color:#000000;font:normal 247.05882352941177% 'Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;letter-spacing:-0.04em;line-height:1.1428571428571428em;padding-top:0.7619047619047619em;padding-bottom:0.5em;}
+H1+P:not([class]),HGROUP+P:not([class]),.doc-main>HEADER+P:not([class]),P.lead{font-weight:bold;}
+HEADER H1{padding-bottom:0;}HEADER H1+DL,HEADER H1+H2,HEADER H1+OL,HEADER H1+P,HEADER H1+UL{margin-top:-0.17647058823529413em;}
+H2{font:200 152.94117647058823% 'HelveticaNeueLight','HelveticaNeue-Light','Helvetica Neue Light','HelveticaNeue','Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;letter-spacing:-0.03em;line-height:0.9230769230769231em;padding-top:0.8076923076923077em;padding-bottom:0.11538461538461539em;}
+H1+H2,HGROUP H2,.deck{padding-top:0;}
+H3,.h3,H4,.h4{font-size:100%;}
+H4,.h4{color:#b2cc4c;}
+.h-inline{float:left;font:bold 100% Georgia,'Times New Roman',Times,serif;line-height:1.411764705882353em;padding:0 .32em 0 0;}
+HEADER,HGROUP{position:relative;*zoom:1;}
+.article-header{padding-bottom:1.2352941176470589em;}
+HGROUP,.doc-main>HEADER,P{margin:0 0 1.411764705882353em;}
+HR{border:0;border-top:1px solid #d2d5d9;clear:both;display:block;margin:2.4117647058823533em 0 3.11764705882353em;padding:0;height:1px;}
+SMALL,.small{font-size:76.47058823529412%;line-height:1.2307692307692308em;}
+.small{margin-bottom:1.2307692307692308em;}
+::-moz-selection{background:#018de6;color:#FFF;text-shadow:none;}
+::selection{background:#018de6;color:#FFF;text-shadow:none;}
+.nowrap{white-space:nowrap;}
+@media only screen and (max-width:767px){BODY{font-size:106.25%;line-height:1.2941176470588236em;} .a-cta{display:block;padding-top:1.2941176470588236em;} ADDRESS,HGROUP,.doc-main>HEADER,P,PRE{margin-bottom:1.2941176470588236em;} H1{font:bold 141.1764705882353% / 1.375em 'Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;padding-top:1.5833333333333333em;padding-bottom:0.3333333333333333em;} HEADER H1{padding-bottom:0.3333333333333333em;}HEADER H1+DL,HEADER H1+H2,HEADER H1+OL,HEADER H1+P,HEADER H1+UL{margin-top:0.5294117647058824em;} H2{font-size:141.1764705882353%;line-height:0.9166666666666666em;padding-top:0.5833333333333334em;padding-bottom:0;}H2+DL,H2+H3,H2+OL,H2+P,H2+UL{margin-top:-0.16666666666666666em;} .article-header{padding-bottom:0;} .h-inline{line-height:22px;} HR{margin:2.2058823529411766em 0 2.8529411764705888em;}}
