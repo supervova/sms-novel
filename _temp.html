@@ -3,7 +3,7 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 	<meta charset="utf-8">
 
-	<title>Проверка №8 | «Роман в SMSках :-*»</title>
+	<title>Проверка №9 | «Роман в SMSках :-*»</title>
 	<meta name="description" content="Сайт книги «Роман в SMSках» Владимира Никишина. Страница не найдена, но на сайте можно скачать бесплатное издание.">
 
 	<!-- Mobile -->
@@ -22,81 +22,20 @@
 /*    .page:hover { background: url(/a/img/_grid-bl22.png) 0 0 repeat-y !important; }
      @media only screen and (min-width: 768px) { .page:hover { background: url(/a/img/_grid-bl24.png) 50% 0 repeat-y !important; }}
 */
-    A.a-cta:after,
-    .btn-back, .btn-menu:before, .btn-search:before,
-    .nameplate .smiley, .f-search BUTTON, .sm-rss:before, .sm-email:after,
-    I.co,
-    .ico-epub, .ico-fb2, .ico-pdf, .ico-doc,
-    .sys-message P:before, .warning-gl EM
-    { background: transparent url(/a/img/base-graphics.png) no-repeat; }
-
-    /*==================================================
-    HIGH RESOLUTION DEVICES
-    ==================================================*/
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-           only screen and (min-resolution: 144dpi) {
-
-/*    @media only screen and (min-width: 768px) and (max-width: 979px) { */
-    A.a-cta:after,
-    .btn-back, .btn-menu:before, .btn-search:before,
-    .nameplate .smiley, .f-search BUTTON, .sm-rss:before, .sm-email:after,
-    I.co,
-    .ico-epub, .ico-fb2, .ico-pdf, .ico-doc,
-    .sys-message P:before, .warning-gl EM {
-        background: transparent url(/a/img/base-graphics-x2.png) no-repeat;
-        -webkit-background-size: 340px 200px;
-        -moz-background-size: 340px 200px;
-        -o-background-size: 340px 200px;
-        background-size: 340px 200px; }
-
-    .box-main-pic FIGURE {
-        background: transparent url(/a/img/main-pic-x2.png) no-repeat;
-        /*background: none;*/
-        -webkit-background-size: 100% 100%;
-        -moz-background-size: 100% 100%;
-        -o-background-size: 100% 100%;
-        background-size: 100% 100%;
-    }
-
-    .box-main-pic FIGURE IMG { visibility: hidden; }
-    }
-
-    .nameplate .smiley{background-position:-290px 0;}
-    .f-search button {background-position:-163px -3px;}
-    .btn-menu:before, .btn-menu .before { background-position: -120px 0; }
 
     @media only screen and (max-width: 767px) {
 
-    .doc-header {
+    .page {
         /* parent - .page
         (box-sizing: border-box; padding: 0 20px; max-height: не определен;
         margin: 0 auto; position: relative; min-height: 100%; height: auto; */
         box-sizing: content-box;
         padding: 0;
-        max-height: none;
+        max-height: none; }
 
-        text-align: center; /* DIFF */
-        margin: 0; /* Polylog - inherit */
-        outline: 0; /* Polylog - inherit */
-        overflow: visible; /* Inherit */
-        vertical-align: baseline; /* Polylog - inherit */ }
+    .doc-header {}
 
     }  /* / @media only (max-width)*/
-
-    /*==================================================
-    HIGH RESOLUTION DEVICES
-    ==================================================*/
-
-        @media only screen and (max-width: 767px),
-               only screen and (-webkit-min-device-pixel-ratio: 1.5),
-               only screen and (min-resolution: 144dpi) {
-
-            .p-front .box-main-pic FIGURE { background: transparent url(/a/img/main-pic-mobile-x2.png) no-repeat; }
-
-            .p-front .box-main-pic FIGURE IMG { visibility: hidden; }
-
-        } /* / @media only (min-resolution)*/
 
     </style>
     <!-- / Development styles. Remove on production -->
@@ -122,6 +61,18 @@
     </div>
     </noscript>
 <!--/noindex-->
+
+<!-- Slide out -->
+    <nav id="slide-out" class="mob">
+    <ul>
+    <li><a href="/">Первая</a></li>
+    <li><a href="/book-sample.html">Отрывок</a></li>
+    <li><a href="/ipad-ibooks-ibookstore.html">iPad-издание</a>
+    <li><a href="/reader-reviews.html">Отзывы</a></li>
+    <li><a href="http://blog.sms-roman.ru/">Блог</a></li>
+    <li><a href="/book-author.html">Об авторе</a></li>
+    </ul>
+    </nav>
 
 <!-- PAGE — REGIONS CONTAINER =========================================== -->
 <div data-role="page" class="page">
