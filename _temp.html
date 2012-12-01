@@ -37,8 +37,7 @@
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
            only screen and (min-resolution: 144dpi) {
 
-/*    @media only screen and (min-width: 768px) and (max-width: 979px) {
-*/
+/*    @media only screen and (min-width: 768px) and (max-width: 979px) { */
     A.a-cta:after,
     .btn-back, .btn-menu:before, .btn-search:before,
     .nameplate .smiley, .f-search BUTTON, .sm-rss:before, .sm-email:after,
@@ -83,21 +82,21 @@
         overflow: visible; /* Inherit */
         vertical-align: baseline; /* Polylog - inherit */ }
 
+    }  /* / @media only (max-width)*/
 
     /*==================================================
     HIGH RESOLUTION DEVICES
     ==================================================*/
 
-        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        @media only screen and (max-width: 767px),
+               only screen and (-webkit-min-device-pixel-ratio: 1.5),
                only screen and (min-resolution: 144dpi) {
 
-            .p-front  .box-main-pic FIGURE { background: transparent url(/a/img/main-pic-mobile-x2.png) no-repeat; }
+            .p-front .box-main-pic FIGURE { background: transparent url(/a/img/main-pic-mobile-x2.png) no-repeat; }
 
-            .p-front  .box-main-pic FIGURE IMG { visibility: hidden; }
+            .p-front .box-main-pic FIGURE IMG { visibility: hidden; }
 
         } /* / @media only (min-resolution)*/
-
-    }  /* / @media only (max-width)*/
 
     </style>
     <!-- / Development styles. Remove on production -->
