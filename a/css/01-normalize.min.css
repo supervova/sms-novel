@@ -1,0 +1,2 @@
+ARTICLE,ASIDE,DETAILS,FIGCAPTION,FIGURE,FOOTER,HEADER,HGROUP,NAV,SECTION,SUMMARY{display:block}AUDIO,CANVAS,VIDEO{display:inline-block;*display:inline;*zoom:1}
+AUDIO:not([controls]){display:none;height:0}[hidden]{display:none}
