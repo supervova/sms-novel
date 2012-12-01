@@ -332,44 +332,4 @@
         }
     };
 
-    /**
-     * iOS Startup Image helper
-     */
-
-    MBP.startupImage = function() {
-        var portrait;
-        var landscape;
-        var pixelRatio;
-        var head;
-        var link1;
-        var link2;
-
-        pixelRatio = window.devicePixelRatio;
-        head = document.getElementsByTagName('head')[0];
-
-        if (navigator.platform === 'iPad') {
-            portrait = pixelRatio === 2 ? '/a/img/startup/startup-tablet-portrait-retina.png' : '/a/img/startup/startup-tablet-portrait.png';
-            landscape = pixelRatio === 2 ? '/a/img/startup/startup-tablet-landscape-retina.png' : '/a/img/startup/startup-tablet-landscape.png';
-
-            link1 = document.createElement('link');
-            link1.setAttribute('rel', 'apple-touch-startup-image');
-            link1.setAttribute('media', 'screen and (orientation: portrait)');
-            link1.setAttribute('href', portrait);
-            head.appendChild(link1);
-
-            link2 = document.createElement('link');
-            link2.setAttribute('rel', 'apple-touch-startup-image');
-            link2.setAttribute('media', 'screen and (orientation: landscape)');
-            link2.setAttribute('href', landscape);
-            head.appendChild(link2);
-        } else {
-            portrait = pixelRatio === 2 ? "/a/img/startup/startup-retina.png" : "/a/img/startup/startup.png";
-
-            link1 = document.createElement('link');
-            link1.setAttribute('rel', 'apple-touch-startup-image');
-            link1.setAttribute('href', portrait);
-            head.appendChild(link1);
-        }
-    };
-
 })(document);
