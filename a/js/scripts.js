@@ -108,11 +108,11 @@ function tooltipSmiley() {
         $(this).data('title', $(this).prop('title'));
         $(this).removeAttr('title');
         // Smiley
-        $('.p-front hr').css('background-position', '0 -48px');
+        $('.box-cta hr').css('background-position', '0 -48px');
     }, function() {
         $('.tooltip').hide('fast').remove();
         $(this).prop('title', $(this).data('title'));
-        $('.p-front hr').css('background-position', '0 0');
+        $('.box-cta hr').css('background-position', '0 0');
     });
 }
 
