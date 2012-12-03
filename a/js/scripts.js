@@ -64,27 +64,27 @@ $(function slideOut() {
         }
     });
 
-    if(document.documentElement.clientWidth < 768) {
-        $('.page').live('swipeleft', function() {
-            if(menuStatus) {
-                $('.page, .doc-header').animate({
-                    marginLeft: '0'
-                }, 300, function() {
-                    menuStatus = false;
-                });
-            }
-        });
+    // if(document.documentElement.clientWidth < 768) {
+    //     $('.page').live('swipeleft', function() {
+    //         if(menuStatus) {
+    //             $('.page, .doc-header').animate({
+    //                 marginLeft: '0'
+    //             }, 300, function() {
+    //                 menuStatus = false;
+    //             });
+    //         }
+    //     });
 
-        $('.page').live('swiperight', function() {
-            if(!menuStatus) {
-                $('.page, .doc-header').animate({
-                    marginLeft: '240px'
-                }, 300, function() {
-                    menuStatus = true;
-                });
-            }
-        });
-    }
+    //     $('.page').live('swiperight', function() {
+    //         if(!menuStatus) {
+    //             $('.page, .doc-header').animate({
+    //                 marginLeft: '240px'
+    //             }, 300, function() {
+    //                 menuStatus = true;
+    //             });
+    //         }
+    //     });
+    // }
 
     $('#slide-out li a').click(function() {
         var p = $(this).parent();
