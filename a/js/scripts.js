@@ -64,7 +64,7 @@ $(function slideOut() {
         }
     });
 
-    if(document.documentElement.clientWidth < 768) {
+    // if(document.documentElement.clientWidth < 768) {
         $('.page').live('swipeleft', function() {
             if(menuStatus) {
                 $('.page, .doc-header').animate({
@@ -84,7 +84,7 @@ $(function slideOut() {
                 });
             }
         });
-    }
+    // }
 
     $('#slide-out li a').click(function() {
         var p = $(this).parent();
