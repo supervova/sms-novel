@@ -3,7 +3,7 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
     <meta charset="utf-8">
 
-    <title>01 «Роман в SMSках :-*» — история любви в формате переписки. Книга Владимира Никишина</title>
+    <title>02 «Роман в SMSках :-*» — история любви в формате переписки. Книга Владимира Никишина</title>
     <meta name="description" content="Книга Владимира Никишина «Роман в SMSках :-*» — история любви в форме переписки. Можно скачать бесплатное издание.">
 
     <!-- OG Protocol -->
@@ -18,7 +18,7 @@
     <!-- Mobile -->
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="canonical" href="http://sms-roman.ru/">
     <link rel="publisher" href="https://plus.google.com/105851932814207462551/">
@@ -278,13 +278,11 @@
     <!--[if gte IE 9]><!-->
     <script>
     $(document).bind('mobileinit', function () {
-        $.mobile.pushStateEnabled = false;
-        $.mobile.ajaxEnabled=false;
+        $.mobile.pushStateEnabled = true;
         $.mobile.textinput.prototype.options.clearSearchButtonText = 'очистить';
-        $('button, input, textarea').attr('data-role','none'); // Prevent jQuery mobile modifications
     });
     </script>
-    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"></script>
+    <script src="/a/js/jquery-mobile.js"></script>
     <!--<![endif]-->
 
     <!-- Improving mobile user experience -->
