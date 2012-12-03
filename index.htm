@@ -44,8 +44,8 @@
     <link rel="stylesheet" href="/a/less/_stock/_mediaquery-reporter.css">-->
     <!-- / Development styles. Remove on production -->
 
-    <script src="/a/js/modernizr-2.6.1.min.js"></script>
     <!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <script src="/a/js/respond.min.js"></script>
     <![endif]-->
 
@@ -150,63 +150,35 @@
 
 <!-- CONTENT ============================================================ -->
 <article class="doc-body" data-role="content">
-    <header class="billboard">
 
-        <!-- Billboard title -->
-        <hgroup>
-        <h1>Это новая книга</h1>
-        <h2><span class="txt-first">Любовная история, рассказанная в смсках,</span>
-        электронных письмах и фейсбук-чатах</h2>
-        </hgroup>
 
-        <!-- Billboard body -->
-        <div class="row">
-
-        <!-- Chat -->
-        <aside class="col box-chat pc">
-        <ul>
-        <li class="her png">Малыш, ты долго еще работать будешь?</li>
-        <li class="me png">Птичка моя :) Через полчаса выхожу</li>
-        <li class="her png">Купи вина по дороге :}<br>
-        И конфеток :-*</li>
-        <li class="me png">Обязательно… Как же сильно я тебя &lt;3</li>
-        </ul>
-        </aside>
-
-        <!-- Main pic -->
-        <div class="col box-main-pic">
-        <figure>
-        <img src="/a/img/main-pic.png" alt="Чашка чая, печеньице и «Роман в SMSках :-*». На обложке — два телефона, любующиеся закатом.">
+    <!-- BTL -->
+    <div class="btl cfx">
+        <figure class="col box-author-pic">
+        <img src="/a/img/author/vladimir-nikishin-front.jpg" alt="Владимир Никишин, автор «Романа в смсках». Примерно так выглядел и герой книжки в начале истории, в 1997-м" height="323" width="200">
         </figure>
-        <p title="Ну, плюс-минус…"><b>100 500 человек</b> уже купили</p>
-        </div>
 
-        <!-- CTA -->
-        <section class="col box-cta">
-        <h2 class="h-cta">Возьмите почитать</h2>
-
-        <div class="body">
-        <h3 class="h-buy">Можно купить</h3>
-        <ul class="l-paid cfx">
-        <li class="first"><a href="http://gum.co/MZba" class="dfn ico-fb2 " title="Книга в формате FB2. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите ссылку на файл.">FB2</a>
-        <li><a href="http://gum.co/gtoH" class="dfn ico-epub" title="Книга в формате EPUB. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите файл.">EPUB</a></li>
-        <li><a href="http://gum.co/zHvg" class="dfn ico-pdf" title="Книга в формате PDF. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите файл.">PDF</a></li>
-        <li><a href="http://gum.co/bcJ" class="dfn ico-doc" title="Книга в формате DOC. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите файл.">DOC</a></li>
-        </ul>
-        <p class="note">($1,5 — около 50 руб.)</p>
-        <hr>
-        <h3 class="h-secondary">Или скачать бесплатно</h3>
-        <ul class="l-free">
-        <li class="li-txt"><a href="https://dl.dropbox.com/u/39735884/sms-novel.txt">TXT</a></li>
-        <li><a href="https://dl.dropbox.com/u/39735884/sms-novel.ibooks">iPad-книга</a></li>
-        </ul>
-        </div>
+        <!-- Synopsis -->
+        <section class="col box-synopsis">
+        <h2 class="h-inline">Сюжет.</h2>
+        Москва, 2008. Владимир Романов — бывший редактор крупной владивостокской газеты, теперь столичный веб-дизайнер — переживает кризис среднего возраста и развод. В метро случайно встречает старинную подругу — Соню,  титулованную красавицу — и снова влюбляется… Герою кажется, что, благодаря эксперименту с аутотренингом и позитивным мышлением, начинают сбываться его желания. Но за 14 месяцев, растянувшихся на всю Евразию, глубокое чувство смешивается и растворяется: одержимость, страхи, ошибки, разочарование, раскаяние, отчаяние, надежда. <a href="/book-sample.html" class="a-cta">См. пролог и первую главу</a>
         </section>
 
+        <!-- Testimonials -->
+        <section class="col box-testimonials">
+        <div class="frame">
+        <blockquote>
+        <p>Роман о мужских проблемах: алкоголизме, мазохизме, онанизме, эксгибиционизме, капитализме и любви</p>
+        <p class="byline">Новая правда</p>
+        </blockquote>
+
+        <blockquote>
+        <p>„Бриджит Джонс“ про наших и по-мужски</p>
+        <p class="byline">Вечерний нуар</p>
+        </blockquote>
         </div>
-    </header>
-
-
+        </section>
+    </div>
 
 </article><!-- / doc-body -->
 
