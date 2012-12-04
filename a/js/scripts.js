@@ -53,6 +53,10 @@ $(function slideOut() {
             }, 300, function() {
                 menuStatus = true;
             });
+
+            if ($('#slide-out').css('display') != 'block') {
+               $('#slide-out').css('display', 'block');
+            }
             return false;
         } else {
             $('.page, .doc-header').animate({
