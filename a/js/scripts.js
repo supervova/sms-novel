@@ -15,7 +15,6 @@ $(document).ready(function(){
     $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
     $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
     dropDowns();
-    slideOut();
     tooltipSmiley();
 });
 
@@ -52,7 +51,7 @@ function dropDowns() {
 }
 
 // SLIDE-OUT MENU. Modified version of snippet by Aldo Lugo — https://github.com/aldomatic/FB-Style-Page-Slide-Menu
-$(function slideOut() {
+$(function () {
     var menuStatus;
 
     // Show menu
