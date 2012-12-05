@@ -46,20 +46,18 @@ function dropDowns() {
 // SLIDE-OUT MENU. Modified version of snippet by Aldo Lugo — https://github.com/aldomatic/FB-Style-Page-Slide-Menu
 $(function slideOut() {
     var menuStatus;
+
+    // Show menu
     $('.btn-menu').click(function() {
         if(menuStatus !== true) {
-            $('.page, .doc-header').animate({
+            $('.ui-page-active, .doc-header').animate({
                 marginLeft: '240px'
             }, 300, function() {
                 menuStatus = true;
             });
-
-            if ($('#slide-out').css('visibility') != 'visible') {
-               $('#slide-out').css('visibility', 'visible');
-            }
             return false;
         } else {
-            $('.page, .doc-header').animate({
+            $('.ui-page-active, .doc-header').animate({
                 marginLeft: '0'
             }, 300, function() {
                 menuStatus = false;
@@ -68,35 +66,39 @@ $(function slideOut() {
         }
     });
 
-    // if(document.documentElement.clientWidth < 768) {
-    //     $('.page').live('swipeleft', function() {
-    //         if(menuStatus) {
-    //             $('.page, .doc-header').animate({
-    //                 marginLeft: '0'
-    //             }, 300, function() {
-    //                 menuStatus = false;
-    //             });
-    //         }
-    //     });
+    $('#slide-out, .pages').live('swipeleft', function() {
+        if(menuStatus) {
+            $('.ui-page-active, .doc-header').animate({
+                marginLeft: '0'
+            }, 300, function() {
+                menuStatus = false;
+            });
+        }
+    });
 
-    //     $('.page').live('swiperight', function() {
-    //         if(!menuStatus) {
-    //             $('.page, .doc-header').animate({
-    //                 marginLeft: '240px'
-    //             }, 300, function() {
-    //                 menuStatus = true;
-    //             });
-    //         }
-    //     });
-    // }
+    $('.pages').live('swiperight', function() {
+        if(!menuStatus) {
+            $('.ui-page-active, .doc-header').animate({
+                marginLeft: '240px'
+            }, 300, function() {
+                menuStatus = true;
+            });
+        }
+    });
 
+    $('div[data-role="page"]').live('pagebeforeshow', function(event, ui) {
+        menuStatus = false;
+        $('.pages').css('margin-left', '0');
+    });
+
+    // Menu behaviour
     $('#slide-out li a').click(function() {
         var p = $(this).parent();
-        if($(p).hasClass('current')) {
-            $('#slide-out li').removeClass('current');
+        if($(p).hasClass('active')) {
+            $('#slide-out li').removeClass('active');
         } else {
-            $('#slide-out li').removeClass('current');
-            $(p).addClass('current');
+            $('#slide-out li').removeClass('active');
+            $(p).addClass('active');
         }
     });
 });
