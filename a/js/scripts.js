@@ -11,6 +11,14 @@
     }
 }());
 
+$(document).ready(function(){
+    $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
+    $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
+    dropDowns();
+    slideOut();
+    tooltipSmiley();
+});
+
 // DROPDOWNS
 function dropDowns() {
     $(document).click(function(e) {
@@ -124,13 +132,7 @@ function tooltipSmiley() {
 
 // A responsive images approach including Retina image replacement — Picturefill - https://github.com/scottjehl/picturefill.
 
-$(document).ready(function(){
-    $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
-    $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
-    dropDowns();
-    slideOut();
-    tooltipSmiley();
-});
+
 
 function noError() {
     return true;
