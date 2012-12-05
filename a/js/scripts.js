@@ -50,14 +50,14 @@ $(function slideOut() {
     // Show menu
     $('.btn-menu').click(function() {
         if(menuStatus !== true) {
-            $('.page, .doc-header').animate({
+            $('.ui-page-active, .doc-header').animate({
                 marginLeft: '240px'
             }, 300, function() {
                 menuStatus = true;
             });
             return false;
         } else {
-            $('.page, .doc-header').animate({
+            $('.ui-page-active, .doc-header').animate({
                 marginLeft: '0'
             }, 300, function() {
                 menuStatus = false;
@@ -68,7 +68,7 @@ $(function slideOut() {
 
     $('#slide-out, .pages').live('swipeleft', function() {
         if(menuStatus) {
-            $('.page, .doc-header').animate({
+            $('.ui-page-active, .doc-header').animate({
                 marginLeft: '0'
             }, 300, function() {
                 menuStatus = false;
@@ -78,7 +78,7 @@ $(function slideOut() {
 
     $('.pages').live('swiperight', function() {
         if(!menuStatus) {
-            $('.page, .doc-header').animate({
+            $('.ui-page-active, .doc-header').animate({
                 marginLeft: '240px'
             }, 300, function() {
                 menuStatus = true;
@@ -128,6 +128,7 @@ $(document).ready(function(){
     $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
     $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
     dropDowns();
+    slideOut();
     tooltipSmiley();
 });
 
