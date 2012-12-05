@@ -277,7 +277,8 @@
     <!--[if gte IE 9]><!-->
     <script>
     $(document).bind('mobileinit', function () {
-        $.mobile.pushStateEnabled = true;
+        $.mobile.pushStateEnabled = false;
+        $.mobile.ajaxEnabled=false;
         $.mobile.textinput.prototype.options.clearSearchButtonText = 'очистить';
         $('button, input, textarea').attr('data-role','none'); // Prevent jQuery mobile modifications
     });
