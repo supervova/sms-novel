@@ -11,14 +11,6 @@
     }
 }());
 
-$(document).ready(function(){
-    $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
-    $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
-    dropDowns();
-    slideOut();
-    tooltipSmiley();
-});
-
 // DROPDOWNS
 function dropDowns() {
     $(document).click(function(e) {
@@ -54,18 +46,20 @@ function dropDowns() {
 // SLIDE-OUT MENU. Modified version of snippet by Aldo Lugo — https://github.com/aldomatic/FB-Style-Page-Slide-Menu
 $(function slideOut() {
     var menuStatus;
-
-    // Show menu
     $('.btn-menu').click(function() {
         if(menuStatus !== true) {
-            $('.ui-page-active, .doc-header').animate({
+            $('.page, .doc-header').animate({
                 marginLeft: '240px'
             }, 300, function() {
                 menuStatus = true;
             });
+
+            if($('#slide-out').css('visibility') != 'visible') {
+                $('#slide-out').css('visibility', 'visible');
+            }
             return false;
         } else {
-            $('.ui-page-active, .doc-header').animate({
+            $('.page, .doc-header').animate({
                 marginLeft: '0'
             }, 300, function() {
                 menuStatus = false;
@@ -74,39 +68,33 @@ $(function slideOut() {
         }
     });
 
-    $('#slide-out, .pages').live('swipeleft', function() {
-        if(menuStatus) {
-            $('.ui-page-active, .doc-header').animate({
-                marginLeft: '0'
-            }, 300, function() {
-                menuStatus = false;
-            });
-        }
-    });
-
-    $('.pages').live('swiperight', function() {
-        if(!menuStatus) {
-            $('.ui-page-active, .doc-header').animate({
-                marginLeft: '240px'
-            }, 300, function() {
-                menuStatus = true;
-            });
-        }
-    });
-
-    $('div[data-role="page"]').live('pagebeforeshow', function(event, ui) {
-        menuStatus = false;
-        $('.pages').css('margin-left', '0');
-    });
-
-    // Menu behaviour
+    // if(document.documentElement.clientWidth < 768) {
+    //     $('.page').live('swipeleft', function() {
+    //         if(menuStatus) {
+    //             $('.page, .doc-header').animate({
+    //                 marginLeft: '0'
+    //             }, 300, function() {
+    //                 menuStatus = false;
+    //             });
+    //         }
+    //     });
+    //     $('.page').live('swiperight', function() {
+    //         if(!menuStatus) {
+    //             $('.page, .doc-header').animate({
+    //                 marginLeft: '240px'
+    //             }, 300, function() {
+    //                 menuStatus = true;
+    //             });
+    //         }
+    //     });
+    // }
     $('#slide-out li a').click(function() {
         var p = $(this).parent();
-        if($(p).hasClass('active')) {
-            $('#slide-out li').removeClass('active');
+        if($(p).hasClass('current')) {
+            $('#slide-out li').removeClass('current');
         } else {
-            $('#slide-out li').removeClass('active');
-            $(p).addClass('active');
+            $('#slide-out li').removeClass('current');
+            $(p).addClass('current');
         }
     });
 });
@@ -132,7 +120,12 @@ function tooltipSmiley() {
 
 // A responsive images approach including Retina image replacement — Picturefill - https://github.com/scottjehl/picturefill.
 
-
+$(document).ready(function(){
+    $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
+    $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
+    dropDowns();
+    tooltipSmiley();
+});
 
 function noError() {
     return true;
