@@ -54,8 +54,8 @@ $(function slideOut() {
                 menuStatus = true;
             });
 
-            if ($('#slide-out').css('display') != 'block') {
-               $('#slide-out').css('display', 'block');
+            if ($('#slide-out').css('visibility') != 'visible') {
+               $('#slide-out').css('visibility', 'visible');
             }
             return false;
         } else {
