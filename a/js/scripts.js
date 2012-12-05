@@ -50,14 +50,14 @@ $(function slideOut() {
     // Show menu
     $('.btn-menu').click(function() {
         if(menuStatus !== true) {
-            $('.ui-page-active, .doc-header').animate({
+            $('.page, .doc-header').animate({
                 marginLeft: '240px'
             }, 300, function() {
                 menuStatus = true;
             });
             return false;
         } else {
-            $('.ui-page-active, .doc-header').animate({
+            $('.page, .doc-header').animate({
                 marginLeft: '0'
             }, 300, function() {
                 menuStatus = false;
@@ -68,7 +68,7 @@ $(function slideOut() {
 
     $('#slide-out, .pages').live('swipeleft', function() {
         if(menuStatus) {
-            $('.ui-page-active, .doc-header').animate({
+            $('.page, .doc-header').animate({
                 marginLeft: '0'
             }, 300, function() {
                 menuStatus = false;
@@ -78,7 +78,7 @@ $(function slideOut() {
 
     $('.pages').live('swiperight', function() {
         if(!menuStatus) {
-            $('.ui-page-active, .doc-header').animate({
+            $('.page, .doc-header').animate({
                 marginLeft: '240px'
             }, 300, function() {
                 menuStatus = true;
