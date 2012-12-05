@@ -28,7 +28,6 @@
 
     <!-- Development styles. Remove on production -->
      <style type="text/css">
-     HTML { -webkit-overflow-scrolling: touch; }
     /*.page:hover { background: url(/a/img/_grid-bl22.png) 0 0 repeat-y !important; }
      @media only screen and (min-width: 768px) {
 
@@ -272,6 +271,19 @@
 <!-- Scripts ============================================================= -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/a/js/jquery-1.8.3.min.js"><\/script>')</script>
+
+    <!-- jQuery Mobile: http://jquerymobile.com/download-builder/ -->
+    <!--[if gte IE 9]><!-->
+    <script>
+    $(document).bind('mobileinit', function () {
+        $.mobile.pushStateEnabled = false;
+        $.mobile.ajaxEnabled=false;
+        $.mobile.textinput.prototype.options.clearSearchButtonText = 'очистить';
+        $('button, input, textarea').attr('data-role','none'); // Prevent jQuery mobile modifications
+    });
+    </script>
+    <script src="//code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"></script>
+    <!--<![endif]-->
 
     <!-- Improving mobile user experience -->
     <script src="/a/js/helper.js"></script>
