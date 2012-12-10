@@ -38,7 +38,6 @@ function dropDowns() {
         $(this).parents('.mm-menu, .body-menu').children('.mm-dropdown, .body-dropdown').toggle();
         $('.mm-label-4dd, .body-label-4dd').removeClass('down');
         $(this).addClass('down');
-        $('#billboard').append('<div class="overlay"></div>');
         return false;
     });
 }
