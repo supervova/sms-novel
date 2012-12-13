@@ -358,6 +358,8 @@ BLOCKQUOTE FOOTER{color:#909295;font-style:italic;}
 .coverline{}
 DIV:focus{outline:none;}
 IFRAME{border:0 none;margin-bottom:1.411764705882353em;}
+#cse-search-results{width:100%;}
+#cse-search-results IFRAME{width:100%;}
 .box-cta{font-family:'Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;text-align:center;width:220px;}.box-cta .h-cta{background:#006ec7;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0;color:#33bfff;font-family:'Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;font-weight:normal;text-shadow:0 1px 1px rgba(0, 74, 163, 0.4);padding:0.375em 0 0;height:1.875em;}
 .box-cta .h-cta,.box-cta .h-buy{font-size:94.11764705882352%;line-height:1.5em;}
 .box-cta .body{background:#19a6ff;-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;padding:0 10px 1.411764705882353em;min-height:276px;*height:276px;}
