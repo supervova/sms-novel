@@ -13,32 +13,31 @@
 
 // DROPDOWNS
 function dropDowns() {
-    $(document).click(function(e) {
-        if($(e.target).is('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd')) {
-            return;
-        }
-        $('.mm-dropdown, .body-dropdown, .hdr-dropdown').toggle();
-        $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').removeClass('down');
-    });
-    $('html').click(function() {
-        $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
-        $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').removeClass('down');
-    });
-    $('.mm-dropdown, .body-dropdown, .hdr-dropdown').click(function(event) {
-        event.stopPropagation();
-    });
-    $(document).keydown(function(e) {
-        if(e.keyCode == 27) {
-            $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
-            $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').removeClass('down');
-        }
-    });
-    $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').click(function(event) {
-        $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
+    var label = $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd');
+    var neighbors = $('.mm-dropdown, .body-dropdown, .hdr-dropdown');
+
+    label.click(function(event) {
+        neighbors.hide();
         $(this).parents('.mm-menu, .body-menu, .hdr-menu').children('.mm-dropdown, .body-dropdown, .hdr-dropdown').toggle();
-        $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').removeClass('down');
+        label.removeClass('down');
         $(this).addClass('down');
         return false;
+    });
+
+    $('html').click(function() {
+        neighbors.hide();
+        label.removeClass('down');
+    });
+
+    $(document).keydown(function(e) {
+        if(e.keyCode == 27) {
+            neighbors.hide();
+            label.removeClass('down');
+        }
+    });
+
+    neighbors.click(function(event) {
+        event.stopPropagation();
     });
 }
 
@@ -152,10 +151,6 @@ $(document).ready(function(){
     tooltipSmiley();
     $('.box-testimonials').rotaterator({fadeSpeed:1200, pauseSpeed:8000});
 
-    $('html').click(function() {
-       $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
-       return false;
-   });
 });
 
 function noError() {
