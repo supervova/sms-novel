@@ -14,29 +14,29 @@
 // DROPDOWNS
 function dropDowns() {
     var label = $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd');
-    var neighbors = $('.mm-dropdown, .body-dropdown, .hdr-dropdown');
+    var allDropDowns = $('.mm-dropdown, .body-dropdown, .hdr-dropdown');
 
     label.click(function(event) {
-        neighbors.hide();
+        allDropDowns.hide();
         $(this).parents('.mm-menu, .body-menu, .hdr-menu').children('.mm-dropdown, .body-dropdown, .hdr-dropdown').toggle();
         label.removeClass('down');
         $(this).addClass('down');
         return false;
     });
 
-    $('html').click(function() {
-        neighbors.hide();
+    $(document).click(function() {
+        allDropDowns.hide();
         label.removeClass('down');
     });
 
     $(document).keydown(function(e) {
         if(e.keyCode == 27) {
-            neighbors.hide();
+            allDropDowns.hide();
             label.removeClass('down');
         }
     });
 
-    neighbors.click(function(event) {
+    allDropDowns.click(function(event) {
         event.stopPropagation();
     });
 }
