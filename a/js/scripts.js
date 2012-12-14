@@ -17,10 +17,10 @@ function dropDowns() {
         if($(e.target).is('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd')) {
             return;
         }
-        $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
+        $('.mm-dropdown, .body-dropdown, .hdr-dropdown').toggle();
         $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').removeClass('down');
     });
-    $('body').click(function() {
+    $('html').click(function() {
         $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
         $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').removeClass('down');
     });
