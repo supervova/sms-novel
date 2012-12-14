@@ -20,7 +20,7 @@ function dropDowns() {
         $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
         $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').removeClass('down');
     });
-    $('html').mousedown(function() { // 'body'
+    $('body').click(function() {
         $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
         $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').removeClass('down');
     });
