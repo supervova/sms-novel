@@ -15,14 +15,16 @@
 function dropDowns() {
     $(document).click(function(e) {
         if($(e.target).is('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd')) {
-            return;
+            return false; // 1 DIFF
         }
         $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
         $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').removeClass('down');
+        return false; // 2 DIFF
     });
-    $('html').click(function() {
+    $('html').click(function() { //.mousedown && 'body'
         $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
         $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd').removeClass('down');
+        return false; // 3 DIFF
     });
     $('.mm-dropdown, .body-dropdown, .hdr-dropdown').click(function(event) {
         event.stopPropagation();
