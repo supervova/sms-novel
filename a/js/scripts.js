@@ -67,26 +67,6 @@ $(function slideOut() {
         }
     });
 
-    // if(document.documentElement.clientWidth < 768) {
-    //     $('.page').live('swipeleft', function() {
-    //         if(menuStatus) {
-    //             $('.page, .doc-header').animate({
-    //                 marginLeft: '0'
-    //             }, 300, function() {
-    //                 menuStatus = false;
-    //             });
-    //         }
-    //     });
-    //     $('.page').live('swiperight', function() {
-    //         if(!menuStatus) {
-    //             $('.page, .doc-header').animate({
-    //                 marginLeft: '240px'
-    //             }, 300, function() {
-    //                 menuStatus = true;
-    //             });
-    //         }
-    //     });
-    // }
     $('#slide-out li a').click(function() {
         var p = $(this).parent();
         if($(p).hasClass('current')) {
@@ -100,21 +80,22 @@ $(function slideOut() {
 
 // TOOLTIP and smiley
 function tooltipSmiley() {
-    $('.dfn').hover(
-
-    function() {
-        var txtTitle = $(this).prop("title");
-        $(this).after('<p class="tooltip">' + txtTitle + '</p>');
-        $(this).siblings('.tooltip').show('fast');
-        $(this).data('title', $(this).prop('title'));
-        $(this).removeAttr('title');
-        // Smiley
-        $('.box-cta hr').css('background-position', '0 -48px');
-    }, function() {
-        $('.tooltip').hide('fast').remove();
-        $(this).prop('title', $(this).data('title'));
-        $('.box-cta hr').css('background-position', '0 0');
-    });
+    if(window.matchMedia('(min-width: 769px)').matches) {
+        $('.dfn').hover(
+        function() {
+            var txtTitle = $(this).prop('title');
+            $(this).after('<p class="tooltip">' + txtTitle + '</p>');
+            $(this).siblings('.tooltip').show('fast');
+            $(this).data('title', $(this).prop('title'));
+            $(this).removeAttr('title');
+            // Smiley
+            $('.box-cta hr').css('background-position', '0 -48px');
+        }, function() {
+            $('.tooltip').hide('fast').remove();
+            $(this).prop('title', $(this).data('title'));
+            $('.box-cta hr').css('background-position', '0 0');
+        });
+    }
 }
 
 // A responsive images approach including Retina image replacement — Picturefill - https://github.com/scottjehl/picturefill.
@@ -170,6 +151,11 @@ $(document).ready(function(){
     dropDowns();
     tooltipSmiley();
     $('.box-testimonials').rotaterator({fadeSpeed:1200, pauseSpeed:8000});
+
+    $('html').click(function() {
+       $('.mm-dropdown, .body-dropdown, .hdr-dropdown').hide();
+       return false;
+   });
 });
 
 function noError() {
