@@ -150,6 +150,7 @@ $(document).ready(function(){
     dropDowns();
     tooltipSmiley();
     $('.box-testimonials').rotaterator({fadeSpeed:1200, pauseSpeed:8000});
+    $('<div class="box-cta-hr"></div>').insertBefore('.box-cta .h-secondary');
 
 });
 
