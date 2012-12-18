@@ -365,7 +365,7 @@ IFRAME{border:0 none;margin-bottom:1.411764705882353em;overflow:auto;overflow-x:
 #cse-search-results IFRAME{min-height:69.82352941176471em;*height:69.82352941176471em;}
 .box-cta{font-family:'Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;text-align:center;width:220px;}.box-cta .h-cta{background:#006ec7;-webkit-border-radius:4px 4px 0 0;-moz-border-radius:4px 4px 0 0;border-radius:4px 4px 0 0;color:#33bfff;font-family:'Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;font-weight:normal;text-shadow:0 1px 1px rgba(0, 74, 163, 0.4);padding:0.375em 0 0;height:1.875em;}
 .box-cta .h-cta,.box-cta .h-buy{font-size:94.11764705882352%;line-height:1.5em;}
-.box-cta .body{background:#19a6ff;-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;padding:0 10px 1.411764705882353em;min-height:276px;*height:276px;}
+.box-cta .body{background:#19a6ff;-webkit-border-radius:0 0 4px 4px;-moz-border-radius:0 0 4px 4px;border-radius:0 0 4px 4px;padding:0 10px;min-height:276px;*height:276px;}
 .box-cta H3{color:#eae58c;}
 .box-cta .l-paid,.box-cta .note,.box-cta .l-free{color:#FFF;}
 .box-cta .h-buy{padding:1.125em 0;text-transform:uppercase;}
@@ -380,6 +380,7 @@ IFRAME{border:0 none;margin-bottom:1.411764705882353em;overflow:auto;overflow-x:
 .box-cta P{margin:0;}
 .box-cta HR{background:url(/a/img/hr-smiley.gif) 0 0 no-repeat;border-top:0;*display:none;margin:0.625em auto 0.6875em;height:48px;width:190px;}
 .box-cta .box-cta-hr{background:url(/a/img/hr-smiley.gif) 0 0 no-repeat;display:none;*display:block;margin:0.625em auto 0.6875em;height:48px;width:190px;}
+.box-cta .h-secondary{padding:0;}
 .box-cta .h-secondary,.box-cta .l-free,.box-cta .note{font-size:81.25%;font-weight:normal;line-height:1.8461538461538463em;}
 .box-cta .l-free{margin-top:-1px;padding:0;}.box-cta .l-free LI{display:inline-block;*display:inline;*zoom:1;}
 .box-cta .l-free .li-txt{margin-right:.3em;position:relative;*zoom:1;}.box-cta .l-free .li-txt:after{color:#eae58c;content:'\2022';display:block;position:absolute;top:0;right:-0.5em;}

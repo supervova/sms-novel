@@ -6,6 +6,13 @@ a/css/*
 !a/css/styles.css
 a/less/
 a/type/
+campaign/
+campaign/*
+campaign/index.htm
+campaign/mail.htm
+campaign/mail.txt
+campaign/sender-subject-url-placeholder.txt
+
 
 # Auxiliary Files
 *.sublime-*
