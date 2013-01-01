@@ -112,7 +112,7 @@ H1,H2,H3,H4,H5{margin:0;text-rendering:optimizelegibility;}H1 SMALL,H2 SMALL,H3 
 H1{color:#000000;font:normal 247.05882352941177% 'Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;letter-spacing:-0.04em;line-height:1.1428571428571428em;padding-top:0.7619047619047619em;padding-bottom:0.5em;}
 H1+P:not([class]),HGROUP+P:not([class]),.doc-main>HEADER+P:not([class]),P.lead{font-weight:bold;}
 HEADER H1{padding-bottom:0;}HEADER H1+DL,HEADER H1+H2,HEADER H1+OL,HEADER H1+P,HEADER H1+UL{margin-top:-0.17647058823529413em;}
-H2{font:200 152.94117647058823% 'HelveticaNeueLight','HelveticaNeue-Light','Helvetica Neue Light','HelveticaNeue','Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;letter-spacing:-0.03em;line-height:0.9230769230769231em;padding-top:0.8076923076923077em;padding-bottom:0.11538461538461539em;}
+.post H1,H2{font:200 152.94117647058823% 'HelveticaNeueLight','HelveticaNeue-Light','Helvetica Neue Light','HelveticaNeue','Helvetica Neue',Helvetica,Roboto,Arial,sans-serif;letter-spacing:-0.03em;line-height:0.9230769230769231em;padding-top:0.8076923076923077em;padding-bottom:0.11538461538461539em;}
 H1+H2,HGROUP H2,.deck{padding-top:0;}
 H3,.h3,H4,.h4,H5{font-size:100%;}
 H3{padding-top:1.411764705882353em;}

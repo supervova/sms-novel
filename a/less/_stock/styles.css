@@ -1,7 +1,7 @@
-/*	CSS Reset */
+/*  CSS Reset */
 @import '/a/css/01-normalize.css';
 
-/*  Variables, mixins, sprites */
+/*  Variables and mixins — Custom colors, font-sizes, etc */
 @import '/a/css/02-variables.css';
 @import '/a/css/02-mixins.css';
 @import '/a/css/02-sprites.css';
@@ -23,7 +23,7 @@
 @import '/a/css/11-boxes.css';
 @import '/a/css/12-tables.css';
 
-/* Forms and system responce */
+/* Forms and system response */
 @import '/a/css/13-forms.css';
 @import '/a/css/14-buttons.css';
 @import '/a/css/15-alerts.css';
@@ -43,6 +43,3 @@
 
 /* Print */
 @import '/a/css/19-print.css';
-
-/* Optional - JQM */
-@import '/a/css/20-jqm.css';
