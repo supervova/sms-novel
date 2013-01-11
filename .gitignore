@@ -4,7 +4,8 @@ _stock/
 /_stock/
 a/css/*
 !a/css/styles.css
-a/less/
+a/img/_tmp/
+a/less/*
 a/type/
 campaign/
 campaign/*
