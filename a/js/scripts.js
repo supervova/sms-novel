@@ -163,11 +163,28 @@ $(document).ready(function(){
     $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
     dropDowns();
     tooltipSmiley();
-    tumblrLike();
+    // tumblrLike();
     $('.box-testimonials').rotaterator({fadeSpeed:1200, pauseSpeed:8000});
     $('<div class="box-cta-hr"></div>').insertBefore('.box-cta .h-secondary');
 
 });
+
+window.onload = function() {
+    document.body.insertAdjacentHTML('beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>');
+    document.addEventListener('click', function(event) {
+        var myLike = event.target;
+        if(myLike.className.indexOf('pft-like') > -1) {
+            var frame = document.getElementById('my-like-frame'),
+                liked = (myLike.className == 'pft-liked'),
+                command = liked ? 'unlike' : 'like',
+                reblog = myLike.getAttribute('data-reblog'),
+                id = myLike.getAttribute('data-id'),
+                oauth = reblog.slice(-8);
+            frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
+            liked ? myLike.className = 'pft-like' : myLike.className = 'pft-liked';
+        }
+    }, false);
+};
 
 function noError() {
     return true;
