@@ -148,10 +148,10 @@ function tumblrLike() {
         $('body').append('<iframe id="tumblr-like" style="display:none;"></iframe>');
     }
     $('.pft-like').click(function() {
-        var frame = $('#tumblr-like'),
-            command = $(this).hasClass('pft-liked') ? 'unlike' : 'like', // var command and semicolon?
-            oauth = $(this).attr('data-reblog').slice(-8),
-            id = $(this).attr('data-id');
+        var frame = $('#tumblr-like');
+        var command = $(this).hasClass('pft-liked') ? 'unlike' : 'like';
+        var oauth = $(this).attr('data-reblog').slice(-8);
+        var id = $(this).attr('data-id');
         frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
         $(this).hasClass('pft-liked') ? $(this).removeClass('pft-liked') : $(this).addClass('pft-liked');
         return false;
