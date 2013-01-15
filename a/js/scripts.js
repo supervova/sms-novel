@@ -170,11 +170,11 @@ $(document).ready(function(){
 });
 
 window.onload = function() {
-    document.body.insertAdjacentHTML('beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>');
+    document.body.insertAdjacentHTML('beforeEnd', '<iframe id="tumblr-like" style="display:none;"></iframe>');
     document.addEventListener('click', function(event) {
         var myLike = event.target;
         if(myLike.className.indexOf('pft-like') > -1) {
-            var frame = document.getElementById('my-like-frame'),
+            var frame = document.getElementById('tumblr-like'),
                 liked = (myLike.className == 'pft-liked'),
                 command = liked ? 'unlike' : 'like',
                 reblog = myLike.getAttribute('data-reblog'),
