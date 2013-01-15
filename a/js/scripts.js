@@ -158,11 +158,11 @@ function tumblrLike() {
 }
 
 $(document).ready(function(){
+    tumblrLike();
     $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
     $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
     dropDowns();
     tooltipSmiley();
-    tumblrLike();
     $('.box-testimonials').rotaterator({fadeSpeed:1200, pauseSpeed:8000});
     $('<div class="box-cta-hr"></div>').insertBefore('.box-cta .h-secondary');
 
