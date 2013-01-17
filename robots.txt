@@ -1,6 +1,5 @@
 User-agent: *
-# Sitemap: http://sms-roman.ru/sitemap.xml
-# Sitemap: http://sms-roman.ru/en/sitemap.xml
+Sitemap: http://sms-roman.ru/sitemap.xml
 
 Crawl-delay: 10
 
@@ -13,13 +12,13 @@ Disallow: /_snips/
 Disallow: /_stock/
 
 # Files
-Disallow: _temp.html
-Disallow: .gitignore
-Disallow: BingSiteAuth.xml
-Disallow: .nojekyll
-Disallow: CNAME
+Disallow: /_temp.html
+Disallow: /.gitignore
+Disallow: /BingSiteAuth.xml
+Disallow: /.nojekyll
+Disallow: /CNAME
 Disallow: *.DS_Store
-Disallow: google*.html
+Disallow: /google*.html
 Disallow: *.sublime-project
 Disallow: *.sublime-workspace
-Disallow: yandex*.html
+Disallow: /yandex*.html
