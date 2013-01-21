@@ -416,11 +416,11 @@ BUTTON.clear,BUTTON.close{background:#abaeb2;}
 .pft-tags{margin:0;padding:0 1.0714285714285714em 0 39px;}.pft-tags I.co{background-position:-220px -50px;margin-top:-8px;top:50%;left:15px;height:16px;width:16px;}
 .pft-tags A{display:none;*display:inline;}
 .pft-tags A:first-of-type{display:inline;}
-.pft-comments{padding:0 15px 0 1.0714285714285714em;}.pft-comments I.co{background-position:-200px -80px;margin-top:-3px;top:50%;right:0;height:8px;width:9px;}
-.pft-comments .note{color:#909295;cursor:default;text-decoration:none;}
+.pft-comments{padding:0 15px 0 1.0714285714285714em;}.pft-comments I.co{background-position:-200px -80px;display:inline-block;*display:inline;*zoom:1;margin:-3px 0 0;position:static;height:8px;width:9px;}
+.pft-comments .note{color:#909295;cursor:default;text-decoration:none;margin-right:5px;}
 .notes IMG,.notes .more_notes_link_container{display:inline-block;*display:inline;*zoom:1;margin:0 .4em 0 0;}
 .notes .clear{display:none;}
-@media only screen and (min-width:768px) and (max-width:979px){}@media only screen and (max-width:767px){.post-link H1,.post-video H1,.post-audio H1{line-height:1.2941176470588236em;} .post-audio .player{padding-bottom:1.2941176470588236em;} .post-text H1+IMG{margin-top:1.2941176470588236em;} .pft{margin-bottom:2.588235294117647em;padding-bottom:0.8235294117647058em;} .pft-tags{display:none;} #tumblr_controls{display:none;}}@media only screen and (max-width:479px){.pft-date{display:none;} .pft-share{border-left:0 none;} .pft-comments{padding-left:0;}.pft-comments .label{background-position:-240px -110px;background-color:transparent;border-width:0;display:inline-block;direction:ltr;text-align:left;text-indent:-4000em;overflow:hidden;cursor:pointer;height:24px;width:40px;}}
+@media only screen and (min-width:768px) and (max-width:979px){}@media only screen and (max-width:767px){.post-link H1,.post-video H1,.post-audio H1{line-height:1.2941176470588236em;} .post-audio .player{padding-bottom:1.2941176470588236em;} .post-text H1+IMG{margin-top:1.2941176470588236em;} .pft{margin-bottom:2.588235294117647em;padding-bottom:0.8235294117647058em;} .pft-tags{display:none;} #tumblr_controls{display:none;}}@media only screen and (max-width:479px){.pft-date{display:none;} .pft-share{border-left:0 none;} .pft-comments{padding-left:0;}.pft-comments .label{background-position:-240px -110px;background-color:transparent;border-width:0;display:inline-block;direction:ltr;text-align:left;text-indent:-4000em;overflow:hidden;cursor:pointer;height:24px;width:40px;} .pft-comments I.co{margin:0 0 1px;}}
 .mob,.mob-inl,.tbl,.tbl-inl,.tbl-mob,.tbl-mob-inl{display:none;}
 .tel{color:#000000;cursor:default;white-space:nowrap;}.tel:hover{color:#000000;text-decoration:none;}
 .tel I{color:#909295;font-style:normal;}
