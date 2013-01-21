@@ -22,3 +22,4 @@ Disallow: /google*.html
 Disallow: *.sublime-project
 Disallow: *.sublime-workspace
 Disallow: /yandex*.html
+Disallow: /nibbler-site-verification.txt
