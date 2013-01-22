@@ -12,6 +12,9 @@ Disallow: /_snips/
 Disallow: /_stock/
 
 # Files
+Disallow: /_stock/tumblr-theme-html.html
+Disallow: /customize/supervova
+
 Disallow: /_temp.html
 Disallow: /.gitignore
 Disallow: /BingSiteAuth.xml
