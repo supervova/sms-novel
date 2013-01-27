@@ -14,7 +14,6 @@ campaign/mail.htm
 campaign/mail.txt
 campaign/sender-subject-url-placeholder.txt
 
-
 # Auxiliary Files
 *.sublime-*
 *.zip
@@ -24,6 +23,7 @@ coming-soon.htm
 Drupal.sublime-projectcompletions
 sms-novel.sublime-project
 sms-novel.sublime-workspace
+_tmp.htm
 
 # OS generated files
 .DS_Store
@@ -33,4 +33,3 @@ sms-novel.sublime-workspace
 .Trashes
 ehthumbs.db
 Thumbs.db
-_tmp.htm
