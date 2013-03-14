@@ -1,9 +1,17 @@
-// CONSOLE ERRORS CURE - Avoid 'console' errors in browsers that lack a console.
+
+/*
+|--------------------------------------------------------------------------
+| CONSOLE ERRORS CURE
+|--------------------------------------------------------------------------
+|
+| Avoid 'console' errors in browsers that lack a console.
+|
+*/
 (function() {
-    var noop = function noop() {};
-    var methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd', 'timeStamp', 'trace', 'warn'];
-    var length = methods.length;
-    var console = window.console || {};
+    var noop = function noop() {},
+        methods = ['assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error', 'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log', 'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd', 'timeStamp', 'trace', 'warn'],
+        length = methods.length,
+        console = window.console || {};
 
     while(length--) {
         // Only stub undefined methods.
@@ -11,10 +19,14 @@
     }
 }());
 
-// DROPDOWNS
+/*
+|--------------------------------------------------------------------------
+| DROPDOWNS
+|--------------------------------------------------------------------------
+*/
 function dropDowns() {
-    var label = $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd');
-    var allDropDowns = $('.mm-dropdown, .body-dropdown, .hdr-dropdown');
+    var label = $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd'),
+        allDropDowns = $('.mm-dropdown, .body-dropdown, .hdr-dropdown');
 
     label.click(function(event) {
         allDropDowns.hide();
@@ -41,8 +53,16 @@ function dropDowns() {
     });
 }
 
-// SLIDE-OUT MENU. Modified version of snippet by Aldo Lugo — https://github.com/aldomatic/FB-Style-Page-Slide-Menu
-$(function slideOut() {
+/*
+|--------------------------------------------------------------------------
+| SLIDE-OUT MENU
+|--------------------------------------------------------------------------
+|
+| Modified version of snippet by Aldo Lugo —
+| https://github.com/aldomatic/FB-Style-Page-Slide-Menu
+|
+*/
+function slideOut() {
     var menuStatus;
     $('.btn-menu').click(function() {
         if(menuStatus !== true) {
@@ -75,9 +95,13 @@ $(function slideOut() {
             $(p).addClass('current');
         }
     });
-});
+}
 
-// TOOLTIP and smiley
+/*
+|--------------------------------------------------------------------------
+| TOOLTIP and smiley
+|--------------------------------------------------------------------------
+*/
 function tooltipSmiley() {
     if(window.matchMedia('(min-width: 769px)').matches) {
         $('.dfn').hover(
@@ -97,9 +121,11 @@ function tooltipSmiley() {
     }
 }
 
-// A responsive images approach including Retina image replacement — Picturefill - https://github.com/scottjehl/picturefill.
-
-// Text rotator
+/*
+|--------------------------------------------------------------------------
+| TEXT ROTATOR
+|--------------------------------------------------------------------------
+*/
 (function($) {
     $.fn.extend({
         //plugin name - rotaterator
@@ -143,6 +169,11 @@ function tooltipSmiley() {
     });
 })(jQuery);
 
+/*
+|--------------------------------------------------------------------------
+| TUMBLR LIKE source
+|--------------------------------------------------------------------------
+*/
 function tumblrLikeSrc() {
     if ($('body').hasClass('p-blog')) {
         $('body').append('<iframe id="tumblr-like" style="display:none;"></iframe>');
@@ -158,6 +189,11 @@ function tumblrLikeSrc() {
     });
 }
 
+/*
+|--------------------------------------------------------------------------
+| TUMBLR LIKE
+|--------------------------------------------------------------------------
+*/
 function tumblrLike() {
     document.body.insertAdjacentHTML('beforeEnd', '<iframe id="tumblr-like" style="display:none;"></iframe>');
     document.addEventListener('click', function(event) {
@@ -175,7 +211,11 @@ function tumblrLike() {
     }, false);
 }
 
-
+/*
+|--------------------------------------------------------------------------
+| CALLING FUNCTIONS after the DOM is loaded
+|--------------------------------------------------------------------------
+*/
 $(document).ready(function(){
     $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
     $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
@@ -187,6 +227,12 @@ $(document).ready(function(){
     $('.btn-back').click(function(){ parent.history.back(); return false;});
 });
 
+
+/*
+|-------------------------------
+| IE status bar error fix
+|-------------------------------
+*/
 function noError() {
     return true;
 }
