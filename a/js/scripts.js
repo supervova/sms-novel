@@ -222,6 +222,7 @@ $(document).ready(function(){
     dropDowns();
     tooltipSmiley();
     tumblrLike();
+    slideOut();
     $('.box-testimonials').rotaterator({fadeSpeed:1200, pauseSpeed:8000});
     $('<div class="box-cta-hr"></div>').insertBefore('.box-cta .h-secondary');
     $('.btn-back').click(function(){ parent.history.back(); return false;});
