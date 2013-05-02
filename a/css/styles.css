@@ -258,11 +258,8 @@ IFRAME{border:0 none;margin-bottom:1.411764705882353em;overflow:auto;overflow-x:
 .ftr-channels-tumblr I.co{background-position:-270px 0;}
 .ftr-channels-instagram I.co{background-position:-240px 0;}
 .ftr-channels-youtube I.co{background-position:-180px 0;}
-.ftr-share{*margin-left:.4em;padding-top:24px;height:89px;}.ftr-share LI{display:inline-block;*display:inline;margin:0 .2em;position:relative;overflow:hidden;height:20px;min-width:55px;*width:55px;*zoom:1;}
-.ftr-share DIV{position:absolute;bottom:0;left:0;}
-.ftr-share .fb,.ftr-share .goo{padding-top:4px;}.ftr-share .fb DIV,.ftr-share .goo DIV{bottom:-3px;}
-.ftr-share .fb DIV{left:auto;right:0;}
-.ftr-share .tw{padding-top:1px;}
+.ftr-share{*margin-left:.4em;padding-top:24px;height:89px;}.ftr-share LI{display:inline-block;*display:inline;margin:0 .2em;position:relative;overflow:hidden;vertical-align:top;height:20px;min-width:55px;*width:55px;*zoom:1;}
+.ftr-share .fb DIV{position:absolute;left:auto;right:0;bottom:-7px;}
 @media only screen and (min-width:768px) and (max-width:979px){.doc-footer{margin:0 0 0 -364px;width:728px;} .txt-object{display:none;}}@media only screen and (max-width:767px){.doc-footer{border-top:1px dotted #8a8c8f;margin:-0.46153846153846156em 0 0;padding-top:3.923076923076923em;position:static;height:auto;width:auto;}.doc-footer .line{display:block;} .ftr-copyright{text-align:center;padding-left:0;width:auto;}.ftr-copyright:before{margin:0 0 0 -19px;top:-68px;left:50%;} .f-message{display:none;} .ftr-second .ftr-subscribe{display:none;}}@media only screen and (max-width:479px){.ftr-second LI,.ftr-second UL LI{width:240px;} .ftr-blog{display:block;margin:-4px auto 1.4615384615384615em;}.ftr-blog A{background:#018de6;-webkit-border-radius:24px;-moz-border-radius:24px;border-radius:24px;color:#fff !important;display:inline-block;*display:inline;*zoom:1;padding:4px 12px;}.ftr-blog A:hover{text-decoration:none;} .feedburnerFeedBlock{display:block;}.feedburnerFeedBlock .headline{white-space:normal;overflow:auto;max-width:none;}}
 TABLE{background:#ffffff;border:1px solid #d2d5d9;border-collapse:collapse;border-spacing:0;empty-cells:show;text-align:left;margin:0 auto 1.411764705882353em;table-layout:auto;width:100%;*width:97%;}TABLE .col,TABLE .col-1of6,TABLE .col-1of4,TABLE .col-1of3,TABLE .col-1of2,TABLE .col-2of3,TABLE .col-3of4{display:table-cell;float:none;margin-left:0;}
 .table{border:1px solid #d2d5d9;margin-bottom:1.3529411764705883em;}
