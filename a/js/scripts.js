@@ -171,10 +171,11 @@ function tooltipSmiley() {
 
 /*
 |--------------------------------------------------------------------------
-| TUMBLR LIKE source
+| TUMBLR LIKE
+| @todo: research native tumblr like button and my tumblr theme, fix it
 |--------------------------------------------------------------------------
 */
-function tumblrLikeSrc() {
+function tumblrLike() {
     $('.pft-like').click(function() {
         var command = $(this).hasClass('pft-liked') ? 'unlike' : 'like';
         var oauth = $(this).attr('data-reblog').slice(-8);
@@ -184,27 +185,6 @@ function tumblrLikeSrc() {
         $(this).hasClass('pft-liked') ? $(this).removeClass('pft-liked') : $(this).addClass('pft-liked');
         return false;
     });
-}
-
-/*
-|--------------------------------------------------------------------------
-| TUMBLR LIKE
-|--------------------------------------------------------------------------
-*/
-function tumblrLike() {
-    document.addEventListener('click', function(event) {
-        var myLike = event.target;
-        if(myLike.className.indexOf('pft-like') > -1) {
-            var frame = document.getElementById('likeit'),
-                liked = (myLike.className == 'pft-liked'),
-                command = liked ? 'unlike' : 'like',
-                reblog = myLike.getAttribute('data-reblog'),
-                id = myLike.getAttribute('data-id'),
-                oauth = reblog.slice(-8);
-            frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
-            liked ? myLike.className = 'pft-like' : myLike.className = 'pft-liked';
-        }
-    }, false);
 }
 
 /*
