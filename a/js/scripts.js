@@ -174,7 +174,7 @@ function tooltipSmiley() {
 | TUMBLR LIKE source
 |--------------------------------------------------------------------------
 */
-function tumblrLike() {
+function tumblrLikeSrc() {
     $('.pft-like').click(function() {
         var command = $(this).hasClass('pft-liked') ? 'unlike' : 'like';
         var oauth = $(this).attr('data-reblog').slice(-8);
@@ -191,12 +191,11 @@ function tumblrLike() {
 | TUMBLR LIKE
 |--------------------------------------------------------------------------
 */
-function tumblrLikeOld() {
-    document.body.insertAdjacentHTML('beforeEnd', '<iframe id="tumblr-like" style="display:none;"></iframe>');
+function tumblrLike() {
     document.addEventListener('click', function(event) {
         var myLike = event.target;
         if(myLike.className.indexOf('pft-like') > -1) {
-            var frame = document.getElementById('tumblr-like'),
+            var frame = document.getElementById('likeit'),
                 liked = (myLike.className == 'pft-liked'),
                 command = liked ? 'unlike' : 'like',
                 reblog = myLike.getAttribute('data-reblog'),
