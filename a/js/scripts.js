@@ -174,7 +174,7 @@ function tooltipSmiley() {
 | TUMBLR LIKE source
 |--------------------------------------------------------------------------
 */
-function tumblrLike() {
+function tumblrLikeSrc() {
     if ($('body').hasClass('p-blog')) {
         $('body').append('<iframe id="tumblr-like" style="display:none;"></iframe>');
     }
@@ -194,7 +194,7 @@ function tumblrLike() {
 | TUMBLR LIKE
 |--------------------------------------------------------------------------
 */
-function tumblrLikeOld() {
+function tumblrLike() {
     document.body.insertAdjacentHTML('beforeEnd', '<iframe id="tumblr-like" style="display:none;"></iframe>');
     document.addEventListener('click', function(event) {
         var myLike = event.target;
