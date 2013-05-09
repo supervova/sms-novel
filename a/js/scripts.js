@@ -202,6 +202,7 @@ $(document).ready(function(){
     dropDowns();
     tooltipSmiley();
     slideOut();
+    tumblrLike();
     $('.box-testimonials').rotaterator({fadeSpeed:1200, pauseSpeed:8000});
     $('<div class="box-cta-hr"></div>').insertBefore('.box-cta .h-secondary');
     $('.btn-back').click(function(){ parent.history.back(); return false;});
@@ -212,9 +213,8 @@ $(document).ready(function(){
 | After scripting elements created
 |---------------------------------------
 */
-$(document).on(function() {
-    tumblrLike();
-});
+// $(document).on(function() {
+// });
 
 /*
 |---------------------------------------
