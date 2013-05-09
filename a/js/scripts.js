@@ -180,7 +180,7 @@ function tumblrLike() {
         var oauth = $(this).attr('data-reblog').slice(-8);
         var id = $(this).attr('data-id');
         var frameAttr = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
-        $('#tumblr-like').attr('src', frameAttr);
+        $('#likeit').attr('src', frameAttr);
         $(this).hasClass('pft-liked') ? $(this).removeClass('pft-liked') : $(this).addClass('pft-liked');
         return false;
     });
