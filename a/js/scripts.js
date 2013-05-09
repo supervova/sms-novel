@@ -174,16 +174,16 @@ function tooltipSmiley() {
 | TUMBLR LIKE source
 |--------------------------------------------------------------------------
 */
-function tumblrLikeSrc() {
+function tumblrLike() {
     if ($('body').hasClass('p-blog')) {
         $('body').append('<iframe id="tumblr-like" style="display:none;"></iframe>');
     }
     $('.pft-like').click(function() {
-        var frame = $('#tumblr-like');
         var command = $(this).hasClass('pft-liked') ? 'unlike' : 'like';
         var oauth = $(this).attr('data-reblog').slice(-8);
         var id = $(this).attr('data-id');
-        frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
+        var frameAttr = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
+        $('#tumblr-like').attr('src', frameAttr);
         $(this).hasClass('pft-liked') ? $(this).removeClass('pft-liked') : $(this).addClass('pft-liked');
         return false;
     });
@@ -194,7 +194,7 @@ function tumblrLikeSrc() {
 | TUMBLR LIKE
 |--------------------------------------------------------------------------
 */
-function tumblrLike() {
+function tumblrLikeOld() {
     document.body.insertAdjacentHTML('beforeEnd', '<iframe id="tumblr-like" style="display:none;"></iframe>');
     document.addEventListener('click', function(event) {
         var myLike = event.target;

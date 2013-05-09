@@ -4,6 +4,7 @@ _stock/
 /_stock/
 a/css/*
 !a/css/styles.css
+!a/css/blog.css
 a/img/_tmp/
 a/less/*
 a/type/
