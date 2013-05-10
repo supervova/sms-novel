@@ -46,7 +46,7 @@ OL.unstyled,UL.unstyled{padding-left:0;list-style:none}.inline{list-style:none;l
 .m-local LI:first-child,.m-local .first{border-left:0 none;padding-left:0}HEADER .m-local{border-bottom:0;margin-bottom:0;padding-bottom:0;position:absolute;bottom:0;right:0}
 @media only screen and (max-width:767px){DL,DD,OL,UL,.list-view LI{margin-bottom:1.2941176470588236em}HEADER .m-local{margin-bottom:1.2941176470588236em;position:static}
 }FIGURE{margin:0 0 1.411764705882353em}FIGCAPTION{padding:1.411764705882353em 0 0}FIGURE.video{margin:2.4705882352941178em 0 2.588235294117647em;padding:30px 0 56.25%;position:relative;height:0;overflow:hidden;*zoom:1}
-FIGURE.video EMBED,FIGURE.video IFRAME,FIGURE.video OBJECT{position:absolute;top:0;left:0;height:100%;width:100%;*width:expression(this.width>440 ? 440:true)!important}
+FIGURE.video EMBED,FIGURE.video IFRAME,FIGURE.video OBJECT{position:absolute;top:0;left:0;height:100%!important;width:100%;*width:expression(this.width>440 ? 440:true)!important}
 IMG{margin:0 0 1.411764705882353em}FIGURE IMG{margin-bottom:0}IMG.left{float:left;margin:2px 20px 10px 0}FIGURE.left{margin:-31px 20px 10px 0}IMG.right{float:right;margin:2px 0 10px 20px}
 FORM IMG{margin:0}.img-top{margin-top:-0.23529411764705882em}.img-caption{margin-bottom:2.823529411764706em}.post .img-caption:first-of-type{margin-top:1.411764705882353em}
 I.co{background-position:;background-color:transparent;border-width:0;display:block;direction:ltr;text-align:left;text-indent:-4000em;overflow:hidden}
