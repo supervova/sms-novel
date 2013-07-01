@@ -328,10 +328,10 @@
         <div class="col-buy">
         <h3 class="h-buy"><span class="tbl-mob-inl">Роман&nbsp;</span>можно купить</h3>
         <ul class="l-paid cfx">
-        <li class="first"><a href="http://gum.co/MZba" class="dfn ico-fb2 " title="Книга в формате FB2. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите ссылку на файл.">FB2</a>
-        <li><a href="http://gum.co/gtoH" class="dfn ico-epub" title="Книга в формате EPUB. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите файл.">EPUB</a></li>
-        <li><a href="http://gum.co/zHvg" class="dfn ico-pdf" title="Книга в формате PDF. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите файл.">PDF</a></li>
-        <li><a href="http://gum.co/bcJ" class="dfn ico-doc" title="Книга в формате DOC. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите файл.">DOC</a></li>
+        <li class="first"><a href="http://gum.co/MZba" title="Книга в формате FB2. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите ссылку на файл." class="dfn ico-fb2 " onClick="_gaq.push(['_trackEvent', 'Download', 'FB2']);">FB2</a>
+        <li><a href="http://gum.co/gtoH" title="Книга в формате EPUB. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите файл." class="dfn ico-epub" onClick="_gaq.push(['_trackEvent', 'Download', 'EPUB']);">EPUB</a></li>
+        <li><a href="http://gum.co/zHvg" title="Книга в формате PDF. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите файл." class="dfn ico-pdf" onClick="_gaq.push(['_trackEvent', 'Download', 'PDF']);">PDF</a></li>
+        <li><a href="http://gum.co/bcJ" title="Книга в формате DOC. Оплата банковскими картами через международную платежную систему Gumroad. Нажмите на книжку; на открывшейся странице кликните I want this — появится платежная форма. Введите email, номер, проверочный код и срок действия карты. Нажмите Pay — получите файл." class="dfn ico-doc" onClick="_gaq.push(['_trackEvent', 'Download', 'DOC']);">DOC</a></li>
         </ul>
         <p class="note">($1,5 — меньше 50 руб.)</p>
         </div>
@@ -339,8 +339,8 @@
         <div class="col-free">
         <h3 class="h-secondary">Или скачать бесплатно</h3>
         <ul class="l-free">
-        <li class="li-txt"><a href="http://goo.gl/VehGp">TXT</a></li>
-        <li><a href="http://goo.gl/cG8Bx">iPad-книга</a></li>
+        <li class="li-txt"><a href="http://goo.gl/VehGp" onClick="_gaq.push(['_trackEvent', 'Download', 'TXT']);">TXT</a></li>
+        <li><a href="http://goo.gl/cG8Bx" onClick="_gaq.push(['_trackEvent', 'Download', 'iPad']);">iPad-книга</a></li>
         </ul>
         </div>
         </div>
@@ -403,21 +403,13 @@
 
     <!-- Google Analytics -->
     <script>
-    var _gaq=[["_setAccount","UA-34526368-2"],['_setDomainName', 'sms-roman.ru'],["_trackPageview"]];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-    s.parentNode.insertBefore(g,s)}(document,"script"));
-    </script>
-
-    <!-- Google Analytics for external links p.2 -->
-    <script type="text/javascript">
-    function recordOutboundLink(link, category, action) {
-    try {
-    var pageTracker=_gat._getTracker("UA-34526368-2");
-    pageTracker._trackEvent(category, action);
-    setTimeout('document.location = "' + link.href + '"', 100)
-    }catch(err){}
-    }
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create', 'UA-34526368-2', 'sms-roman.ru');
+        ga('send', 'pageview');
     </script>
 </body>
 </html>
