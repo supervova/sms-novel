@@ -101,8 +101,8 @@ HEADER .m-local{border-bottom:0;margin-bottom:0;padding-bottom:0;position:absolu
 @media only screen and (max-width:767px){DL,DD,OL,UL,.list-view LI{margin-bottom:1.2941176470588236em;} HEADER .m-local{margin-bottom:1.2941176470588236em;position:static;}}
 FIGURE{margin:0 0 1.411764705882353em;}
 FIGCAPTION{padding:1.411764705882353em 0 0;}
-FIGURE.video{max-width:500px;margin:2.4705882352941178em 0 2.588235294117647em;padding:30px 0 56.25%;position:relative;height:0;overflow:hidden;*zoom:1;}FIGURE.video IFRAME{position:absolute;top:0;left:0;height:100% !important;width:100%;*width:expression(this.width > 440 ? 440: true) !important;}
-FIGURE.video IFRAME{overflow:auto;overflow-x:hidden;overflow-y:auto;height:auto !important;}
+FIGURE.video{margin:2.4705882352941178em 0 2.588235294117647em;padding:30px 0 56.25%;position:relative;height:0;overflow:hidden;*zoom:1;}FIGURE.video IFRAME,FIGURE.video EMBED,FIGURE.video OBJECT{position:absolute;top:0;left:0;height:100% !important;width:100%;*width:expression(this.width > 440 ? 440: true) !important;}
+FIGURE.video IFRAME{overflow:auto;overflow-x:hidden;overflow-y:auto;}
 IMG{margin:0 0 1.411764705882353em;}
 FIGURE IMG{margin-bottom:0;}
 IMG.left{float:left;margin:2px 20px 10px 0;}
