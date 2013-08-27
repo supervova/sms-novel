@@ -196,10 +196,8 @@ function tumblrLike() {
 */
 $(function() {
 
-    var $allVideos = $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], iframe[src*="//instagram.com/"], iframe[src^="http://coub.com"], object, embed'),
+    var $allVideos = $("iframe[src^='http://player.vimeo.com'], iframe[src^='http://www.youtube.com'], object, embed"),
     $fluidEl = $("figure");
-
-    $allVideos.wrap('<figure class="video" />');
 
     $allVideos.each(function() {
 
@@ -226,6 +224,7 @@ $(function() {
     }).resize();
 
 });
+
 /*
 |-------------------------------------------------------------------------------
 | CALLING FUNCTIONS
@@ -235,6 +234,7 @@ $(function() {
 */
 $(document).ready(function(){
     // $('.i-search').css( 'border-color', 'transparent');
+    $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], iframe[src*="//instagram.com/"], iframe[src^="http://coub.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
     $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
     dropDowns();
     tooltipSmiley();
