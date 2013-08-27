@@ -191,11 +191,13 @@ function tumblrLike() {
 |-------------------------------------------------------------------------------
 | FLUID WIDTH VIDEO
 |-------------------------------------------------------------------------------
+| Self calling anonymous function
+|
 */
-function fluidVideo() {
+$(function() {
 
-    var $allVideos = $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], iframe[src*="//instagram.com/"], iframe[src^="http://coub.com"], object, embed'),
-    $fluidEl = $('figure');
+    var $allVideos = $("iframe[src^='http://player.vimeo.com'], iframe[src^='http://www.youtube.com'], object, embed"),
+    $fluidEl = $("figure");
 
     $allVideos.each(function() {
 
@@ -221,7 +223,7 @@ function fluidVideo() {
 
     }).resize();
 
-}
+});
 
 /*
 |-------------------------------------------------------------------------------
@@ -232,7 +234,6 @@ function fluidVideo() {
 */
 $(document).ready(function(){
     // $('.i-search').css( 'border-color', 'transparent');
-    fluidVideo();
     $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
     dropDowns();
     tooltipSmiley();
