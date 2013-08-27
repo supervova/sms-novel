@@ -187,7 +187,6 @@ function tumblrLike() {
     });
 }
 
-
 /*
 |-------------------------------------------------------------------------------
 | FLUID WIDTH VIDEO
@@ -206,7 +205,8 @@ $(function() {
         // jQuery .data does not work on object/embed elements
         .attr('data-aspectRatio', this.height / this.width)
         .removeAttr('height')
-        .removeAttr('width');
+        .removeAttr('width')
+        .wrap('<figure class="video" />');
 
     });
 
@@ -225,7 +225,6 @@ $(function() {
     }).resize();
 
 });
-
 /*
 |-------------------------------------------------------------------------------
 | CALLING FUNCTIONS
