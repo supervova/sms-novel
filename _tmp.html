@@ -12,6 +12,8 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&amp;subset=latin,cyrillic,latin-ext">
+
     <style type="text/css">
         HTML {
             font-size: 100%;
@@ -21,7 +23,7 @@
         HTML, BODY { min-height: 100%; }
 
         BODY {
-            color: #515458;
+            color: #3d4045;
             background: #f7f8fa;
             text-align: left;
             -webkit-font-smoothing: antialiased;
@@ -33,65 +35,56 @@
             font: bold;
         }
 
-        H1, H2, H3 {
-            font-stretch: condensed;
+        H1, H2, H3, H4 {
+            font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
             text-rendering: optimizelegibility;
             margin: 0; }
 
         H1, H2 {
-            font-family: 'HelveticaNeueCondensed', 'HelveticaNeue-Condensed', 'Helvetica Neue Condensed', 'HelveticaNeueRomanCondensed', 'HelveticaNeue-Roman-Condensed', 'Helvetica Neue Roman Condensed', 'Roboto Condensed Regular', 'RobotoCondensed-Regular', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', 'TeXGyreHerosCnRegular', Helvetica, Arial, sans-serif;
-            font-weight: 400;
             letter-spacing: -.04em; }
 
         H1 {
             font-size: 200%;
+            font-weight: 400;
             line-height: 1.125;
             padding-top: 0;
             padding-bottom: 0; }
 
         H2 {
             font-size: 150%;
-            font-stretch: condensed;
+            font-weight: 300;
             line-height: 1;
             padding-top: 0;
             padding-bottom: 0; }
 
-        H3 {
-            font-size: 112.5%;
-            font-family: 'HelveticaNeueBoldCondensed', 'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed', 'Roboto Condensed Bold', 'RobotoCondensed-Bold', 'Roboto Condensed', 'Arial Narrow', 'Segoe UI', 'TeXGyreHerosCnBold', Helvetica, Arial, sans-serif;
-            font-weight: 700; }
+        H3, H4 { font-size: 112.5%; }
 
-        .georgia P {
+        H4 { color: #797c80; }
+
+        P {
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 112.5%;
-            line-height: 1.333; }
+            line-height: 1.34; }
 
-        .times P {
-            font-family: 'Times New Roman', Times, Georgia, serif;
-            font-size: 106.3%;
-            line-height: 1.294; }
+        .sans-serif {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 100%;
+            line-height: 1.34; }
 
         @media only screen and (max-width: 400px) {
         }
-	</style>
+    </style>
 
 </head>
 
 <body>
-<article class="georgia">
-<h1>Заголовок первого уровня</h1>
-<h2>Заголовок второго уровня</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
-<h3>Заголовок третьего уровня</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
-</article>
-
-<article class="times">
-<h1>Заголовок первого уровня</h1>
-<h2>Заголовок второго уровня</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
-<h3>Заголовок третьего уровня</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
+<article>
+    <h1>The quick brown fox jumps over the lazy dog</h1>
+    <h2>Съешь же ещё этих мягких французских булок, да выпей чаю</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
+    <h3>Заголовок третьего уровня</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
+    <p class="sans-serif">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
 </article>
 </body>
 </html>
