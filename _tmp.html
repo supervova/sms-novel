@@ -12,7 +12,7 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300&amp;subset=latin,cyrillic,latin-ext">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,700,300&amp;subset=latin,cyrillic,latin-ext">
 
     <style type="text/css">
         HTML {
@@ -27,8 +27,7 @@
             background: #f7f8fa;
             color: #4a4d51;
             font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-            font-size: 15px;
-            font-size: .938rem;
+            font-size: 93.8%;
             line-height: 22px;
             line-height: 1.375rem;
             text-align: left;
@@ -50,18 +49,16 @@
 
         H1 {
             color: #000;
-            font-size: 30px;
-            font-size: 1.875rem;
+            font-size: 200%;
             line-height: 33px;
-            line-height: 2.063rem;
+            line-height: 33px;
             padding-bottom: 11px;
             padding-bottom: .688rem;  }
 
         H2 {
-            font-size: 24px;
-            font-size: 1.5rem;
-            line-height: .917;
-            padding-bottom: .458em; }
+            font-size: 156.3%;
+            line-height: 1.32;
+            padding-bottom: .44em; /* 11px */ }
 
         H3, H4 { font-size: 100%; }
 
@@ -71,53 +68,22 @@
             margin: 0 0 22px;
             margin: 0 0 1.375rem; }
 
-        .detail-view H1, .detail-view H2 {
-            padding-bottom: 12px;
-            padding-bottom: .75rem;  }
-
-        .detail-view H1 {
-            line-height: 36px;
-            line-height: 2.25rem; }
-
-        .detail-view H2 {
-            line-height: 24px;
-            line-height: 1.5rem; }
-
-        .detail-view DL, .detail-view OL, .detail-view P, .detail-view UL {
-            font-family: Georgia, 'Times New Roman', Times, serif; }
-
-        .detail-view DL, .detail-view H3, .detail-view H4, .detail-view OL,
-        .detail-view P, .detail-view UL {
-            font-size: 18px;
-            font-size: 1.125rem;
-            line-height: 24px;
-            line-height: 1.5rem; }
-
-        .detail-view DIV, .detail-view DL, .detail-view OL, .detail-view P, .detail-view UL {
-            margin: 0 0 24px;
-            margin: 0 0 1.5rem; }
+        .roboto H1, .roboto H2 { font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 
         @media only screen and (max-width: 400px) {
             BODY {
                 margin: 0;
+                font-size: 100%;
                 padding: 20px;
                 max-width: none; }
 
             H1 {
-                font-size: 150%;
-                font-weight: 700;
-                line-height: 1;
-                padding-bottom: .5em; }
+                font-size: 150%; /* 24px */
+                font-weight: 700; }
 
             H2 {
                 font-size: 125%;
-                line-height: 1.2;
-                padding-bottom: .6em; }
-
-            DIV, DL, OL, P, UL {
-                font-size: 16px;
-                font-size: 1rem; }
-
+                line-height: 1.1; }
         }
     </style>
 
@@ -133,12 +99,14 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
     </section>
 
+<section class="roboto">
     <h1>The quick brown fox jumps over the lazy dog</h1>
     <h2>Съешь же ещё этих мягких французских булок, да выпей чаю</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
     <h3>Заголовок третьего уровня</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, repellendus blanditiis dolorum doloribus nesciunt temporibus ea qui vitae architecto beatae adipisci rem repudiandae eveniet illo rerum assumenda harum. Fugit, laborum.</p>
+</section>
 </article>
 </body>
 </html>
