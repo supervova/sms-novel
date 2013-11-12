@@ -11,6 +11,9 @@ Disallow: /.git/
 Disallow: /_snips/
 Disallow: /_stock/
 
+# Internal Search Results
+Disallow: /search/
+
 # Files
 Disallow: /_stock/tumblr-theme-html.html
 Disallow: /customize/supervova
