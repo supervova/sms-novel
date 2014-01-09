@@ -327,10 +327,10 @@
         <div class="col-buy">
         <h3 class="h-buy">Скачать бесплатно</h3>
         <ul class="l-paid cfx">
-            <li class="first"><a href="https://www.paywithatweet.com/pay/?id=8c5cb48f0a171d6754bebbc58367b15a" onClick="_gaq.push(['_trackEvent', 'Download', 'FB2']);" class="dfn ico-fb2 " title="Книга в формате FB2. Можете скачать бесплатно, опубликовав короткую информацию о книге в Фейсбуке, Вконтакте или Твиттере">FB2</a>
-            <li><a href="https://www.paywithatweet.com/pay/?id=2d33b3d6a4c1d708e78ef028ba20bc6a" onClick="_gaq.push(['_trackEvent', 'Download', 'EPUB']);" class="dfn ico-epub" title="Книга в формате EPUB. Можете скачать бесплатно, опубликовав короткую информацию о книге в Фейсбуке, Вконтакте или Твиттере">EPUB</a></li>
-            <li><a href="https://www.paywithatweet.com/pay/?id=f08f4f6658852f1b277b202d07f9075c" onClick="_gaq.push(['_trackEvent', 'Download', 'PDF']);" class="dfn ico-pdf" title="Книга в формате PDF. Можете скачать бесплатно, опубликовав короткую информацию о книге в Фейсбуке, Вконтакте или Твиттере">PDF</a></li>
-            <li><a href="https://www.paywithatweet.com/pay/?id=e9a9c85bb3269fe01391fc4db10efeb2" onClick="_gaq.push(['_trackEvent', 'Download', 'DOC']);" class="dfn ico-doc" title="Книга в формате DOC. Можете скачать бесплатно, опубликовав короткую информацию о книге в Фейсбуке, Вконтакте или Твиттере">DOC</a></li>
+            <li class="first"><a href="https://www.paywithatweet.com/pay/?id=8c5cb48f0a171d6754bebbc58367b15a" class="dfn ico-fb2" title="Книга в формате FB2. Можете скачать бесплатно, опубликовав короткую информацию о книге в Фейсбуке, Вконтакте или Твиттере">FB2</a></li>
+            <li><a href="https://www.paywithatweet.com/pay/?id=2d33b3d6a4c1d708e78ef028ba20bc6a" class="dfn ico-epub" title="Книга в формате EPUB. Можете скачать бесплатно, опубликовав короткую информацию о книге в Фейсбуке, Вконтакте или Твиттере">EPUB</a></li>
+            <li><a href="https://www.paywithatweet.com/pay/?id=f08f4f6658852f1b277b202d07f9075c" class="dfn ico-pdf" title="Книга в формате PDF. Можете скачать бесплатно, опубликовав короткую информацию о книге в Фейсбуке, Вконтакте или Твиттере">PDF</a></li>
+            <li><a href="https://www.paywithatweet.com/pay/?id=e9a9c85bb3269fe01391fc4db10efeb2" class="dfn ico-doc" title="Книга в формате DOC. Можете скачать бесплатно, опубликовав короткую информацию о книге в Фейсбуке, Вконтакте или Твиттере">DOC</a></li>
         </ul>
         <p class="note">за сообщение в соц. сетях</p>
         </div>
@@ -338,8 +338,8 @@
         <div class="col-free">
         <h3 class="h-secondary tbl-mob-inl">выбирайте формат</h3>
         <ul class="l-free">
-        <li class="li-txt"><a href="http://goo.gl/VehGp" onClick="_gaq.push(['_trackEvent', 'Download', 'TXT']);">TXT</a></li>
-        <li><a href="http://goo.gl/cG8Bx" onClick="_gaq.push(['_trackEvent', 'Download', 'iPad']);">iPad-книга</a></li>
+        <li class="li-txt"><a href="https://www.paywithatweet.com/pay/?id=594db7ccd3cea713e00e9133cda75c88" class="a-download-txt" title="Книга в формате TXT. Можете скачать бесплатно, опубликовав короткую информацию о книге в Фейсбуке, Вконтакте или Твиттере">TXT</a></li>
+        <li><a href="https://www.paywithatweet.com/pay/?id=95f0a9030dc36b53cf0f97b080d51e4a" class="a-download-ipad" title="Книга в формате iPad-книги. Можете скачать бесплатно, опубликовав короткую информацию о книге в Фейсбуке, Вконтакте или Твиттере">iPad-книга</a></li>
         </ul>
         </div>
         </div>
@@ -402,16 +402,13 @@
 
     <!-- Google Analytics -->
     <script>
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-34526368-2']);
-        _gaq.push(['_setDomainName', 'sms-roman.ru']);
-        _gaq.push(['_trackPageview']);
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+        ga('create', 'UA-34526368-2', 'sms-roman.ru');
+        ga('send', 'pageview');
     </script>
 </body>
 </html>

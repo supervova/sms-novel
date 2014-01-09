@@ -205,6 +205,14 @@ $(document).ready(function(){
     $('.box-testimonials').rotaterator({fadeSpeed:1200, pauseSpeed:8000});
     $('<div class="box-cta-hr"></div>').insertBefore('.box-cta .h-secondary');
     $('.btn-back').click(function(){ parent.history.back(); return false;});
+
+    $('.l-paid .ico-fb2').on('click', function() {ga('send', 'event', 'Download', 'FB2');});
+    $('.l-paid .ico-epub').on('click', function() {ga('send', 'event', 'Download', 'EPUB');});
+    $('.l-paid .ico-pdf').on('click', function() {ga('send', 'event', 'Download', 'PDF');});
+    $('.l-paid .ico-doc').on('click', function() {ga('send', 'event', 'Download', 'DOC');});
+
+    $('.l-free .a-download-txt').on('click', function() {ga('send', 'event', 'Download', 'TXT');});
+    $('.l-free .a-download-ipad').on('click', function() {ga('send', 'event', 'Download', 'iPad');});
 });
 
 /*
