@@ -327,5 +327,6 @@ TR,IMG{page-break-inside:avoid}UL{list-style-image:none;list-style-type:disc}}
 .p-404 .img-top { -webkit-background-size: 220px 220px; -moz-background-size: 220px 220px; -o-background-size: 220px 220px; background-size: 220px 220px }
 .p-thank-you .img-top { background: transparent url(/a/img/illustrations/khobotov-x2.jpg) no-repeat; -webkit-background-size: 220px 220px; -moz-background-size: 220px 220px; -o-background-size: 220px 220px; background-size: 220px 220px }
 .p-thank-you .img-top IMG { visibility: hidden }
-.p-ipad .img-ipad-01, .p-ipad .img-ipad-02, .p-ipad .img-ipad-03, .p-ipad .img-ipad-04 { -webkit-background-size: 100% 100%; -moz-background-size: 100% 100%; -o-background-size: 100% 100%; background-size: 100% 100% }
+.p-ipad .img-ipad-01, .p-ipad .img-ipad-04 { -webkit-background-size: 325px 416px; -moz-background-size: 325px 416px; -o-background-size: 325px 416px; background-size: 325px 416px }
+.p-ipad .img-ipad-02, .p-ipad .img-ipad-03 { -webkit-background-size: 650px 539px; -moz-background-size: 650px 539px; -o-background-size: 650px 539px; background-size: 650px 539px }
 }
