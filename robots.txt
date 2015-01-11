@@ -15,6 +15,7 @@ Disallow: /_stock/
 Disallow: /search/
 
 # Files
+Disallow: /ac/valentine/index.htm
 Disallow: /_stock/tumblr-theme-html.html
 Disallow: /customize/supervova
 
