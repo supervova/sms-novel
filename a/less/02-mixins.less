@@ -83,6 +83,18 @@ Internet explorer's cures
 .ie7-restore-right-whitespace() {
   *margin-right: .3em; }
 
+.fixed-on-top() {
+    position: fixed;
+    top: 0;
+    *position: absolute;
+    *top: ~'expression(( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) + "px" )';
+}
+
+.height-100p() {
+    height: 100%;
+    *height: ~'expression(minY=(this.scrollHeight < parseInt(this.currentStyle.minHeight)+1)? this.currentStyle.minHeight : maxY=(this.scrollHeight > parseInt(this.currentStyle.maxHeight)+1)? this.currentStyle.maxHeight : "auto")';
+}
+
 /*  **************************************************
 
     VERTICAL RHYTHM

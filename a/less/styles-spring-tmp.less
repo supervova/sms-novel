@@ -1,0 +1,113 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+@modal-md:                  640px;
+
+@mb-margin-top:             60px;
+@mb-padding:                22px 40px 66px;
+@mb-padding-mob:            0 40px 0 20px;
+
+@mb-close-top:              14px;
+@mb-close-right:            20px;
+@mb-close-bg-position:      -150px 0;
+@mb-close-dimension:        24px;
+
+// Overlay
+@modal-backdrop-bg:         #000; // 2
+@modal-backdrop-opacity:    64;
+
+
+
+// Body class for killing the scroll
+.modal-open { overflow: hidden; }
+
+/* .modal-box is just a container that centered real modal box */
+.modal-box {
+    -webkit-overflow-scrolling: touch;
+    display: none;
+    text-align: center;
+    overflow-y: scroll;
+    overflow: auto;
+    // Prevent Chrome on Windows from adding a focus outline
+    outline: 0;
+    .fixed-on-top;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .height-100p;
+    width: 100%;
+    z-index: 444;
+
+    // Real Modal Box
+    .mb-body {
+        background: #FFF;
+        .border-radius(24px);
+        text-align: left;
+        margin: @mb-margin-top auto 0;
+        overflow-y: auto;
+        padding: @mb-padding;
+        position: relative;
+        max-height: 64%;
+        _height: 21 * @bl + 0px; // 462px
+        width: @modal-md;
+        *zoom: 1;
+    }
+
+    H2 {
+        text-shadow:0 1px 0 rbga(255, 255, 255, .4);
+        margin: 0;
+        padding: 0 20px 0 0;
+    }
+
+    // There are resets in buttons.less
+    .btn-close {
+        background-position: @mb-close-bg-position;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+        top: @mb-close-top;
+        right: @mb-close-right;
+        height: @mb-close-dimension;
+        width: @mb-close-dimension;
+        z-index: 2;
+    }
+
+}
+
+// Overlay
+.overlay {
+    background: @modal-backdrop-bg;
+    display: none;
+    .opacity(@modal-backdrop-opacity);
+    .fixed-on-top;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: @zindex-modal-background;
+}
+
+/*
+|-------------------------------------------------------------------------------
+| PHONES & SMALL PORTRAIT TABLETS: up to 767px
+|-------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 767px) {
+    .modal-box {
+        padding: 10px;
+
+        .mb-body {
+            margin: 0;
+            padding: 22px 20px;
+            max-height: none;
+            height: auto;
+            width: 100%;
+        }
+
+        .btn-close { right: 10px; }
+    }
+}
