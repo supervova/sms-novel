@@ -10,13 +10,17 @@ Disallow: /*?
 Disallow: /.git/
 Disallow: /_snips/
 Disallow: /_stock/
+Disallow: /a/css/
+Disallow: /a/js/
+Disallow: /a/less/
+Disallow: /a/type/
+Disallow: /campaign/
 
 # Internal Search Results
 Disallow: /search/
 
 # Files
-Disallow: /ac/valentine/index.htm
-Disallow: /_stock/tumblr-theme-html.html
+Disallow: /ac/spring/index.htm
 Disallow: /customize/supervova
 
 Disallow: /_temp.html

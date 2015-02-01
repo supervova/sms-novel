@@ -1,0 +1,294 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.p-front, .p-front .page { background-image: url(/a/img/bg-front.png); }
+
+.p-front {
+
+    /* BILLBOARD */
+    .billboard {
+        font-family: @font-sans;
+        text-align: center;
+        padding: @baseline 20px 0;
+
+        .hgroup { padding-bottom: @baseline / 4 * 3; }
+
+        H1, .hgroup H2 { color: #FFF;}
+
+        .hgroup H2 { margin-top: 0;}
+
+        H1 {
+            font-weight: bold;
+            padding-bottom: 19em / @h1; }
+
+        .txt-first { display: block; }
+
+        .row {
+            position: relative;
+            *zoom: 1;
+        }
+
+        .box-chat, .box-main-pic {
+            font-size: 16 / @b * 100%;
+            line-height: @baseline-s; }
+        UL {
+            list-style: none;
+            list-style-image: none; }
+    }
+
+    /* Chat */
+    .box-chat {
+        text-align: left;
+
+        UL { padding: 0;}
+
+        LI {
+            background: url(/a/img/bubbles.png) no-repeat;
+            min-height: 66px;
+            *height: 66px;
+            width: 180px; }
+
+        .her {
+            background-position: -6px 0;
+            margin: 0 -6px (8em / @bs) 0;
+            padding: (@baseline-s / 4) 26px 0 20px; }
+
+        .me {
+            background-position: 0 -79px;
+            margin: 0 0 (8em / @bs) -6px;
+            padding: (@baseline-s / 4) 20px 0 26px; }
+        }
+
+    /* Main pic */
+    .box-main-pic {
+        color: #47494c;
+        padding-top: 36px;
+        width: 480 / 920 * 100%;
+        *width: 479 / 920 * 100%;
+
+        FIGURE {
+            margin: 0 auto 1em / @bs;
+            height: 209px; // Sinse it's not image we can't make it responsive
+            width: 365px; }
+        P { padding-top: @baseline-s; }
+        }
+
+    /* CTA moved to 16-boxes to use it throu the site */
+
+    /* BTL */
+    .btl {
+        padding: 63em/@b 20px 0;
+
+        .box-synopsis {
+            padding: 16em/@b 20px 0 40px;
+            width: 500 / 920 * 100%;
+            *width: 499 / 920 * 100%; }
+
+        .box-testimonials {
+            float: right;
+            padding: 16em/@b 0 0 20px;
+            width: 220px;
+
+            P { margin-bottom: 0;}
+        }
+    }
+
+    .doc-footer { padding-bottom: 0; }
+}
+
+/*==================================================
+HIGH RESOLUTION DEVICES
+==================================================*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+
+    .p-front {
+        .box-main-pic {
+            IMG { visibility: hidden; }
+            FIGURE {
+                background: transparent url(/a/img/main-pic-x2.png) no-repeat;
+                .background-size(100% 100%); }
+        }
+
+        .box-author-pic {
+            background: transparent url(/a/img/author/vladimir-nikishin-front-x2.jpg) no-repeat;
+            .background-size(100% 100%);
+
+            IMG { visibility: hidden; }
+        }
+
+    .box-chat LI {
+            background: transparent url(/a/img/bubbles-x2.png) no-repeat;
+            .background-size(232px 160px); }
+    }
+}
+
+/***************************************************
+
+PORTRAIT TABLETS: 768–979px
+
+***************************************************/
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+    .p-front {
+        .box-cta { float: right; }
+
+        .box-author-pic { display: none; }
+
+        .btl .box-synopsis { padding: 19em/@b 20px 0 0; }
+
+        .btl .box-testimonials { padding-top: 19em/@b; }
+    }
+
+}
+
+/***************************************************
+
+!! BL SHIFT !!
+PHONES & SMALL PORTRAIT TABLETS: 480–767px
+
+***************************************************/
+
+@media only screen and (max-width: 767px) {
+    .p-front {
+        background-position: 0 -124px;
+
+        .page { background-position: 0 -124px; }
+
+        .billboard {
+            padding: 0;
+
+            H1 { padding-bottom: 17em / @h1m; }
+
+            .txt-first { display: inline; }
+
+            .row { min-height: 339em / @bm; }
+
+            .box-main-pic, .h-cta, .h-buy { line-height: 22px; }
+            }
+
+        .box-main-pic {
+
+            padding-top: 32px;
+
+            FIGURE {
+                background: transparent url(/a/img/main-pic-mobile.png) no-repeat;
+                height: 104px; // Sinse it's not image we can't make it responsive
+                width: 183px; }
+
+            IMG { visibility: hidden; }
+
+            B { display: block; }
+        }
+
+        .box-cta {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            .body { min-height: 274px; }
+        }
+
+            .h-buy { padding: 14em / @bs 0; }
+
+            .l-paid { margin-bottom: 5em / @bs; }
+
+            HR { margin: (7em / @bs) auto; }
+
+            .l-free { margin: -3px auto 0; }
+
+        /* BTL */
+        .box-author-pic { display: none; }
+
+        .btl {
+            padding: 0;
+
+            .box-synopsis, .box-testimonials { width: 100%; }
+
+            .box-synopsis { padding: 0 0 38em/@bm; }
+
+            .box-testimonials {
+                border-top: 1px dotted #8a8c8f;
+                padding: 49em/@bm 0 @baseline-mob;
+                height: 292em/@bm;
+                width: 100%; }
+        }
+
+        .doc-footer {
+            padding-top: 51em/13; }
+
+    }
+}
+
+/*==================================================
+HIGH RESOLUTION DEVICES for 480–767px devices
+Nested rules don't work
+==================================================*/
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px),
+only screen and (min-resolution: 144dpi) and (max-width: 767px) {
+
+    .p-front  .box-main-pic FIGURE {
+        background: transparent url(/a/img/main-pic-mobile-x2.png) no-repeat;
+        .background-size(100% 100%);
+
+        IMG { visibility: hidden; }
+    }
+}
+
+/***************************************************
+
+PORTRAIT PHONES
+
+***************************************************/
+
+@media only screen and (max-width: 479px) {
+
+    .p-front  {
+        .box-main-pic {
+            width: 100%;
+            P { display: none; }
+        }
+
+        .billboard {
+            padding-top: 166em / @b;
+            position: relative;
+            *zoom: 1;
+
+            .hgroup  { padding-bottom: 15em / @b; }
+
+            H1 {
+                font-size: 22 / @b * 100%;
+                line-height: 1;
+                padding-bottom: 2em / 22; }
+
+            .row {
+                padding-bottom: 8em / @bm;
+                position: static;
+                min-height: 0; }
+        }
+
+        .hgroup  H2 {
+            font-family: @font-sans;
+            font-size: @bs /  @b * 100%;
+            font-weight: 400;
+            line-height: @baseline-mob-s; }
+
+        .box-main-pic {
+            padding-top: 0;
+            position: static;
+
+            FIGURE {
+                position: absolute;
+                margin-left: -92px;
+                top: 53px;
+                left: 50%; }
+        }
+
+        .box-cta { position: static; }
+    }
+
+}

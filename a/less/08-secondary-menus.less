@@ -1,0 +1,395 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.doc-header .mm-dropdown, .body-dropdown, .hdr-dropdown {
+    .border-radius(4px);
+    .box-shadow(0 2px 8px rgba(0,0,0,.12));
+
+    /* none by default, but block on "open" of the menu */
+    display: none;
+    margin: 0;
+    position: absolute;
+    z-index: @z-dd;
+
+    LI {
+        display: block;
+        *float: none;
+        margin: 0 0 1px; }
+
+    /* Active state */
+    .active > A { font-weight: bold; }
+
+    .group A {
+        .inline-block;
+        padding: 5px 10px 6px; }
+}
+
+/* "On the other hand section" */
+.menu-border-guard {
+    border-bottom: 1px solid #e5cc66;
+    margin-bottom: 6px !important;
+    padding-bottom: 6px;
+    position: relative;
+    *zoom: 1;
+
+    &:after {
+        border-top: 1px solid #fff28c;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0;
+        width: 200px; }
+}
+
+/* "On the other hand section" */
+.menu-optgroup-h {
+    border-top: 1px solid #e5cc66;
+    margin-top: 6px;
+    padding: 11px 0 6px;
+    position: relative;
+    *zoom: 1;
+
+    &:before {
+        border-top: 1px solid #fff28c;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 200px; }
+}
+
+
+/*==================================================
+Main menu dropdowns
+==================================================*/
+.mm-dropdown {
+    border-bottom-width: 2px;
+    padding: 11px 9px 14px;
+    top: 37px;
+    right: -10px;
+    width: 200px;
+
+    &:before { /* Caret border */
+        border-top: 12px solid transparent;
+        border-right: 12px solid;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: -12px;
+        right: 19px; }
+
+    &:after { /* Caret body */
+        border-top: 10px solid transparent;
+        border-right: 10px solid;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        z-index: 2; }
+
+    A {
+        .border-radius(3px);
+        padding: 5px 5px 6px; }
+}
+
+/*==================================================
+Header dropdowns
+==================================================*/
+.hdr-menu, .pst-menu {
+    position: relative;
+    *zoom: 1;
+}
+
+.hdr-dropdown {
+    background: @c-tr;
+    border: @brd;
+    text-align: left;
+    padding: 7px 19px 21px;
+    top: 37px;
+    right: 0;
+    width: 100px;
+
+    &:before { /* Caret border */
+        border-top: 12px solid transparent;
+        border-right: 12px solid @c-brd;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: -12px;
+        right: 19px; }
+
+    &:after { /* Caret body */
+        border-top: 10px solid transparent;
+        border-right: 10px solid @c-tr;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        z-index: 2; }
+
+}
+
+/*==================================================
+Body dropdowns
+==================================================*/
+.body-menu {
+    position: relative;
+    *zoom: 1;
+}
+
+.body-dropdown {
+    background: @bg;
+    border: @brd;
+    text-align: left;
+    bottom: 2*@baseline;
+    left: 0;
+    width: 278px;
+
+    &:before { /* Caret border */
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid @c-brd;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        bottom: -12px;
+        left: 19px; }
+
+    &:after { /* Caret body */
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid @bg;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        bottom: -10px;
+        left: 20px;
+        z-index: 2; }
+
+    H3 {
+        #gradient > .vertical(@c-tr, @c-th);
+        .border-radius(3px 3px 0 0);
+        border-bottom: @brd;
+        color: darken(@c-nt, 28%);
+        padding: 15px 19px 0;
+        height: 31px; } /* 2*baseline - padding - border */
+}
+
+/* Posts dropdowns */
+.post .body-dropdown {
+    font-style: italic;
+    padding: 19px 19px 21px;
+    width: 100px;
+
+    LI {
+        padding: 0 0 0 24px;
+        position: relative;
+        *zomm: 1; }
+
+    A {
+        color: #65676a;
+        display: block;
+        padding: 5px 0;
+        text-decoration: none; }
+
+    I.co {
+        position: absolute;
+        left: 0;
+        top: 6px;
+        height: 20px;
+        width: 20px; }
+}
+
+/*==================================================
+Customs: blog drop-down
+==================================================*/
+
+.mm-blog .mm-dropdown {
+    background: @yellow-accent;
+    border: 1px solid #e5cc66;
+    color: #bfa640; /* Menu headings color */
+    text-shadow: 0 1px 1px rgba(255,255,255,.48);
+
+    .mm-dropdown-a {
+        color: #8c730d;
+        text-shadow: none;
+
+        &:focus, &:hover, &:active { background: #f2d973; }
+    }
+}
+
+.mm-blog .mm-dropdown {
+    &:before { /* Caret border */
+        border-right-color: #e5cc66 !important; }
+
+    &:after { /* Caret body */
+        border-right-color:  @yellow-accent !important; }
+}
+
+/*==================================================
+Sidebar section menu
+==================================================*/
+.box-menu {
+    text-align: center;
+    margin: -7em/17 0 30em/17;
+    width: 220px;
+
+    .body {
+        .border-radius(0 0 4px 4px);
+        text-shadow: 0 1px 1px rgba(255,255,255,.48);
+        padding: 14px 10px 21px; }
+
+    .box-menu-note { padding: 5px 0 7px; }
+
+    UL { margin-bottom: 0; }
+
+    LI {
+        display: block;
+        margin: 0 0 1px; }
+
+    A {
+        .border-radius(3px);
+        display: block;
+        text-shadow: none;
+        text-decoration: none;
+        padding: 5px 5px 6px; }
+
+    /* Active state */
+    .active > A { font-weight: bold; }
+
+    .group A {
+        .inline-block;
+        padding: 5px 10px 6px; }
+}
+
+.box-menu-h {
+    .border-radius(4px 4px 0 0);
+    font-family: @font-sans;
+    font-size: 16 / @b * 100%;
+    font-weight: normal;
+    line-height: @baseline-s;
+    padding: (@baseline-s / 4) 0 0;
+    height: @baseline-s*1.5 - (@baseline-s / 4); }
+
+/* Blog section menu coloring */
+
+.p-blog .box-menu {
+    .body {
+        background: @yellow-accent;
+        color: #bfa640; /* Menu headings color */ }
+
+    .box-menu-note { color: #a68c26; }
+
+    A {
+        color: #8c730d;
+        &:focus, &:hover, &:active { background: #f2d973; }
+    }
+}
+
+.p-blog .box-menu-h {
+    background: #f2d973;
+    color: #8c730d;
+    text-shadow: 0 1px 1px rgba(255,255,255,.48); }
+
+/*==================================================
+Submenus: Archive, RSS, Email Subscription
+==================================================*/
+
+.sm-secondary-ations {
+    background: #ebeef2;
+    .border-radius(3px);
+    color: #686c70;
+    margin-top: @baseline/2 !important;
+    padding: 13px 10px;
+    position: static;
+    width: 180px;
+
+    H3 {
+        border-top: 1px dashed #c5c8cc;
+        margin-top: 6px;
+        padding: 11px 0 7px; }
+
+    A {
+        color: #686c70 !important;
+        &:focus, &:hover { background: #dee1e5 !important; }
+    }
+
+}
+
+.doc-header .mm-dropdown .group, .box-menu .group {
+    .sm-rss {
+        margin-right: .1em;
+        padding-left: 28px;
+        position: relative; }
+    .sm-email {
+        margin-left: .1em;
+        padding-right: 32px;
+        position: relative; }
+}
+
+    .sm-rss:before, .sm-email:after {
+        /* Main sprite */
+        .ir;
+        content: '';
+        position: absolute;
+        height: 14px;
+        width: 18px; }
+
+    .sm-rss:before {
+        background-position:  -220px 0;
+        top: 9px;
+        left: 9px; }
+
+    .sm-email:after {
+        background-position:  -250px 0;
+        top: 10px;
+        right: 9px; }
+
+/***************************************************
+
+PORTRAIT TABLETS: 768–979px
+
+***************************************************/
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+    .box-menu { display: none; }
+}
+
+/***************************************************
+
+!! BL SHIFT !!
+PHONES & SMALL PORTRAIT TABLETS: 480–767px
+
+***************************************************/
+
+@media only screen and (max-width: 767px) {
+
+.hdr-dropdown {
+    font-size: @small-font-size;
+    font-style: italic;
+
+    LI {
+        padding: 0 0 0 24px;
+        position: relative;
+        *zomm: 1; }
+
+    A {
+        color: #65676a;
+        display: block;
+        padding: 5px 0;
+        text-decoration: none; }
+
+    I.co {
+        position: absolute;
+        left: 0;
+        top: 6px;
+        height: 20px;
+        width: 20px; }
+}
+
+.box-menu { display: none; }
+}

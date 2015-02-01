@@ -1,0 +1,406 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+ASIDE.left, ASIDE.right {
+    .box-sizing(border-box);
+    width: 33.3333333%; /*  1/3 of body width - 320 in 960px layout */
+
+    ADDRESS, BLOCKQUOTE, DL, OL, UL, FIELDSET, PRE, P {
+        &:last-child { margin-bottom: 0; }
+        }
+
+    }
+
+    .doc-main ASIDE.left, .doc-main ASIDE.right { width: 44.44%; /* Still 1/3 of body width */ }
+
+    ASIDE.left { margin: 0 20px @baseline 0; }
+
+    ASIDE.right { margin: 0 0 @baseline 20px; }
+
+
+BLOCKQUOTE {
+    color: #47494c;
+    margin: 0 0 @baseline;
+    padding: 0;
+    .pseudo-before;
+    position: relative;
+    *zoom: 1;
+
+    &:before, &.before {
+        content: '\00ab';
+        font-size: 27/17 * 100%;
+        position: absolute;
+        top: -1em/27;
+        left: -.6em;}
+
+    P:last-of-type:not(.byline) { margin-bottom: 0; }
+
+    P:last-of-type:not(.byline):after { content: '\00bb'; }
+
+    FOOTER {
+        color: @c-nt;
+        font-style: italic; }
+    }
+
+
+/*==================================================
+General boxes
+==================================================*/
+
+.box {
+    border: @brd;
+    .border-radius(4px);
+    .box-shadow(0 2px 2px rgba(0,0,0,.12));
+    margin-top: -1/2*@baseline !important;
+    .padding-bottom (@b, 1, 1);
+
+    HEADER {
+        #gradient > .vertical(#eeebf2, #e3e6ea);
+        .border-radius(3px 3px 0 0);
+        margin-bottom: 1/2*@baseline;
+        padding: (1/2*@baseline - 1/@b) 19px 1/2*@baseline; }
+
+    DL, OL, P, UL { padding-right: 19px; }
+
+    DL, P { padding-left: 19px; }
+
+    }
+
+.jumped {
+    /*
+    A story requiring a "jump," or continuation, to another page should be split in midsentence,
+    never at a period of a paragraph. For example, "(Continued on page , col. ) will direct the reader adequately.
+    The jumped portion should carry a brief head, or key word, taken from the main head to identify it as a continuation.
+    The "jump head" should be keyed to the same type style and face, although it seldom will be in the same type size,
+    as the original headline. Never jump a story on a hyphenated word, or carry over the last line of a paragraph.
+    */ }
+
+.tsr {
+    /*
+    Teaser - An eye-catching graphic element or small chunk of text on Page One or section fronts,
+    that promotes an item inside; also called a promo.
+    */
+    margin-bottom: @baseline; }
+
+.coverline {
+    /*
+    Small teaser - graphic element or headline. Set in 2-columns smartphone layout.
+    */ }
+
+/*  ==================================================  */
+
+DIV:focus { outline: none; }
+
+IFRAME {
+    border: 0 none;
+    margin-bottom: @baseline;
+    max-width: 100%; }
+
+#cse-search-results, #cse-search-results IFRAME { width: 100%; }
+#cse-search-results IFRAME {
+    min-height: 1187em/@b;
+    *height: 1187em/@b; }
+
+/*==================================================
+CTA
+==================================================*/
+
+.box-cta {
+    font-family: @font-sans;
+    text-align: center;
+    width: 220px;
+
+    .h-cta {
+        background: #006ec7;
+        .border-radius(4px 4px 0 0);
+        color: #33bfff;
+        font-family: @font-sans;
+        font-weight: normal;
+        text-shadow: 0 1px 1px rgba(0,74,163,.4);
+        padding: (@baseline-s / 4) 0 0;
+        height: @baseline-s*1.5 - (@baseline-s / 4); }
+
+    .h-cta, .h-buy {
+        font-size: 16 / @b * 100%;
+        line-height: @baseline-s; }
+
+    .body {
+        background: #19a6ff;
+        .border-radius(0 0 4px 4px);
+        padding: 0 10px;
+        min-height: 276px;
+        *height: 276px; }
+
+    H3 { color: #eae58c; }
+
+    .l-paid, .note, .l-free { color: #FFF; }
+
+    /* Paid formats */
+    .h-buy {
+        padding: (@baseline-s / 4 * 3) 0;
+        text-transform: uppercase; }
+
+    .l-paid {
+        margin: 0 auto (@baseline-s / 4) + (1em / @b);
+        padding: 0;
+        width: 172px;
+
+        LI {
+        float: left;
+        margin-left: 4px;
+        position: relative;
+        *zoom: 1; }
+
+        .first { margin-left: 0; }
+    }
+
+    .ico-fb2, .ico-epub, .ico-pdf, .ico-doc {
+        .ir;
+        height: 48px;
+        width: 40px; }
+
+    .ico-fb2 { background-position: 0 -50px; }
+    .ico-epub { background-position: -50px -50px; }
+    .ico-pdf { background-position: -100px -50px; }
+    .ico-doc { background-position: -150px -50px; }
+
+    .tooltip { /* Set here to rewrite font rules */
+        bottom: 3 * @baseline-s;
+        left: -20px;
+        font-size: @small / @bs * 100%;
+        line-height: 2 / 3 * @bl / @small + 0em; }
+
+    P { margin: 0; }
+
+    HR {
+        background: url(/a/img/hr-smiley.gif) 0 0 no-repeat;
+        border-top: 0;
+        *display: none;
+        margin: (@baseline-s / 2 - 2em / @bs) auto (@baseline-s / 2 - 1em / @bs);
+        height: 48px;
+        width: 190px; }
+
+    .box-cta-hr {
+        background: url(/a/img/hr-smiley.gif) 0 0 no-repeat;
+        display: none;
+        *display: block;
+        margin: (@baseline-s / 2 - 2em / @bs) auto (@baseline-s / 2 - 1em / @bs);
+        height: 48px;
+        width: 190px;
+
+    }
+
+    /* Free versions */
+    .h-secondary { padding: 0; }
+
+    .h-secondary, .l-free, .note {
+        font-size: @small / @bs * 100%;
+        font-weight: normal;
+        line-height: @bl / @small + 0em; }
+
+    .l-free{
+
+        margin-top: -1px;
+        padding: 0;
+
+        LI { .inline-block; }
+
+        .li-txt {
+            margin-right: .3em;
+            position: relative;
+            *zoom: 1;
+
+            &:after {
+                color: #eae58c;
+                content: '\2022';
+                display: block;
+                position: absolute;
+                top: 0;
+                right: -.5em; }
+        }
+
+        A {
+            color: #FFF;
+            display: block;
+            text-decoration: underline;
+            padding: 0 10px;
+
+            &:focus, &:hover {
+                background: #0d99f2;
+                .border-radius(3px);
+                text-decoration: none;
+                .transition(background 0.2s linear); }
+        }
+    }
+} /* / CTA */
+
+/*==================================================
+HIGH RESOLUTION DEVICES
+==================================================*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+
+    .box-cta HR {
+        background: url(/a/img/hr-smiley-x2.gif) 0 0 no-repeat;
+        .background-size(190px 96px); }
+}
+
+/***************************************************
+
+DESKTOPS: 980px and UP
+
+***************************************************/
+
+@media only screen and (min-width: 980px) {
+
+.box-cta-inner  { margin-top: -6em/16; }
+
+}
+
+/***************************************************
+
+UP TO PORTRAIT TABLETS: UP TO 979px
+
+***************************************************/
+
+@media only screen and (max-width: 979px) {
+
+.box-cta-inner  {
+    margin: 0 0 @baseline;
+    width: 100%; }
+
+}
+
+/***************************************************
+
+SPECIAL SIZE for CTA: 612–979px
+
+***************************************************/
+
+@media only screen and (min-width: 612px) and (max-width: 979px) {
+
+.box-cta-inner  { /*.box-cta resetting */
+    margin-bottom: @baseline;
+    width: 100%;
+
+    .body {
+        padding: 0 10px @baseline;
+        position: relative;
+        min-height: 83px;
+        *height: 83px;
+        *zoom: 1;
+
+    /* Smileys */
+    HR, .box-cta-hr { display: none; }
+
+    &:after {
+        background: url(/a/img/hr-smiley-static.png) 0 0 no-repeat;
+        margin: 0 0 0 -26px;
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        height: 45px;
+        width: 51px; }
+    }
+
+    /* Paid formats */
+    .col-buy {
+        float: left;
+        text-align: right;
+        padding-top: 18px;
+        width: 33.33%; }
+
+    .h-buy {
+        padding: 0 0 1em/16;
+        text-transform: none; }
+
+    .l-paid {
+        margin-left: -86px;
+        position: absolute;
+        top: 19px;
+        left: 50%; }
+
+    /* Free versions */
+    .col-free {
+        float: right;
+        text-align: left;
+        width: 33.33%; }
+
+    .h-secondary { padding-top: 19px;}
+
+    .l-free{ margin-left: -10px; }
+}
+
+}
+
+
+/*==================================================
+HIGH RESOLUTION DEVICES
+==================================================*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+
+    .box-cta-inner .body:after {
+        background: url(/a/img/hr-smiley-static-x2.png) 0 0 no-repeat;
+        .background-size(100% 100%); }
+}
+
+/***************************************************
+
+!! BL SHIFT !!
+PHONES & SMALL PORTRAIT TABLETS: 480–767px
+
+***************************************************/
+@media only screen and (max-width: 767px) {
+
+ASIDE.left, ASIDE.right {
+    margin: 0 0 2*@baseline-mob;
+    max-width: none;
+    width: auto !important; }
+
+.box {
+    background: @c-tr;
+    margin-top: 1/2*@baseline-mob !important;
+    .padding-bottom-m (@bm, 1, 1);
+
+    HEADER {
+        margin-bottom: 1/2*@baseline-mob;
+        padding: (1/2*@baseline-mob - 1/@bm) 19px 1/2*@baseline-mob; }
+    }
+
+.box-cta-inner {
+    margin-bottom: 2*@baseline-mob;
+    padding-bottom: @baseline-mob;
+}
+
+.tsr {  margin-bottom: @baseline-mob; }
+
+BLOCKQUOTE {
+    padding: 0 20px;
+    margin: 0 0 @baseline-mob;
+
+    &:before, &.before { left: .12em;}
+}
+
+.box, .jumped, .tsr, .coverline {
+    UL {
+        padding-left: 20px;
+
+        UL { padding-right: 40px}
+        }
+    }
+
+}
+
+/***************************************************
+
+PORTRAIT PHONES
+
+***************************************************/
+
+@media only screen and (max-width: 479px) {
+    .box-cta { width: 100%; }
+
+}

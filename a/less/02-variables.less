@@ -1,0 +1,196 @@
+/*==================================================
+Typography
+==================================================*/
+
+@font-sans:                     'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+@font-sans-light:               'HelveticaNeueLight', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+@font-mono:                     Monaco, 'Courier New', monospace;
+@font-serif:                    Georgia, 'Times New Roman', Times, serif;
+
+@b:                             17; /* 17px - 1/17em; To set margin and padding use formula [multiplier * ]@bl / [pixel font size] + 0em;  */
+@bm:                            17;
+@bs:                            16; /* Base sans serif size */
+@bl:                            24; /* Baseline in pixels (13pb - 20px) */
+@blm:                           22;
+
+@sans-font-size:                (@bs / @b * 100%);
+
+@baseline:                      @bl / @b + 0em;
+@baseline-s:                    @bl / @bs + 0em;
+@baseline-mob:                  @blm / @bm + 0em;
+@baseline-mob-s:                @blm / @bs + 0em;
+
+@h1:                            42;
+@h1-font-size:                  (@h1 / @b * 100%); /* Keep these functions here to avoid compiling errors */
+@h1-line-height:                2 * @bl / @h1 + 0em; /* 48px (13pb: 40px - 1.176) */
+@h1-font:                       @font-sans;
+@h1-font-weight:                normal;
+@h1-color:                      @c-txt;
+
+@h1m:                           24;
+@h1-font-size-mob:              (@h1m / @bm * 100%);
+@h1-line-height-mob:            1.5 * @blm / @h1m + 0em; /* 36px */
+@h1-font-mob:                   @h1-font;
+@h1-font-weight-mob:            bold;
+
+@h2:                            26; /* 13pb: 21px - 161.5%) */
+@h2-font-size:                  (@h2 / @b * 100%); /* Keep these functions here to avoid compiling errors */
+@h2-line-height:                @bl / @h2 + 0em; /* 24px (13pb: 20px - .952) */
+@h2-font:                       @font-sans-light;
+@h2-font-weight:                200;
+@h2-color:                      @c-txt;
+
+@h2m:                           24;
+@h2-font-size-mob:              (@h2m / @bm * 100%);
+@h2-line-height-mob:            @blm / @h2m + 0em;
+
+@small:                         13;
+@small-font-size:               (@small / @b * 100%);
+
+/*==================================================
+Layout
+==================================================*/
+@max-width:                     960px;
+@col:                           80px;
+@col-padding:                   0 20px;
+@footer-height:                 240px;
+@sidebar:                       220px;
+@gutter:                        40px;
+
+/*==================================================
+Color scheme
+==================================================*/
+
+@c-txt:                         #000; /* Body text color */
+
+@bg:                            #ffffff; /* Background color */
+@bg-body:                       @bg url(/a/img/bg.gif) repeat-x;  /* Body and .page background set */
+
+/*  Background based colors */
+@c-input:                       @bg;
+@c-tbl:                         @bg;
+@c-tr:                          #f2f4f7; /* even table rows, boxes etc */
+@c-th:                          #ebedf0; /* theads — darker then on @bg-dkr-1 3–4% */
+@c-brd:                         #d2d5d9; /* lines, borders, hrs */
+@c-nt:                          #909295; /* notes, time, .byline etc */
+
+@c-link:                        #018de6;
+@c-link-hover:                  darken(@c-link, 16%);
+@c-link-visited:                #606;
+
+@c-selection:                   @c-link;
+
+@green:                         #198019;
+@purple:                        #e580ff; /* Sample */
+@blue:                          #19a6ff; /* iPad */
+@green:                         #b2cc4c; /* Reviews */
+@yellow:                        #f2b200; /* Blog */
+@yellow-accent:                 #ffe580;
+@red:                           #ff4119; /* About */
+@grey:                          #616468; /* Search */
+
+@c-clear-close:                 #abaeb2;
+
+@brd:                           1px solid @c-brd; /* Main border */
+
+/*==================================================
+Buttons
+==================================================*/
+
+@c-btn-light:                   #f3f6fa;
+@c-btn-dark:                    #f3f6fa;
+
+@c-btn-mob-header-light:        #5f6164;
+@c-btn-mob-header-dark:         #333538;
+
+/*  @c-btn-info-light:
+    @c-btn-info:
+    @c-btn-info-dark:
+    @c-btn-success:
+    @c-btn-warning: */
+
+
+/*==================================================
+Main menu (mm), drop-downs/submenus (sm) and slide-out (so)
+==================================================*/
+
+@c-mm-link:                     #9d8582;
+@c-sm-link:                     #9d8582;
+@c-sm-link-hover:               @c-txt;
+@c-so-link:                     #ffffff;
+@c-so-link-hover:               #ffffff;
+@c-mm-caret:                    @c-nt;
+
+@c-sm-bg:                       @c-tr;
+@c-sm-brd:                      @c-brd;
+@c-sm-link-hover-bg:            darken(@c-sm-bg, 4%);
+@c-sm-link-hover-light:         @c-th;
+@c-sm-link-hover-dark:          darken(@c-sm-link-hover-light, 16%);
+
+@c-so-bg:                       #4E5053;
+@c-so-brd-t:                    0 1px 0 rgba(255,255,255,.2);
+@c-so-brd-b:                    1px solid #33363a;
+@c-so-link-hover-light:         #5B5E62;
+@c-so-link-hover-dark:          #33363a;
+@c-so-link-hover-darkest:       #15181c;
+@so-width:                      240px;
+
+
+/*==================================================
+Forms
+==================================================*/
+
+@i-bg:                          #ffffff;
+@i-placeholder:                 @c-nt;
+@brd-radius:                    3px;
+@i-width:                       140px;
+
+/*==================================================
+Sprite paths
+==================================================*/
+
+@base-graphics:                 '/a/img/base-graphics.png';
+@base-graphics-x2:              '/a/img/base-graphics-x2.png';
+
+/*==================================================
+Component variables
+==================================================*/
+
+/* Empty */
+
+/*==================================================
+Z-index master list
+==================================================*/
+
+@z-dd:                          400;
+@z-popover:                     440;
+@z-tooltip:                     480;
+@z-fixed-navbar:                520;
+@z-modal-backdrop:              560;
+@zindexModal:                   600;
+
+/*==================================================
+Billboard / Hero unit
+==================================================*/
+
+@hero-bg:                       @c-link;
+@hero-h1:                       #ffffff;
+@hero-txt:                      #ffffff;
+
+/*==================================================
+    Form states and alerts
+        ==================================================  */
+
+@warning-txt:                   @red;
+@warning-brd:                   lighten(@red, 50%);
+@warning-bg:                    #ffffe1;
+
+@error-txt:                     #ffffff;
+@error-brd:                     @red;
+@error-bg:                      lighten(@red, 80%);
+
+@success-txt:                   @green;
+@success-brd:                   lighten(@green, 60%);
+@success-bg:                    lighten(@green, 80%);
+
+/*@info */

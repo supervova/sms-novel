@@ -1,0 +1,105 @@
+/*  **************************************************
+
+    http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/twitter-bootstrap-101-introducing-2-0/
+
+    **************************************************  */
+
+/*
+ALERT
+Less have limits on compiling code caused FATAL ERROR: CALL_AND_RETRY2;
+So I've redecued files quality and file length. E.g. I use one big file for jQuery Mobile.
+*/
+
+/*
+Less Cheetsheet
+
+Variables
+@с-red: #660019;
+@с-gold: #bf9940;
+@brd: 1px solid #b8bbbf;
+@base-graphics = '/a/img/base-graphics.png';
+@baseline: 1.5em;
+
+Usage
+
+background: @c-gold;
+border: 3px solid @c-red;
+margin: 0 0 @baseline;
+
+==================
+
+Mixins
+
+.border-radius(@radius: 5px) {
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius; }
+
+Usage
+
+#header { .border-radius; }
+#footer { .border-radius(3px); }
+
+=================
+
+The nested structure
+
+#header {
+  #nav {
+    UL {
+      LI {
+        A {}
+      }
+    }
+  }
+}
+
+=================
+
+Less allows to use the same comments as in the CSS, as well as single-line double-slash syntax //, in the JS-style
+But double-slash requires increased accuracy so I prefer CSS-style comments
+
+*/
+
+/*  CSS Reset */
+@import '01-normalize.less';
+
+/*  Variables and mixins — Custom colors, font-sizes, etc */
+@import '02-variables.less';
+@import '02-mixins.less';
+@import '02-sprites.less';
+
+/* Global styles */
+@import '03-page.less';
+@import '04-layout.less';
+@import '05-typography.less';
+@import '06-lists.less';
+@import '07-media.less';
+
+/* Regions and menus */
+@import '08-header-main-menu.less';
+@import '08-secondary-menus.less';
+@import '08-boxes.less';
+@import '09-sidebar.less';
+@import '10-footer.less';
+
+/* Tables */
+@import '11-tables.less';
+
+/* Forms and system response */
+@import '12-forms.less';
+@import '13-buttons.less';
+@import '14-alerts.less';
+
+/* Widgets */
+@import '15-wdg-01-pagination.less';
+@import '15-wdg-07-tooltip.less';
+
+/* Customization */
+@import '16-cstm-01-front.less';
+
+/* Utility classes */
+@import '17-helpers.less';
+
+/* Print */
+@import '18-print.less';

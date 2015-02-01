@@ -1,0 +1,79 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+/* Hide */
+.mob, .mob-inl,
+.tbl, .tbl-inl,
+.tbl-mob, .tbl-mob-inl
+{ display: none !important; }
+
+.tel {
+    color: @c-txt;
+    cursor: default;
+    white-space: nowrap;
+
+    &:hover {
+        color: @c-txt;
+        text-decoration: none; }
+
+    I {
+        color: @c-nt;
+        font-style: normal; }
+    }
+
+/***************************************************
+
+PORTRAIT TABLETS: 768–979px
+
+***************************************************/
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+/* Hide */
+.pc, .pc-inl { display: none !important; }
+
+/* Show */
+.tbl, .tbl-mob { display: block !important; }
+.tbl-inl, .tbl-mob-inl  {
+    display: inline-block !important;
+    *display: inline !important; /* IE7 inline-block hack */
+    *zoom: 1; }
+
+.tel {
+    color: @c-link;
+    cursor: pointer;
+
+    I { color: lighten(@c-link, 20%); }
+    }
+}
+
+/***************************************************
+
+!! BL SHIFT !!
+PHONES & SMALL PORTRAIT TABLETS: 480–767px
+
+***************************************************/
+
+@media only screen and (max-width: 767px) {
+
+/* Hide */
+.tbl, .tbl-inl,
+.tbl-pc, .tbl-pc-inl,
+.pc, .pc-inl { display: none !important; }
+
+/* Show */
+.mob, .tbl-mob { display: block !important; }
+.mob, .mob-inl,
+.tbl-mob, .tbl-mob-inl {
+    display: inline-block !important;
+    *display: inline !important; /* IE7 inline-block hack */
+    *zoom: 1; }
+
+
+.tel {
+    color: @c-link;
+    cursor: pointer;
+
+    I { color: lighten(@c-link, 20%); }
+    }
+}

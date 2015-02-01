@@ -1,0 +1,300 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.p-sample, .p-sample .page { background-image: url(/a/img/bg-sample.png); }
+.p-ipad, .p-ipad .page { background-image: url(/a/img/bg-ipad.png); }
+.p-reviews, .p-reviews .page { background-image: url(/a/img/bg-reviews.png); }
+.p-blog, .p-blog .page { background-image: url(/a/img/bg-blog.png); }
+.p-author, .p-author .page { background-image: url(/a/img/bg-author.png); }
+.p-system, .p-system .page { background-image: url(/a/img/bg-system.png); }
+
+/* Main headers */
+.p-sample .hdr { background: @purple; }
+.p-ipad .hdr { background: @blue; }
+.p-reviews .hdr { background: @green; }
+.p-blog .hdr { background: @yellow; }
+.p-author .hdr { background: @red; }
+.p-system .hdr { background: #8e9093; }
+
+/* Main content header */
+.hdr {
+    margin-bottom: 54px;
+    position: relative;
+    height: 72px;
+    *zoom: 1;
+
+    H1 {
+        color: rgba(255, 255, 255, .72);
+        font-weight: 200;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, .12);
+        padding: 8px 0 0 20px;
+        .text-overflow();
+        max-width: 640 / 940 * 100%;
+        *width: 640 / 940 * 100%;
+
+        A {
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+
+        &:hover {
+            border-bottom: 1px dotted rgba(255, 255, 255, .44);
+            *border-bottom-color: #fff; }
+        }
+    }
+
+
+
+    NAV.tbl-pc {
+        text-align: right;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: 400px; }
+
+    .hdr-channels-caption {
+        color: rgba(0, 0, 0, .48);
+        *color: #000;
+        *filter: alpha(opacity=48);
+        .inline-block;
+        font: normal @small-font-size @h1-font;
+        margin: 0; }
+}
+
+.hdr-channels {
+    .inline-block;
+    vertical-align: middle;
+    margin-top: -4px;
+
+    A {
+        .ir;
+        height: 20px;
+        width: 20px; }
+}
+
+.hdr-channels-facebook, .hdr-channels-twitter, .hdr-channels-google, .hdr-channels-mail {
+    float: left;
+    margin-left: .3em; }
+
+.hdr-channels-facebook, .hdr-dropdown-facebook I.co, .body-dropdown-facebook I.co { background-position: 0 0; }
+.hdr-channels-twitter, .hdr-dropdown-twitter I.co, .body-dropdown-twitter I.co { background-position: -30px 0; }
+.hdr-channels-google, .hdr-dropdown-google I.co, .body-dropdown-google I.co { background-position: -60px 0; }
+.hdr-channels-mail, .hdr-dropdown-mail I.co, .body-dropdown-mail I.co  { background-position: -90px 0; }
+
+/* Fragment headings */
+.h-prologue, .h-chp1 {
+margin: 2*@h2-line-height 0 @h2-line-height;
+padding: 44px 220px 0 20px;
+height: 148px; }
+
+.h-prologue { background: #f4eae1 url(/a/img/illustrations/prologue.jpg) no-repeat 100% 0; }
+.h-chp1 {
+    background: #a33cb2 url(/a/img/illustrations/ch1.jpg) no-repeat 100% 0;
+    color: #fff; }
+
+/* Author gallery */
+
+.img-pair {
+    margin-bottom: 0;
+
+    FIGURE { margin-bottom: @baseline-mob; }
+
+    .first { float: left; }
+    .second { float: right; }
+    .first, .second { width: 324/668*100%; }
+
+    .img-tera { margin-left: 20px; }
+}
+
+/* iPad-издание */
+FIGURE.img-ipad-01 { margin-bottom: @baseline; }
+.img-ipad-02 { clear: left; }
+
+/*==================================================
+HIGH RESOLUTION DEVICES
+==================================================*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+
+    .p-sample, .p-sample .page { background-image: url(/a/img/bg-sample-x2.png); }
+    .p-ipad, .p-ipad .page { background-image: url(/a/img/bg-ipad-x2.png); }
+    .p-reviews, .p-reviews .page { background-image: url(/a/img/bg-reviews-x2.png); }
+    .p-blog, .p-blog .page { background-image: url(/a/img/bg-blog-x2.png); }
+    .p-author, .p-author .page { background-image: url(/a/img/bg-author-x2.png); }
+    .p-system, .p-system .page { background-image: url(/a/img/bg-system-x2.png); }
+    .p-sample, .p-ipad, .p-reviews, .p-blog, .p-author, .p-system {
+        .background-size(100% 240px);
+        .page { .background-size(100% 240px); }
+    }
+
+    .h-prologue { background-image: url(/a/img/illustrations/prologue-x2.jpg); }
+    .h-chp1 { background-image: url(/a/img/illustrations/ch1-x2.jpg); }
+    .h-prologue, .h-chp1 { .background-size(690px 192px); }
+
+    .p-404 .img-top { background: transparent url(/a/img/illustrations/404-x2.jpg) no-repeat; }
+    .p-thank-you .img-top { background: transparent url(/a/img/illustrations/khobotov-x2.jpg) no-repeat; }
+    .p-404 .img-top,
+    .p-thank-you .img-top {
+        .background-size(220px 220px);
+    }
+
+    .p-ipad .img-ipad-01 { background: transparent url(/a/img/illustrations/ipad-01-x2.jpg) no-repeat; }
+    .p-ipad .img-ipad-02 { background: transparent url(/a/img/illustrations/ipad-02-x2.jpg) no-repeat; }
+    .p-ipad .img-ipad-03 { background: transparent url(/a/img/illustrations/ipad-03-x2.jpg) no-repeat; }
+    .p-ipad .img-ipad-04 { background: transparent url(/a/img/illustrations/ipad-last-x2.jpg) no-repeat; }
+    .p-ipad {
+        .img-ipad-01, .img-ipad-04 {
+            .background-size(325px 416px);
+        }
+        .img-ipad-02, .img-ipad-03 {
+            .background-size(650px 539px);
+        }
+    }
+
+    .p-404 .img-top,
+    .p-thank-you .img-top,
+    .p-ipad .img-ipad-01,
+    .p-ipad .img-ipad-02,
+    .p-ipad .img-ipad-03,
+    .p-ipad .img-ipad-04 {
+        IMG { visibility: hidden; }
+    }
+}
+
+/*==================================================
+HIGH RESOLUTION DEVICES for iPads and Mac Retina
+==================================================*/
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 768px),
+only screen and (min-resolution: 144dpi) and (min-width: 768px) {
+
+    .img-pair FIGURE {
+        .background-size(100% 100%);
+
+        IMG { visibility: hidden; }
+        IMG { visibility: visible e('\9'); }
+    }
+
+    .img-pair .img-tera IMG { visibility: visible;}
+
+    .img-mom { background: transparent url(/a/img/author/vladimir-nikishin-mom-x2.jpg) no-repeat; }
+    .img-dad { background: transparent url(/a/img/author/vladimir-nikishin-dad-x2.jpg) no-repeat; }
+
+    .img-sister { background: transparent url(/a/img/author/vladimir-nikishin-sister-natasha-x2.jpg) no-repeat; }
+    .img-childhood { background: transparent url(/a/img/author/vladimir-nikishin-childhood-x2.jpg) no-repeat; }
+
+    .img-paula { background: transparent url(/a/img/author/vladimir-nikishin-daughter-paula-x2.jpg) no-repeat; }
+    .img-nyc { background: transparent url(vladimir-nikishin-at-new-york-times-square-at-97-x2.jpg) no-repeat; }
+
+    .img-mom, .img-dad, .img-sister, .img-childhood, .img-paula, .img-nyc
+    { background: transparent none e('\9'); }
+}
+
+
+
+/***************************************************
+
+DESKTOPS and PORTRAIT TABLETS: 768px and UP
+
+***************************************************/
+
+@media only screen and (min-width: 768px) {
+
+    .hdr I.co { display: none;}
+}
+
+
+/***************************************************
+
+UP TO PORTRAIT TABLETS: UP TO 979px
+
+***************************************************/
+
+@media only screen and (max-width: 979px) {
+
+.hdr H1 {
+    padding-left: 0;
+
+}
+
+A[href='#box-cta'] {
+    color: #000;
+    cursor: default;
+
+    &:hover { text-decoration: none; }
+}
+
+}
+
+/***************************************************
+
+PORTRAIT TABLETS: 768–979px
+
+***************************************************/
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+.hdr H1 {
+    max-width: 380 / 460 * 100%;
+    *width: 380 / 460 * 100%; }
+}
+
+/***************************************************
+
+!! BL SHIFT !!
+PHONES & SMALL PORTRAIT TABLETS: 480–767px
+
+***************************************************/
+
+@media only screen and (max-width: 767px) {
+
+.p-sample, .p-ipad, .p-reviews, .p-blog, .p-author, .p-system {
+    background-position: 0 -152px;
+    .page { background-position: 0 -152px; }
+}
+
+.hdr {
+    margin-bottom: 49px;
+    height: 44px;
+
+    H1 {
+        font: bold @sans-font-size @font-sans;
+        padding: 12px 0 0; }
+
+    NAV.mob {
+        position: absolute;
+        top: 7px;
+        right: 0;
+        width: 44px; }
+
+    .hdr-channels-caption {
+        background-position: 0 -40px;
+        .ir;
+        cursor: pointer;
+        padding: 0;
+        height: 30px;
+        width: 44px; }
+}
+
+/* Fragment headings */
+.h-prologue, .h-chp1 {
+    background-position: 100% 50%;
+    margin: 2*@h2-line-height-mob 0 @h2-line-height-mob;
+    padding: 41px 200px 0 20px;
+    height: 138px; }
+}
+
+/* iPad-издание */
+FIGURE.img-ipad-01 { margin-bottom: @baseline-mob; }
+
+/***************************************************
+
+PORTRAIT PHONES
+
+***************************************************/
+
+@media only screen and (max-width: 479px) {
+.h-prologue, .h-chp1 { background-position: 84% 50%; }
+}

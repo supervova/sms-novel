@@ -1,0 +1,64 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+/* Main sprite */
+A.a-cta:after,
+.btn-back, .btn-menu:before, .btn-search:before,
+.ftr-copyright:before,
+.ico-epub, .ico-fb2, .ico-pdf, .ico-doc,
+.nameplate .smiley, .f-search BUTTON, .sm-rss:before, .sm-email:after,
+.next-page, .previous-page, .pagination .controls:before,
+.pft-share .body-label-4dd, .pft-like, .pft-liked, .pft-reblog A, .pft-comments I.co, .pft-tags I.co,
+.sys-message P:before, .warning-gl EM
+{ background: transparent url(@base-graphics) no-repeat; }
+
+.ftr-channels I.co, .hdr-dropdown I.co, .body-dropdown I.co,
+.hdr-channels-facebook, .hdr-channels-twitter, .hdr-channels-google, .hdr-channels-mail,
+.pst-channels-facebook, .pst-channels-twitter, .pst-channels-google, .pst-channels-mail,
+.hdr-label-4dd {
+    background: transparent url(/a/img/socials.png) no-repeat; }
+
+@media only screen and (max-width: 479px) {
+    .pft-comments .label { background: transparent url(@base-graphics) no-repeat; }
+}
+
+/*==================================================
+HIGH RESOLUTION DEVICES
+==================================================*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+
+    A.a-cta:after,
+    .btn-back, .btn-menu:before, .btn-search:before,
+    .ico-epub, .ico-fb2, .ico-pdf, .ico-doc,
+    .nameplate .smiley, .f-search BUTTON, .sm-rss:before, .sm-email:after,
+    .next-page, .previous-page, .pagination .controls:before,
+    .p-front .ftr-copyright:before,
+    .pft-share .body-label-4dd, .pft-like, .pft-liked, .pft-reblog A, .pft-comments I.co, .pft-tags I.co,
+    .sys-message P:before, .warning-gl EM
+    {
+        background: transparent url(/a/img/base-graphics-x2.png) no-repeat;
+        .background-size(340px 200px); /* Half of physical retina sprite image */ }
+
+    .ftr-channels I.co, .hdr-dropdown I.co, .body-dropdown I.co,
+    .hdr-channels-facebook, .hdr-channels-twitter, .hdr-channels-google, .hdr-channels-mail,
+    .pst-channels-facebook, .pst-channels-twitter, .pst-channels-google, .pst-channels-mail,
+    .hdr-label-4dd {
+        background: transparent url(/a/img/socials-x2.png) no-repeat;
+        .background-size(300px 100px); }
+}
+
+/*==================================================
+HIGH RESOLUTION DEVICES for portrait phones
+Nested rules don't work
+==================================================*/
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 479px),
+only screen and (min-resolution: 144dpi) and (max-width: 479px) {
+
+    .pft-comments .label {
+        background: transparent url(/a/img/base-graphics-x2.png) no-repeat;
+        .background-size(340px 200px); /* Half of physical retina sprite image */ }
+}

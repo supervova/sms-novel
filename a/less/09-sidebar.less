@@ -1,0 +1,44 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.doc-sidebar { /* Sidebar section menus are in 08-secondary-menus */
+    float: right;
+    font-size: 100%;
+    width: 220px; }
+
+.f-paypal {
+    padding-top: 30 / @b + 0em;
+    P {
+        text-align: center;
+        margin-bottom: 13 / @b + 0em;; }
+    INPUT[type="image"] {
+        height: 50px;
+        width: 220px;
+    }
+}
+
+
+/*
+|-------------------------------------------------------------------------------
+| PORTRAIT TABLETS: 768–979px
+|-------------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+    .doc-sidebar {
+        float: none;
+        width: 660/692*100%; }
+}
+
+/*
+|-------------------------------------------------------------------------------
+| PHONES & SMALL PORTRAIT TABLETS: up to 767px
+|-------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 767px) {
+
+ASIDE.doc-sidebar {
+    float: none;
+    width: 100%; }
+}

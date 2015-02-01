@@ -1,0 +1,168 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.doc-header, .doc-body, .doc-footer, .cfx, .row {
+  *zoom: 1;
+
+  &:before, &:after {
+    content: '';
+    display: table;
+    line-height: 0; }
+
+  &:after { clear: both; }
+}
+
+.left, .coverline, .tsr { float: left; }
+.right { float: right; }
+
+.doc-body {
+    position: relative;
+    padding-bottom: 228px;
+    *padding-bottom: 2*@baseline !important;
+    *zoom: 1; }
+
+.row { /* Use .row for full width blocks inside .doc-body and .doc-main and .cfx for other purposes */
+    margin-bottom: @baseline;
+    width: 100%; }
+
+/*  .row [class*='span'], - die6 */
+.col, .col-1of12, .col-1of6, .col-1of4, .col-1of3, .col-1of2,
+.col-2of3, .col-3of4, .col-full {
+    .box-sizing(border-box);
+    display: block;
+    list-style: none; /* Make columns of lists */
+    list-style-image: none;
+    margin-bottom: 0;
+    position: relative;
+    min-height: 1px;
+    *zoom: 1; }
+
+.col, .col-1of12, .col-1of6, .col-1of4, .col-1of3,
+.col-1of2, .col-2of3, .col-3of4 {
+    float: left; }
+
+.col-1of6, .col-1of4, .col-1of3,
+.col-1of2, .col-2of3, .col-3of4, .col-full {
+    padding: 0 20px; }
+
+.row [class*='span']:last-child {
+    /* There are two solutions for disguising webkit rounding bug
+    1) This is the first and the second is...
+    2) .row [class*='span']:last-child { float: right; } */
+    float: none;
+    overflow: hidden;
+    width: auto; }
+
+.col-1of12 { /* 80px in 960px grid */
+    width: 1/12 * 100%;
+    *width: 79/960 * 100%; /* IE cure - absolute width is less by one pixel */}
+
+.col-1of6 { /* 160px */
+    width: 1/6 * 100%;
+    *width: 159/960 * 100%; }
+
+.col-1of4 { /* 240px */
+    width: 25%;
+    *width: 239/960 * 100%; }
+
+.col-1of3 { /* 320 */
+    width: 1/3 * 100%;
+    *width: 319/960 * 100%; }
+
+.col-1of2 { /* 480 */
+    width: 50%;
+    *width: 479/960 * 100%; }
+
+.col-2of3 { /* 640 */
+    width: 2/3 * 100%;
+    *width: 639/960 * 100%; }
+
+.col-3of4 { /* 720 */
+    width: 75%;
+    *width: 719/960 * 100%; }
+
+.col-full { /* 960 */
+    width: 100%; }
+
+
+ /* 4 columns layout based on 960px .doc-body max-width and 720px .doc-main maximum width */
+.doc-main {
+    float: left;
+    padding-left: 20px;
+    .box-sizing(border-box);
+    width: 660/920*100%;
+
+    .col { width: @col; /* Set to fixed size */}
+
+    /*
+    Use thirds grid in .doc-main
+    .col-1of3 = 1/4 (.col-1of4) of .doc-body (full page width)
+    .col-2of3 = 1/2 (.col-1of2) of .doc-body
+
+    Suplimental widths
+    .col-1of2 = 3/8 (37.5%) of .doc-body
+    .col-3of4 = 56.25% of .doc-body
+    */
+    }
+
+/***************************************************
+
+UP TO PORTRAIT TABLETS: UP TO 979px
+
+***************************************************/
+
+@media only screen and (max-width: 979px) {
+
+.doc-main {
+    float: none;
+    padding-left: 0;
+    width: 660/692*100%; }
+
+}
+
+/***************************************************
+
+PORTRAIT TABLETS: 768–979px
+
+***************************************************/
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+.doc-body {
+    padding-left: 38px;
+    padding-right: 38px; }
+
+}
+
+
+/***************************************************
+
+!! BL SHIFT !!
+PHONES & SMALL PORTRAIT TABLETS: 480–767px
+
+***************************************************/
+
+@media only screen and (max-width: 767px) {
+
+
+.left, .right { max-width: 50%; }
+
+.row { margin-bottom: @baseline-mob; }
+
+/*  .row [class*='span'], - die6 */
+.col, .col-1of12, .col-1of6, .col-1of4, .col-1of3,
+.col-1of2, .col-2of3, .col-3of4 {
+    float: none;
+    width: 100%; }
+
+/*  Only coverlines lay out in 2 columns */
+.coverline {
+    float: left;
+    width: 100% * (360-1) / 2 / 360; }
+
+.row .coverline:last-child { float: right; }
+
+.doc-body { padding: 44em/@bm 0 @baseline-mob; /* Add on top 68px, fixed header space and remove space for absolute positioned footer */ }
+
+.doc-main { width: 100%; }
+}

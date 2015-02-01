@@ -1,0 +1,197 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.p-blog-index .hdr H1 A { cursor: default; }
+.p-blog-tag .hdr H1 A { cursor: pointer; }
+
+.post-text H1, .post-chat H1 { margin-top: -3px; }
+
+.post-link H1, .post-video H1, .post-audio H1 {
+    font: bold 100% @font-serif;
+    letter-spacing: 0;
+    line-height: @baseline;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    A {
+        color: @c-link;
+        &:hover {
+            color: @c-link-hover;
+            text-decoration: underline; }
+    }
+
+    + P:not([class]) { font-weight: normal; }
+}
+
+.post-audio H1 { font-weight: normal; }
+
+.post-text H1 + IMG { margin-top: @baseline; }
+
+.post-chat {
+    DT {
+    float: left;
+    font-weight: bold;
+    padding: 0 .32em 0 0; }
+
+    DD {
+        clear: right;
+        margin-bottom: 0; }
+}
+
+.post-audio .player { padding-bottom: @baseline; }
+
+/* Post footer */
+.pft {
+    .inline-block;
+    border-bottom: 1px dashed @c-brd;
+    list-style-image: none;
+    list-style-type: none;
+    margin-bottom: 2*@baseline;
+    padding: 0 1em 1em 0; }
+
+#posts .post:last-of-type .pft { border-bottom-color: transparent; } /* Keep rythm */
+
+.pft-date, .pft-share, .pft-like, .pft-liked, .pft-reblog, .pft-tags, .pft-comments {
+    border-left: @brd;
+    font-size: 14/17 * 100%;
+    font-style: italic;
+    float: left; }
+
+.pft-date {
+    border-left: 0 none;
+    color: @c-nt;
+    font-weight: bold;
+    padding-right: 15em/14; }
+
+.pft-share .body-label-4dd, .pft-like, .pft-liked, .pft-reblog A {
+    .ir;
+    cursor: pointer;
+    height: 24px;
+    width: 45px; }
+
+.pft-share .body-label-4dd { background-position: -190px -140px; }
+
+.pft-like {
+    background-position: -190px -110px;
+    border-left: @brd !important; }
+
+.pft-liked {
+    background-position: -190px -170px;
+    border-left: @brd !important; }
+
+.pft-reblog A { background-position: -220px -80px; }
+
+.pft-tags, .pft-comments {
+    position: relative;
+    *zoom: 1;
+
+    I.co {
+        .ir;
+        position: absolute; }
+}
+
+.pft-tags {
+    margin: 0;
+    padding: 0 15em/14 0 39px;
+
+    I.co {
+        background-position: -220px -50px;
+        margin-top: -8px;
+        top: 50%;
+        left: 15px;
+        height: 16px;
+        width: 16px; }
+
+    A {
+        display: none;
+        *display: inline; }
+
+    A:first-of-type { display: inline; }
+}
+
+.pft-comments {
+    white-space: nowrap;
+    padding: 0 15px 0 15em/14;
+
+    I.co {
+        background-position: -200px -80px;
+        .inline-block;
+        margin: -3px 0 0;
+        position: static;
+        height: 8px;
+        width: 9px; }
+
+    .note {
+        color: @c-nt;
+        cursor: default;
+        text-decoration: none;
+        margin-right: 5px; }
+}
+/* Post footer */
+
+/* Notes */
+.notes {
+    IMG, .more_notes_link_container {
+        .inline-block;
+        margin: 0 .4em 0 0; }
+
+    .clear { display: none; }
+}
+
+
+/***************************************************
+
+PORTRAIT TABLETS: 768–979px
+
+***************************************************/
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+    .cta-share { display: none; }
+}
+
+/***************************************************
+
+!! BL SHIFT !!
+PHONES & SMALL PORTRAIT TABLETS: 480–767px
+
+***************************************************/
+
+@media only screen and (max-width: 767px) {
+    .post-link H1, .post-video H1, .post-audio H1 { line-height: @baseline-mob; }
+
+    .post-audio .player { padding-bottom: @baseline-mob; }
+
+    .post-text H1 + IMG { margin-top: @baseline-mob; }
+
+    .pft {
+        margin-bottom: 2*@baseline-mob;
+        padding-bottom: 14em/17; }
+        .pft-tags { display: none;}
+
+    #tumblr_controls { display: none !important; }
+}
+
+/***************************************************
+
+PORTRAIT PHONES
+
+***************************************************/
+
+@media only screen and (max-width: 479px) {
+.pft-date { display: none;}
+.pft-share { border-left: 0 none;}
+.pft-comments {
+    padding-left: 0;
+
+    .label {
+        background-position: -240px -110px;
+        .ir(0, inline-block);
+        cursor: pointer;
+        height: 24px;
+        width: 40px; }
+
+    I.co { margin: 0 0 1px; }
+
+}
+}

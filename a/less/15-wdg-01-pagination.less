@@ -1,0 +1,59 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.pagination {
+	color: #47494c;
+	padding-bottom: 21em/17;
+
+	H3 {
+		font-weight: normal;
+		padding: 0 0 0 60px; }
+
+	A { .inline-block; }
+
+	B {
+		font-size: @h2-font-size;
+		font-weight: normal; }
+}
+
+
+/*  Prev-Next buttons */
+.controls {
+    padding: 3px 0 0 60px;
+    margin-top: -6px;
+    position: relative;
+    *zoom: 1; }
+
+.next-page, .previous-page, .pagination .controls:before {
+    .ir;
+    vertical-align: middle;
+    height: 30px;
+    width: 48px; }
+
+.previous-page, .pagination .controls:before {
+    background-position: 0 -110px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    z-index: 2; }
+
+.pagination .controls:before {
+	content: '';
+	.opacity(44);
+	z-index: 1; }
+
+.next-page {
+    background-position: -60px -110px;
+    margin: -3px 0 0 .4em; }
+
+
+/***************************************************
+
+PHONES & TABLETS: UP TO 979px
+
+***************************************************/
+
+@media only screen and (max-width: 979px) {
+
+    .pagination { padding-bottom: 79em/17; }
+}
