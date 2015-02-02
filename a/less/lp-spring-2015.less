@@ -1,0 +1,131 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.p-spring-2015, .p-spring-2015 .page { background-image: url(/a/img/lp/bg-valentine.png); }
+
+.p-spring-2015 {
+
+    .page { max-width: 720px; }
+
+    /* Header */
+    .doc-header {
+        background-position: 0 0;
+        background: rgba(255, 255, 255, .08);
+        height: 72px;
+
+        NAV { // Third column
+            float: none;
+            position: absolute;
+            top: 24px;
+            right: 20px;
+            width: 170px;
+
+            .nav {
+                .mm-label { padding: 6px 7px; }
+
+                .mm-sample:hover .mm-label, .mm-sample:focus .mm-label, .mm-sample:active .mm-label { background-color: @purple; }
+            }
+        } // NAV
+    } // .doc-header
+
+    .nameplate { // First column
+        float: none;
+        text-align: center;
+        position: relative;
+        padding: 0 0 0;
+        width: 100%;
+        *zoom: 1;
+
+        &:hover { text-decoration: none; }
+
+        H2 {
+            text-align: left;
+            position: absolute;
+            top: 30px;
+            left: 20px;
+            padding: 0;
+        }
+
+        H1 {
+            font-size: 26/@b*100%;
+            padding: 25px 0 0;
+            position: relative;
+            *zoom: 1;
+        }
+
+        .smiley {
+            .inline-block();
+            font-size: 18/26*100%;
+            margin: -10px 0 0 2px;
+            vertical-align: middle;
+            position: static;
+        }
+
+    } // Nameplate
+
+
+    /* BILLBOARD */
+    .billboard {
+        text-align: left;
+
+        .hgroup { padding-bottom: @baseline / 4 * 3; }
+
+        H2, .hgroup H3{ color: #FFF;}
+
+        H2 {
+            font-size: 42/@b*100%;
+            font-weight: bold;
+        }
+
+        .hgroup H3 {
+            font-family: @font-sans;
+            font-size: 26/@b*100%;
+            font-weight: 200;
+            margin-top: 0;
+            padding-bottom: 19em / @h1;
+        }
+    } // billboard
+
+    /* Main pic */
+    .box-main-pic {
+        FIGURE {
+            height: 268px; // Sinse it's not image we can't make it responsive
+            width: 197px; }
+        }
+
+    .doc-footer { padding-bottom: 0; }
+}
+
+/*
+|---------------------------------------
+| High resolution devices
+|---------------------------------------
+*/
+ @media print,
+        (-o-min-device-pixel-ratio: 5/4),
+        (-webkit-min-device-pixel-ratio: 1.25),
+        (min-resolution: 120dpi) {
+
+
+}
+
+
+/*
+|-------------------------------------------------------------------------------
+| PORTRAIT TABLETS: 768–979px
+|-------------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+}
+
+
+/*
+|-------------------------------------------------------------------------------
+| PHONES & SMALL PORTRAIT TABLETS: up to 767px
+|-------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 767px) {
+
+}
