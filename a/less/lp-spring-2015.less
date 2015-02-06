@@ -3,27 +3,36 @@
 
 .p-spring-2015, .p-spring-2015 .page { background-image: url(/a/img/lp/bg-valentine.png); }
 
+.p-spring-2015 .doc-body { padding-bottom: 0; }
+
 .p-spring-2015 {
 
-    .page { max-width: 720px; }
+    .page { max-width: 680px; }
 
     /* Header */
     .doc-header {
         background-position: 0 0;
-        background: rgba(255, 255, 255, .08);
+        // background: rgba(255, 255, 255, .08);
         height: 72px;
 
         NAV { // Third column
             float: none;
             position: absolute;
             top: 24px;
-            right: 20px;
+            right: 0;
             width: 170px;
 
             .nav {
-                .mm-label { padding: 6px 7px; }
+                .mm-download:hover .mm-label, .mm-download:focus .mm-label, .mm-download:active .mm-label,
+                .mm-buy:hover .mm-label, .mm-buy:focus .mm-label, .mm-buy:active .mm-label
+                { background-color: @blue; }
+            }
 
-                .mm-sample:hover .mm-label, .mm-sample:focus .mm-label, .mm-sample:active .mm-label { background-color: @purple; }
+            .nav {
+                .mm-buy .mm-label { background-color: #25282c; }
+                .mm-download:hover .mm-label, .mm-download:focus .mm-label, .mm-download:active .mm-label,
+                .mm-buy:hover .mm-label, .mm-buy:focus .mm-label, .mm-buy:active .mm-label
+                { background-color: @blue; }
             }
         } // NAV
     } // .doc-header
@@ -42,7 +51,7 @@
             text-align: left;
             position: absolute;
             top: 30px;
-            left: 20px;
+            left: 0;
             padding: 0;
         }
 
@@ -63,38 +72,121 @@
 
     } // Nameplate
 
-
-    /* BILLBOARD */
+/*
+|---------------------------------------
+| Billboard
+|---------------------------------------
+*/
     .billboard {
         text-align: left;
 
-        .hgroup { padding-bottom: @baseline / 4 * 3; }
+        .hgroup {
+            padding: 0 0 2.529em 226px;
+            position: relative;
+            *zoom: 1;
 
-        H2, .hgroup H3 { color: #FFF;}
+            H2, H3 { }
+
+            H3 {
+                color: #66f2ff;
+                font-family: @font-sans;
+                font-size: 26/@b*100%;
+                font-weight: 200;
+                margin-top: 0;
+                padding: .731em 0 0;
+            }
+        }
 
         H2 {
+            color: #FFF;
             font-size: 42/@b*100%;
-            font-weight: bold;
+            line-height: 1.143;
+            padding: 1.94em 0 0;
         }
 
-        .hgroup H3 {
-            font-family: @font-sans;
-            font-size: 26/@b*100%;
-            font-weight: 200;
-            margin-top: 0;
-            padding-bottom: 19em / @h1;
-        }
+        .txt-first { display: block; }
+        H2 .txt-first { font-weight: bold; }
     } // billboard
 
     /* Main pic */
     .box-main-pic {
+        position: absolute;
+        top: 55px;
+        left: -9px;
+
         FIGURE {
             height: 268px; // Sinse it's not image we can't make it responsive
             width: 197px; }
         }
-
-    .doc-footer { padding-bottom: 0; }
 }
+
+/*
+|---------------------------------------
+| CTA
+|---------------------------------------
+*/
+
+.sec-cta, .sec-cta UL {
+    list-style-image: none;
+    list-style-type: none;
+}
+
+.btn-prim, .btn-sec {
+    display: block;
+    text-align: center;
+    height: 48px;
+    width: 335px;
+}
+
+.btn-prim {
+    float: right;
+}
+
+.btn-sec {
+    float: left;
+}
+
+/*
+|---------------------------------------
+| Footer
+|---------------------------------------
+*/
+
+.p-spring-2015 {
+
+    .doc-footer {
+        text-align: center;
+        margin: 0 auto;
+        position: static;
+        height: auto;
+        width: 680px;
+
+        P, UL, H3 { .inline-block(); }
+
+        P, H3 {
+            color: #8a8c8f;
+            font-weight: normal;
+        }
+
+        P {
+            border-right: 1px solid #bbbec2;
+            margin-right: 26px;
+            padding-right: 30px;
+        }
+    }
+
+    .ftr-copyright {
+        padding-left: 46px;
+        width: auto;
+    }
+
+    .ftr-share {
+        height: auto;
+        .fb { margin-right: .5em; }
+
+    }
+}
+
 
 /*
 |---------------------------------------
