@@ -3,11 +3,15 @@
 
 .p-spring-2015, .p-spring-2015 .page { background-image: url(/a/img/lp/bg-valentine.png); }
 
-.p-spring-2015 .doc-body { padding-bottom: 0; }
+.p-spring-2015 .doc-body { padding-bottom: 173px; }
 
 .p-spring-2015 {
 
-    .page { max-width: 680px; }
+    .page {
+        min-height: 100%;
+        height: auto;
+        *height: 100%;
+        max-width: 680px; }
 
     /* Header */
     .doc-header {
@@ -131,15 +135,17 @@
     list-style-type: none;
 }
 
+.sec-cta { padding-top: 37em/@b; }
+
 .btn-prim A, .btn-sec A {
     .border-radius(24px);
     .box-sizing(border-box);
     display: block;
     font-family: @font-sans;
     font-size: 16/@b*100%;
-    line-height: 48px;
     text-align: center;
     text-decoration: none;
+    white-space: nowrap;
     padding-top: 0px;
     height: 48px;
     width: 335px;
@@ -147,6 +153,32 @@
 
 .btn-prim {
     float: right;
+
+    A {
+        #gradient > .vertical-three-colors(#a3ce62, #469817, 50%, #61a727);
+        border: 1px solid #408e1b;
+        .box-shadow(inset 0 1px 0 rgba(255, 255, 255, .32), 0 1px 2px rgba(0, 0, 0, .08));
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0,.32);
+        padding-top: 10px;
+
+        &:hover {
+            background-color: #61a727; // Gradient goes up to uncover its dark side
+            background-position: 0 -15px;
+            .transition(background-position 0.2s linear);
+
+            .co { background-position: 0 -30px; }
+        }
+    }
+
+    .co {
+        background: transparent url(/a/img/lp/ico-animated.gif) 0 0 no-repeat;
+        .inline-block();
+        margin: -4px .2em 0 0;
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+    }
 }
 
 .btn-sec {
@@ -154,20 +186,30 @@
 
     UL {
         .inline-block();
-        padding: 0;
+        padding: 2px 0 0;
         vertical-align: middle;
     }
 
      A {
         border: 2px solid #19a6ff;
         color: #47494c;
-\     }
+        padding-top: 9px;
+        .transition(background .2s linear);
+
+        &:hover,
+        &:focus { background: #f2f4f7; }
+     }
+
+    .tooltip {
+        font-family: @font-sans;
+        bottom: 77em/13.8;
+        left: 0;
+    }
 }
 
     .download-pay-w LI {
         .ir(0, inline-block);
         *display: inline; // IE7 inline-block hack
-        vertical-align: central;
         margin-left: 12px;
         height: 18px;
         width: 18px;
@@ -189,9 +231,9 @@
 
     .doc-footer {
         text-align: center;
-        margin: 0 auto;
-        position: static;
-        height: auto;
+        margin: 0 0 0 -340px;
+        padding: 0;
+        height: 135px;
         width: 680px;
 
         P, UL, H3 { .inline-block(); }
@@ -326,7 +368,11 @@
         (-webkit-min-device-pixel-ratio: 1.25),
         (min-resolution: 120dpi) {
 
-
+    .btn-prim .co
+        {
+            background-image: url(/a/img/lp/ico-animated-x2.gif);
+            .background-size(30px 30px);
+        }
 }
 
 
