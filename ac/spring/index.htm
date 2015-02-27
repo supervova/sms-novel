@@ -144,23 +144,27 @@
 
 
 <!-- Modal Box ============================================================= -->
-<section class="modal-box">
-    <h2>Роман в SMSках — отрывок</h2>
-    <blockquote>
-    <p>Пиши ко мне, мой ангел, письма твои будут мне большим утешением. Что ваши балы, что наши общие знакомые?</p>
-    <footer>Александр Пушкин</footer>
-    </blockquote>
+<div class="modal-box">
+    <section class="mb-body">
+        <header class="mb-header">
+        <h2>Роман в SMSках — отрывок</h2>
+        </header>
+        <blockquote>
+        <p>Пиши ко мне, мой ангел, письма твои будут мне большим утешением. Что ваши балы, что наши общие знакомые?</p>
+        <footer>Александр Пушкин</footer>
+        </blockquote>
 
-    <blockquote>
-    <p>На днях, не имея денег, зашел я к Некрасову. Сидя у него, у меня пришла идея романа в 9 письмах. Придя домой, я написал этот роман…</p>
-    <footer>Фёдор Достоевский</footer>
-    </blockquote>
+        <blockquote>
+        <p>На днях, не имея денег, зашел я к Некрасову. Сидя у него, у меня пришла идея романа в 9 письмах. Придя домой, я написал этот роман…</p>
+        <footer>Фёдор Достоевский</footer>
+        </blockquote>
 
-    <blockquote>
-    <p>Эта история придумана, все персонажи и события вымышлены</p>
-    <footer>Телесериал «Обмани меня»</footer>
-    </blockquote>
-</section>
+        <blockquote>
+        <p>Эта история придумана, все персонажи и события вымышлены</p>
+        <footer>Телесериал «Обмани меня»</footer>
+        </blockquote>
+    </section>
+</div>
 <div class="overlay" style="filter: alpha(opacity=64)"></div>
 
 <!-- Scripts =============================================================== -->
@@ -190,7 +194,7 @@
             e.preventDefault();
 
             var modal = $('.modal-box');
-            var overlay = overlay;
+            var overlay = $('.overlay');
 
             modal.fadeIn('300');
             overlay.fadeIn('300');

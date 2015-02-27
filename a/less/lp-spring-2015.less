@@ -276,7 +276,6 @@ HTML, BODY { height:100%; }
 
 @modal-md:                  800px;
 
-@mb-margin-top:             60px;
 @mb-padding:                22px 40px 66px;
 @mb-padding-mob:            0 40px 0 20px;
 
@@ -313,15 +312,25 @@ HTML, BODY { height:100%; }
 
     // Real Modal Box — Header
     .mb-header {
-        color: @text-color;
+        background: rgba(236, 239, 243, .9);
+        border-bottom: 1px solid #dde0e4;
+        .box-shadow(0 4px 12px rgba(0,0,0,.08));
+        color: @c-nt;
+        font-family: @font-sans;
+        font-size: 16/@b*100%;
         line-height: 1;
         text-align: left;
         .text-overflow;
-        margin: @mb-margin-top auto 0;
-        padding: @mb-padding;
+        text-shadow:0 1px 0 #fff;
+        margin: 0 auto;
+        padding: 0;
         position: fixed;
-        height: ;
-        width: @modal-md;
+        top: 0;
+        left: auto;
+        height: 72px;
+        min-width: 768px;
+        max-width: @modal-md;
+        z-index: 100;
         *zoom: 1;
     }
 
@@ -329,15 +338,14 @@ HTML, BODY { height:100%; }
     // Real Modal Box
     .mb-body {
         background: #FFF;
-        .border-radius(24px);
         text-align: left;
-        margin: @mb-margin-top auto 0;
+        margin: 0 auto;
         overflow-y: auto;
         padding: @mb-padding;
         position: relative;
-        max-height: 64%;
-        _height: 21 * @bl + 0px; // 462px
-        width: @modal-md;
+        min-width: 768px;
+        max-width: @modal-md;
+        .height-100p;
         *zoom: 1;
     }
 
