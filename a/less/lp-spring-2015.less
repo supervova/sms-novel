@@ -1,6 +1,8 @@
 @import '02-variables.less';
 @import '02-mixins.less';
 
+HTML, BODY { height:100%; }
+
 .p-spring-2015, .p-spring-2015 .page { background-image: url(/a/img/lp/bg-valentine.png); }
 
 .p-spring-2015 .doc-body { padding-bottom: 173px; }
@@ -183,6 +185,8 @@
 
 .btn-sec {
     float: left;
+    position: relative;
+    *zoom: 1;
 
     UL {
         .inline-block();
@@ -201,6 +205,7 @@
      }
 
     .tooltip {
+        .box-shadow(0 1px 3px rgba(0,0,0,0.08));
         font-family: @font-sans;
         bottom: 77em/13.8;
         left: 0;
@@ -269,7 +274,7 @@
 |---------------------------------------
 */
 
-@modal-md:                  640px;
+@modal-md:                  800px;
 
 @mb-margin-top:             60px;
 @mb-padding:                22px 40px 66px;
@@ -305,6 +310,21 @@
     .height-100p;
     width: 100%;
     z-index: 444;
+
+    // Real Modal Box — Header
+    .mb-header {
+        color: @text-color;
+        line-height: 1;
+        text-align: left;
+        .text-overflow;
+        margin: @mb-margin-top auto 0;
+        padding: @mb-padding;
+        position: fixed;
+        height: ;
+        width: @modal-md;
+        *zoom: 1;
+    }
+
 
     // Real Modal Box
     .mb-body {
