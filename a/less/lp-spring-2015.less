@@ -114,6 +114,10 @@ HTML, BODY { height:100%; }
         H2 .txt-first { font-weight: bold; }
     } // billboard
 
+    A.a-cta:after {
+        background-position: -300px -140px;
+    }
+
     /* Main pic */
     .box-main-pic {
         position: absolute;
@@ -276,18 +280,7 @@ HTML, BODY { height:100%; }
 
 @modal-md:                  800px;
 
-@mb-padding:                22px 40px 66px;
-@mb-padding-mob:            0 40px 0 20px;
-
-@mb-close-top:              14px;
-@mb-close-right:            20px;
-@mb-close-bg-position:      -150px 0;
-@mb-close-dimension:        24px;
-
-// Overlay
-@modal-backdrop-bg:         #000; // 2
-@modal-backdrop-opacity:    64;
-
+@mb-padding-mob:            0;
 
 
 // Body class for killing the scroll
@@ -298,8 +291,6 @@ HTML, BODY { height:100%; }
     -webkit-overflow-scrolling: touch;
     display: none;
     text-align: center;
-    overflow-y: scroll;
-    overflow: auto;
     // Prevent Chrome on Windows from adding a focus outline
     outline: 0;
     .fixed-on-top;
@@ -310,43 +301,55 @@ HTML, BODY { height:100%; }
     width: 100%;
     z-index: 444;
 
-    // Real Modal Box — Header
-    .mb-header {
-        background: rgba(236, 239, 243, .9);
-        border-bottom: 1px solid #dde0e4;
-        .box-shadow(0 4px 12px rgba(0,0,0,.08));
-        color: @c-nt;
-        font-family: @font-sans;
-        font-size: 16/@b*100%;
-        line-height: 1;
-        text-align: left;
-        .text-overflow;
-        text-shadow:0 1px 0 #fff;
-        margin: 0 auto;
-        padding: 0;
-        position: fixed;
-        top: 0;
-        left: auto;
-        height: 72px;
-        min-width: 768px;
-        max-width: @modal-md;
-        z-index: 100;
-        *zoom: 1;
+    .mb-content, .mb-header, .mb-body {
+        .box-sizing(border-box);
+        *behavior: url(/a/js/boxsizing.htc);
     }
 
 
     // Real Modal Box
-    .mb-body {
-        background: #FFF;
+    .mb-content {
+        background: #f7fafe;
         text-align: left;
+        padding-top: 6em;
         margin: 0 auto;
-        overflow-y: auto;
-        padding: @mb-padding;
         position: relative;
-        min-width: 768px;
-        max-width: @modal-md;
+        max-width: 800px;
+        width: 100%;
         .height-100p;
         *zoom: 1;
+    }
+
+    // Real Modal Box — Header
+    .mb-header {
+        background: #edf0f4;
+        border-bottom: 1px solid #dde0e4;
+        .box-shadow(0 4px 12px rgba(0,0,0,.08));
+        position: fixed;
+        top: 0;
+        left: auto;
+        height: 72px;
+        width: 100%;
+        max-width: 800px;
+        z-index: 100;
+        *zoom: 1;
+
+        H2 {
+            color: @c-nt;
+            font-size: 16/@b*100%;
+            font-weight: bold;
+            line-height: 1;
+            text-shadow: 0 1px 0 #fff;
+            .text-overflow;
+            padding: 2.125em 60px 0;
+        }
+    }
+
+    .mb-body {
+        padding: 0 60px 66px;
+        overflow-y: auto;
+        .height-100p;
+        width: 100%;
     }
 
     H2 {
@@ -357,26 +360,33 @@ HTML, BODY { height:100%; }
 
     // There are resets in buttons.less
     .btn-close {
-        background-position: @mb-close-bg-position;
+        background-position: -300px -100px;
         background-color: transparent;
-        border: 0;
-        cursor: pointer;
+        .reset-filter();
+        .box-shadow(none);
+        border: 0 none;
+        .ir();
+        margin: 0;
         padding: 0;
         position: absolute;
-        top: @mb-close-top;
-        right: @mb-close-right;
-        height: @mb-close-dimension;
-        width: @mb-close-dimension;
+        top: 28px;
+        right: 26px;
+        height: 24px;
+        width: 24px;
         z-index: 2;
+
+        &:focus { outline: 0; }
+
+        &:active, &.active { background-image: url(@base-graphics); }
     }
 
 }
 
 // Overlay
 .overlay {
-    background: @modal-backdrop-bg;
+    background: #000;
     display: none;
-    .opacity(@modal-backdrop-opacity);
+    .opacity(64);
     .fixed-on-top;
     right: 0;
     bottom: 0;
