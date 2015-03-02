@@ -18,7 +18,6 @@ HTML, BODY { height:100%; }
     /* Header */
     .doc-header {
         background-position: 0 0;
-        // background: rgba(255, 255, 255, .08);
         height: 72px;
 
         NAV { // Third column
@@ -27,12 +26,6 @@ HTML, BODY { height:100%; }
             top: 24px;
             right: 0;
             width: 170px;
-
-            .nav {
-                .mm-download:hover .mm-label, .mm-download:focus .mm-label, .mm-download:active .mm-label,
-                .mm-buy:hover .mm-label, .mm-buy:focus .mm-label, .mm-buy:active .mm-label
-                { background-color: @blue; }
-            }
 
             .nav {
                 .mm-buy .mm-label { background-color: #25282c; }
@@ -352,12 +345,6 @@ HTML, BODY { height:100%; }
         width: 100%;
     }
 
-    H2 {
-        text-shadow:0 1px 0 rbga(255, 255, 255, .4);
-        margin: 0;
-        padding: 0 20px 0 0;
-    }
-
     // There are resets in buttons.less
     .btn-close {
         background-position: -300px -100px;
@@ -396,6 +383,7 @@ HTML, BODY { height:100%; }
     z-index: 440;
 }
 
+
 /*
 |---------------------------------------
 | High resolution devices
@@ -420,6 +408,10 @@ HTML, BODY { height:100%; }
 |-------------------------------------------------------------------------------
 */
 
+@media only screen and (max-width: 800px) {
+    .mb-content, .mb-header { max-width: none; }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 979px) {
 }
 
@@ -431,15 +423,58 @@ HTML, BODY { height:100%; }
 */
 
 @media only screen and (max-width: 767px) {
-    .modal-box {
-        padding: 10px;
 
+    .p-spring-2015, .p-spring-2015 .page { background-position: 0 -30px; }
+
+    .p-spring-2015 {
+
+        .doc-header { // Header
+            height: 42px;
+
+            NAV { // Third column
+                color: #C9CCD0;
+                font-size: 75%;
+                font-weight: bold;
+                top: 4px;
+                right: 20px;
+
+                .nav {
+                    .mm-download:hover .mm-label, .mm-download:focus .mm-label, .mm-download:active .mm-label
+                    { background-color: transparent; }
+
+                    .mm-buy .mm-label  {
+                        #gradient > .vertical(@c-btn-mob-header-light, @c-btn-mob-header-dark);
+                        border: 1px solid rgba(0, 0, 0, .64);
+                        .border-radius(5px);
+                        .box-shadow(inset 0 1px 0 #76787A, 0 1px 0 rgba(255, 255, 255, .2));
+                        line-height: 1;
+                        margin: 0;
+                        padding: 9px 9px 6px;
+                        min-height: 12px;
+                        min-width: 24px;
+                    }
+
+                    .mm-buy:hover .mm-label, .mm-buy:focus .mm-label, .mm-buy:active .mm-label
+                    { background-color: @c-btn-mob-header-dark; }
+                }
+            } // Nav
+        }
+
+        .nameplate { // First column
+
+            H1 {
+                font-size: @bs / @b * 100%;
+                text-align: left;
+                margin: 0;
+                padding: 13px 0 0 20px;
+            }
+        }
+    }
+
+    .modal-box {
         .mb-body {
             margin: 0;
             padding: 22px 20px;
-            max-height: none;
-            height: auto;
-            width: 100%;
         }
 
         .btn-close { right: 10px; }
