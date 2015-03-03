@@ -333,11 +333,57 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
+    <!-- Modal Box -->
+    <script>
+    $(function() {
 
+        var modal = $('.modal-box');
+        var overlay = $('.overlay');
+        var body = $('body');
+
+        // Open
+        $('a[data-role="modal-launcher"]').click(function(e) {
+
+            //Cancel the link behavior
+            e.preventDefault();
+
+            modal.fadeIn('300');
+            overlay.fadeIn('300');
+            body.addClass('modal-open');
+        });
+
+        // Close
+        var closeModal = function( ) {
+            modal.fadeOut('fast');
+            overlay.fadeOut('fast');
+            body.removeClass('modal-open');
+            return;
+        };
+
+        $(document).keydown(function(e) {
+            if (e.keyCode == 27) {
+                closeModal();
+            }
+
+        });
+
+        modal.click(function(e) {
+            if ($(e.target).is('.modal-box *')) {
+                return;
+            }
+            closeModal();
+        });
+
+        $('.modal-box .btn-close').click(function(e) {
+            //Cancel the link behavior
+            e.preventDefault();
+            closeModal();
+        });
+    });
+    </script>
 
     <!-- Improving mobile user experience -->
     <script src="/a/js/helper.js"></script>
-    <script src="/a/js/scripts.js"></script>
     <!--[if lt IE 7 ]>
     <script type="text/javascript" src="/a/js/png.js"></script>
     <script type="text/javascript"> DD_belatedPNG.fix('img, .png');</script>
