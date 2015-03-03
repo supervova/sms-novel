@@ -1,6 +1,17 @@
-/**
- * MBP - Mobile boilerplate helper functions
- */
+/*
+|-------------------------------------------------------------------------------
+| MBP - Mobile boilerplate helper functions
+|-------------------------------------------------------------------------------
+| iPhone Scale Bug Fix
+| Hide URL Bar
+| MBP.fastButton is used to make instant responsive buttons, 300ms faster to be exact
+| Autogrow textarea
+| Enable CSS active pseudo styles
+| Prevent default scrolling on document window
+| Prevent iOS from zooming onfocus
+| iOS Startup Image helper
+|
+*/
 
 (function(document) {
 
@@ -307,6 +318,7 @@
 
     MBP.preventScrolling = function() {
         document.addEventListener('touchmove', function(e) {
+            if (e.target.type === 'range') { return; }
             e.preventDefault();
         }, false);
     };
