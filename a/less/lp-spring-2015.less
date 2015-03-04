@@ -84,8 +84,6 @@ HTML, BODY { height:100%; }
             position: relative;
             *zoom: 1;
 
-            H2, H3 { }
-
             H3 {
                 color: #66f2ff;
                 font-family: @font-sans;
@@ -431,6 +429,7 @@ HTML, BODY { height:100%; }
 @media only screen and (max-width: 767px) {
 
     .p-spring-2015, .p-spring-2015 .page { background-position: 0 -30px; }
+    .p-spring-2015 .doc-body { padding-bottom: 66em / 17; }
 
     .p-spring-2015 {
 
@@ -481,8 +480,53 @@ HTML, BODY { height:100%; }
                 padding: 13px 0 0 20px;
             }
         }
+
+        // Billboard
+        .billboard {
+            .hgroup {
+                text-align: center;
+                padding: 0;
+
+                H3 {
+                    font-size: @bs /  @b * 100%;
+                    font-weight: 400;
+                    line-height: @baseline-mob-s;
+                    padding: 0;
+                }
+            }
+
+            H2 {
+                font-size: 22 / @b * 100%;
+                font-weight: bold;
+                line-height: 1;
+                padding: 2em 0 (2em / 22);
+            }
+
+            .box-main-pic {
+                display: block;
+                margin-top: 53em/@bm;
+                position: static;
+
+                FIGURE {
+                    background: transparent url(/a/img/main-pic-mobile.png) no-repeat;
+                    margin: 0 auto;
+                }
+
+                IMG { visibility: hidden; }
+
+                FIGURE, IMG {
+                    height: 104px; // Sinse it's not image we can't make it responsive
+                    width: 183px;
+                }
+            }
+
+        .a-cta { text-align: center;}
+
+        } // billboard
     }
 
+
+    // Buttons
     .sec-cta {
         text-align: center;
         padding-top: 33em/@b;
@@ -497,18 +541,30 @@ HTML, BODY { height:100%; }
 
     // Modal Box
     .modal-box {
+
+        .mb-content { padding-top: 49em/17; }
+
         .mb-body {
             margin: 0;
             padding: 22px 20px;
         }
 
-        .btn-close { right: 10px; }
+        .mb-header {
+            height: 42px;
+            H2 { padding: (14em/16) 20px 0; }
+        }
+
+        .btn-close {
+            top: 10px;
+            right: 10px;
+        }
+
     }
 
     // Footer
     .p-spring-2015 .doc-footer {
         margin: 0;
-        padding: 100px 0 0;
+        padding: 100px 0 (58em/13);
         height: auto;
         width: 100%;
         *zoom: 1;
@@ -518,7 +574,7 @@ HTML, BODY { height:100%; }
 
         .ftr-copyright {
             border-right: 0 none;
-            margin-right: 0;
+            margin: 0 0 (21em/13);
             padding: 0;
         }
 
