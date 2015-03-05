@@ -30,39 +30,6 @@ HTML, BODY {
 .p-spring-2015 .doc-header NAV .nav .mm-download:hover .mm-label, .p-spring-2015 .doc-header NAV .nav .mm-download:focus .mm-label, .p-spring-2015 .doc-header NAV .nav .mm-download:active .mm-label, .p-spring-2015 .doc-header NAV .nav .mm-buy:hover .mm-label, .p-spring-2015 .doc-header NAV .nav .mm-buy:focus .mm-label, .p-spring-2015 .doc-header NAV .nav .mm-buy:active .mm-label {
     background-color: #19a6ff
 }
-.p-spring-2015 .nameplate {
-    float: none;
-    text-align: center;
-    position: relative;
-    padding: 0 0 0;
-    width: 100%;
-*zoom:1
-}
-.p-spring-2015 .nameplate:hover {
-    text-decoration: none
-}
-.p-spring-2015 .nameplate H2 {
-    text-align: left;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    padding: 0
-}
-.p-spring-2015 .nameplate H1 {
-    font-size: 152.94117647%;
-    padding: 25px 0 0;
-    position: relative;
-*zoom:1
-}
-.p-spring-2015 .nameplate .smiley {
-    display: inline-block;
-*display:inline;
-*zoom:1;
-    font-size: 69.23076923%;
-    margin: -10px 0 0 2px;
-    vertical-align: middle;
-    position: static
-}
 
 /*
 |---------------------------------------
