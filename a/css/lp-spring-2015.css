@@ -248,37 +248,7 @@ filter:progid:DXImageTransform.Microsoft.Gradient(startColorstr=#a3ce62, endColo
 |---------------------------------------
 */
 
-.p-spring-2015 .doc-footer {
-    text-align: center;
-    margin: 0 0 0 -340px;
-    padding: 0;
-    height: 135px;
-    width: 680px
-}
-.p-spring-2015 .doc-footer P, .p-spring-2015 .doc-footer UL, .p-spring-2015 .doc-footer H3 {
-    display: inline-block;
-*display:inline;
-*zoom:1
-}
-.p-spring-2015 .doc-footer P, .p-spring-2015 .doc-footer H3 {
-    color: #8a8c8f;
-    font-weight: normal
-}
-.p-spring-2015 .doc-footer P {
-    border-right: 1px solid #bbbec2;
-    margin-right: 26px;
-    padding-right: 30px
-}
-.p-spring-2015 .ftr-copyright {
-    padding-left: 46px;
-    width: auto
-}
-.p-spring-2015 .ftr-share {
-    height: auto
-}
-.p-spring-2015 .ftr-share .fb {
-    margin-right: .5em
-}
+
 
 /*
 |---------------------------------------
