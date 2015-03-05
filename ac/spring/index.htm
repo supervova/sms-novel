@@ -93,70 +93,7 @@
 
 
 
-<!-- Scripts =============================================================== -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/a/js/jquery-1.8.3.min.js"><\/script>')</script>
 
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <!-- Modal Box -->
-    <script>
-    $(function() {
-
-        var modal = $('.modal-box');
-        var overlay = $('.overlay');
-        var body = $('body');
-
-        // Open
-        $('a[data-role="modal-launcher"]').click(function(e) {
-
-            //Cancel the link behavior
-            e.preventDefault();
-
-            modal.fadeIn('300');
-            overlay.fadeIn('300');
-            body.addClass('modal-open');
-        });
-
-        // Close
-        var closeModal = function( ) {
-            modal.fadeOut('fast');
-            overlay.fadeOut('fast');
-            body.removeClass('modal-open');
-            return;
-        };
-
-        $(document).keydown(function(e) {
-            if (e.keyCode == 27) {
-                closeModal();
-            }
-
-        });
-
-        modal.click(function(e) {
-            if ($(e.target).is('.modal-box *')) {
-                return;
-            }
-            closeModal();
-        });
-
-        $('.modal-box .btn-close').click(function(e) {
-            //Cancel the link behavior
-            e.preventDefault();
-            closeModal();
-        });
-    });
-    </script>
-
-    <!-- Improving mobile user experience -->
-    <script src="/a/js/helper.js"></script>
 
 </body>
 </html>
