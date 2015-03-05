@@ -409,15 +409,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(enabled = false);
 |---------------------------------------
 */
 
-@media print, (-o-min-device-pixel-ratio:5/4), (-webkit-min-device-pixel-ratio:1.25), (min-resolution:120dpi) {
-.btn-prim .co {
-    background-image: url(/a/img/lp/ico-animated-x2.gif);
-    -webkit-background-size: 30px 60px;
-    -moz-background-size: 30px 60px;
-    -o-background-size: 30px 60px;
-    background-size: 30px 60px
-}
-}
+
 
 /*
 |-------------------------------------------------------------------------------
