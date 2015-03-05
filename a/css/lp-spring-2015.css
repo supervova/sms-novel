@@ -70,46 +70,6 @@ HTML, BODY {
 |---------------------------------------
 */
 
-.p-spring-2015 .billboard {
-    text-align: left
-}
-.p-spring-2015 .billboard .hgroup {
-    padding: 0 0 2.529em 226px;
-    position: relative;
-*zoom:1
-}
-.p-spring-2015 .billboard .hgroup H3 {
-    color: #66f2ff;
-    font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-    font-size: 152.94117647%;
-    font-weight: 200;
-    margin-top: 0;
-    padding: .731em 0 0
-}
-.p-spring-2015 .billboard H2 {
-    color: #fff;
-    font-size: 247.05882353%;
-    line-height: 1.143;
-    padding: 1.94em 0 0
-}
-.p-spring-2015 .billboard .txt-first {
-    display: block
-}
-.p-spring-2015 .billboard H2 .txt-first {
-    font-weight: bold
-}
-.p-spring-2015 A.a-cta:after {
-    background-position: -300px -140px
-}
-.p-spring-2015 .box-main-pic {
-    position: absolute;
-    top: 55px;
-    left: -9px
-}
-.p-spring-2015 .box-main-pic FIGURE {
-    height: 268px;
-    width: 197px
-}
 
 /*
 |---------------------------------------
