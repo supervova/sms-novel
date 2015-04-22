@@ -141,6 +141,8 @@ CTA
         text-transform: uppercase; }
 
     .l-paid {
+        list-style-image: none;
+        list-style-type: none;
         margin: 0 auto (@baseline-s / 4) + (1em / @b);
         padding: 0;
         width: 172px;
@@ -154,15 +156,17 @@ CTA
         .first { margin-left: 0; }
     }
 
-    .ico-fb2, .ico-epub, .ico-pdf, .ico-doc {
+    .ico-fb2, .ico-epub, .ico-ipad, .ico-mobi, .ico-pdf, .ico-doc {
         .ir;
         height: 48px;
         width: 40px; }
 
-    .ico-fb2 { background-position: 0 -50px; }
+    .ico-mobi { background-position: 0 -50px; }
+    //.ico-fb2 { background-position: 0 -50px; }
     .ico-epub { background-position: -50px -50px; }
     .ico-pdf { background-position: -100px -50px; }
-    .ico-doc { background-position: -150px -50px; }
+    .ico-ipad { background-position: -150px -50px; }
+    //.ico-doc { background-position: -150px -50px; }
 
     .tooltip { /* Set here to rewrite font rules */
         bottom: 3 * @baseline-s;
@@ -190,8 +194,23 @@ CTA
 
     }
 
+    /* Buy Paper Book */
+    .h-buy-secondary {
+        font-size: 16 / @b * 100%;
+        line-height: @baseline-s;
+        margin-top: -2em/16;
+        padding: 0;
+
+        A, A:hover { color: #fff; }
+    }
+
+
+
     /* Free versions */
-    .h-secondary { padding: 0; }
+    .h-secondary {
+        color: #fff;
+        padding: 0;
+    }
 
     .h-secondary, .l-free, .note {
         font-size: @small / @bs * 100%;
