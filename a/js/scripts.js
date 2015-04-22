@@ -102,7 +102,7 @@ function slideOut() {
 | TOOLTIP and smiley
 |-------------------------------------------------------------------------------
 */
-function tooltipSmiley() {
+function tooltip() {
     if(window.matchMedia('(min-width: 769px)').matches) {
         $('.dfn').hover(
         function() {
@@ -111,8 +111,6 @@ function tooltipSmiley() {
             $(this).siblings('.tooltip').show('fast');
             $(this).data('title', $(this).prop('title'));
             $(this).removeAttr('title');
-            // Smiley
-            $('.box-cta hr').css('background-position', '0 -48px');
         }, function() {
             $('.tooltip').hide('fast').remove();
             $(this).prop('title', $(this).data('title'));
@@ -121,7 +119,7 @@ function tooltipSmiley() {
     }
 }
 
-function buySmiley() {
+function smiley() {
     if(window.matchMedia('(min-width: 769px)').matches) {
         $('.dfn, .h-buy-secondary a').hover(
         function() {
@@ -208,8 +206,8 @@ $(document).ready(function(){
     $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], iframe[src*="//instagram.com/"], iframe[src^="http://coub.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
     $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
     dropDowns();
-    tooltipSmiley();
-    buySmiley();
+    tooltip();
+    smiley();
     slideOut();
     tumblrLike();
     $('.box-testimonials').rotaterator({fadeSpeed:1200, pauseSpeed:8000});
@@ -218,12 +216,10 @@ $(document).ready(function(){
 
     // $('.l-paid .ico-fb2').on('click', function() {ga('send', 'event', 'Download', 'FB2');});
     $('.l-paid .ico-epub').on('click', function() {ga('send', 'event', 'Download', 'EPUB');});
-    $('.l-paid .ico-pdf').on('click', function() {ga('send', 'event', 'Download', 'PDF');});
     $('.l-paid .ico-mobi').on('click', function() {ga('send', 'event', 'Download', 'MOBI');});
-    $('.l-paid .ico-ipad').on('click', function() {ga('send', 'event', 'Download', 'iPAD');});
+    $('.l-paid .ico-ipad').on('click', function() {ga('send', 'event', 'Download', 'IPAD');});
+    $('.l-paid .ico-pdf').on('click', function() {ga('send', 'event', 'Download', 'PDF');});
     // $('.l-paid .ico-doc').on('click', function() {ga('send', 'event', 'Download', 'DOC');});
-
-    $('.l-paid .ico-doc').on('click', function() {ga('send', 'event', 'Download', 'DOC');});
 
     $('.l-free .a-download-txt').on('click', function() {ga('send', 'event', 'Download', 'TXT');});
     $('.l-free .a-download-ipad').on('click', function() {ga('send', 'event', 'Download', 'iPad');});
