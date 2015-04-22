@@ -102,7 +102,7 @@ function slideOut() {
 | TOOLTIP and smiley
 |-------------------------------------------------------------------------------
 */
-function tooltip() {
+function tooltipSmiley() {
     if(window.matchMedia('(min-width: 769px)').matches) {
         $('.dfn').hover(
         function() {
@@ -111,6 +111,8 @@ function tooltip() {
             $(this).siblings('.tooltip').show('fast');
             $(this).data('title', $(this).prop('title'));
             $(this).removeAttr('title');
+            // Smiley
+            $('.box-cta hr').css('background-position', '0 -48px');
         }, function() {
             $('.tooltip').hide('fast').remove();
             $(this).prop('title', $(this).data('title'));
@@ -119,7 +121,7 @@ function tooltip() {
     }
 }
 
-function smiley() {
+function buySmiley() {
     if(window.matchMedia('(min-width: 769px)').matches) {
         $('.dfn, .h-buy-secondary a').hover(
         function() {
@@ -206,8 +208,8 @@ $(document).ready(function(){
     $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], iframe[src*="//instagram.com/"], iframe[src^="http://coub.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
     $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
     dropDowns();
-    tooltip();
-    smiley();
+    tooltipSmiley();
+    buySmiley();
     slideOut();
     tumblrLike();
     $('.box-testimonials').rotaterator({fadeSpeed:1200, pauseSpeed:8000});
