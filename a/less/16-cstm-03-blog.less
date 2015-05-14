@@ -50,6 +50,16 @@
     margin-bottom: 2*@baseline;
     padding: 0 1em 1em 0; }
 
+/* Hide Post Footer Stuff Under the .fb-post */
+
+.fb-post + .pft {
+    border-bottom-color: transparent;
+
+    .pft-date, .pft-share, .pft-like, .pft-liked, .pft-reblog, .pft-tags {
+        display: none;
+    }
+}
+
 #posts .post:last-of-type .pft { border-bottom-color: transparent; } /* Keep rythm */
 
 .pft-date, .pft-share, .pft-like, .pft-liked, .pft-reblog, .pft-tags, .pft-comments {
