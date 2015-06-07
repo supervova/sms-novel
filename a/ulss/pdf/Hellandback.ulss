@@ -1,0 +1,504 @@
+//
+// Hellandback
+//
+// Demo style to show clean layout
+// without markup
+//
+// Visit http://www.ulyssesapp.com/styles
+// for full reference
+//
+
+
+
+//
+// Document & Layout Settings
+//
+
+document-settings {
+
+	page-inset-top:    30mm;	page-inset-inner:  30mm
+	page-inset-bottom: 45mm;	page-inset-outer:  30mm
+
+	section-break:	heading-1
+	// always have H1 on a new page
+
+	two-sided:	no
+	page-binding:	left
+
+	footnote-enumeration:	per-section
+	footnote-placement:	end-of-page
+	footnote-style:	decimal
+
+	}
+
+
+
+//
+// Default Typography
+//
+
+defaults {
+
+	font-family:	"Helvetica"
+	font-size:		14pt
+	line-height:	16pt
+
+	text-alignment: justified
+	hyphenation:	yes
+
+	}
+
+
+
+//
+// Basic Non-Text-Area Page Layout
+//
+
+area-header {
+
+	content:		none
+	top-spacing:		0mm
+	bottom-spacing:		0mm
+
+	}
+
+area-footnotes {
+
+	font-size:		9pt
+	line-height:		12pt
+
+	top-spacing:		10mm
+	// additional space cut off from text area
+
+	}
+
+
+area-footer {
+
+	content:		page-number
+	text-alignment:		right
+	top-spacing:		0mm
+	bottom-spacing:		26mm
+	text-alignment:		right
+
+	}
+
+
+
+//
+// Reusable styles (variables & mixins)
+//
+
+$mark-color =		#FEFECC
+$black =		#000000
+$light-grey =		#cccccc
+$cool-blue = 		#3875d7
+
+
+@code {
+
+	font-family:	"Helvetica"
+	font-weight:	normal;
+	font-slant:	normal;
+	// Reset all traits to normal, since this can appear anywhere
+
+	}
+
+
+
+//
+// Headers
+//
+
+heading-all {
+
+	line-height:			100%;
+
+	keep-with-following:	true
+	text-alignment: 	left
+
+	}
+
+
+heading-1 {
+
+	style-title:	"Heading 1"
+	// As shown and used by MS Word
+
+	font-size:	36pt
+	font-weight:	bold
+
+	margin-top:	24pt
+	// Since H1 is section break, this adds to first page top margin
+
+	margin-bottom:	12pt
+
+	}
+
+
+heading-2 {
+
+	style-title:	"Heading 2"
+	// As shown and used by MS Word
+
+	font-size:	20pt
+	font-weight:	bold
+
+	margin-top: 	24pt
+	margin-bottom:	12pt
+
+	}
+
+
+heading-3 {
+
+	style-title:	"Heading 3"
+	// As shown and used by MS Word
+
+	font-size:		18pt
+	font-weight:	bold
+
+	margin-top: 	24pt;
+
+	}
+
+
+heading-4 {
+
+	style-title:	"Heading 4"
+	// As shown and used by MS Word
+
+	font-size:		16pt
+	font-weight:	bold
+
+	margin-top: 	12pt;
+
+	}
+
+
+heading-5 {
+
+	style-title:	"Heading 5"
+	// As shown and used by MS Word
+
+	font-size:		14pt
+	font-weight:	bold
+
+	margin-top: 	12pt;
+
+	}
+
+
+heading-6 {
+
+	style-title:	"Heading 6"
+	// As shown and used by MS Word
+
+	font-size:		14pt
+
+	margin-top: 	12pt;
+
+	}
+
+
+
+//
+// Paragraph styles
+//
+
+paragraph {
+
+	style-title:		"Paragraph"
+	// As shown and used by MS Word
+
+	first-line-indent:	0pt
+	margin-bottom: 12pt
+
+	}
+
+
+paragraph-divider {
+
+	page-break:		none
+	visibility:		hidden
+	// Set the divider to help with manual page breaks
+
+	}
+
+
+paragraph-figure {
+
+	margin-top:	12pt
+	margin-bottom:	12pt
+
+	text-alignment:	left
+
+	}
+
+paragraph + paragraph {
+
+	first-line-indent:	0em
+	// Don't indent the first line of a paragraph
+
+	}
+
+
+//
+// Block styles
+//
+
+block-all {
+
+	margin-top:	12pt
+	margin-bottom:	12pt
+
+	margin-left:	3em
+	margin-right:	3em
+
+	}
+
+
+block-code : @code {
+
+	style-title:	"Codeblock"
+	// As shown and used by MS Word
+
+	font-size:		12pt
+	font-color:		$cool-blue
+	line-height:	14pt
+
+	margin-bottom:  14pt
+
+	// No need to set the font, since @code calls Menlo
+
+	}
+
+
+block-code paragraph {
+
+	text-alignment:		left
+	first-line-indent:	0pt
+
+	hyphenation:		no
+
+	default-tab-interval: 6em
+	// Set tab stops
+
+	}
+
+block-quote {
+
+	style-title:	"Blockquote"
+	// As shown and used by MS Word
+
+	font-slant:		italic
+
+	margin-left: 	3em
+
+	}
+
+
+block-raw {
+
+	visibility:	hidden
+	// kills raw source blocks
+
+	}
+
+
+block-comment {
+
+	visibility:	hidden
+
+}
+
+
+
+//
+// List styles
+//
+
+
+list-all {
+
+	margin-left:	0.5em
+	margin-top:	0pt;
+	margin-bottom:	0pt;
+	}
+
+
+list-all list-all {
+
+	margin-top:	0pt;
+	margin-bottom:	0pt;
+	// No extra spacings between nested ordered and unordered lists
+
+	}
+
+
+list-ordered {
+
+	enumeration-format:	"%d."
+	text-inset:	2em;
+	// Simulates tab stop justified right
+
+	}
+
+
+list-ordered list-ordered {
+
+	enumeration-format:	"%*%d"
+	text-inset:	2.5em;
+	// Simulates tab stop justified right
+
+	}
+
+
+list-ordered list-ordered list-ordered {
+
+	enumeration-format:	"%*.%d"
+	text-inset:	3em;
+	// Simulates tab stop justified right
+
+	}
+
+
+list-unordered {
+
+	enumeration-format:	"→"
+	text-inset:	2em;
+	// Simulates tab stop justified right
+	margin-bottom:	0pt;
+	}
+
+
+//
+// Inline styles
+//
+
+inline-strong {
+
+	style-title:	"Strong"
+	// As shown and used by MS Word
+
+	font-weight:	bold
+
+	}
+
+
+inline-emphasis {
+
+	style-title:	"Emphasis"
+	// As shown and used by MS Word
+
+	font-slant: 	italic;
+
+	}
+
+
+inline-mark {
+
+	style-title:		"Mark"
+	// As shown and used by MS Word
+
+	background-color:	$mark-color
+
+	}
+
+
+inline-citation {
+
+	style-title:	"Inline Cite"
+	// As shown and used by MS Word
+
+	font-slant:		italic;
+
+	}
+
+
+inline-code : @code {
+
+	style-title:	"Inline Code"
+	// As shown and used by MS Word
+
+	// Nothing else to set here, since it inherits from @code
+
+	}
+
+
+inline-link {
+
+	style-title:		"Link"
+	// As shown and used by MS Word
+
+	font-color:	$cool-blue
+	underline:	single
+	underline-color: $cool-blue
+
+	}
+
+
+inline-comment {
+
+	visibility:	hidden;
+	// kills comments
+
+	}
+
+
+inline-delete {
+
+	visibility:	hidden;
+	// deletes deletions
+
+	}
+
+
+inline-annotation {
+
+	background-color:	$mark-color
+
+	}
+
+
+inline-annotation:anchor {
+
+	background-color:	#ffffff
+
+	}
+
+
+inline-raw {
+
+	visibility:	hidden;
+	// kills raw source
+
+	}
+
+
+
+//
+// Ulysses specific stuff
+// By default, we are hiding tags (##) etc.
+//
+
+ulysses-tag {
+
+	visibility:	hidden
+
+	}
+
+
+inline-link ulysses-tag {
+
+	visibility: hidden
+
+	}
+
+
+list-all ulysses-tag {
+
+	visibility: hidden
+
+	}
+
