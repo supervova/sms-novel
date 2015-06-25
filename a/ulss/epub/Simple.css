@@ -1,1 +1,0 @@
-/*	Simple	Plain ePub css	Visit http://www.ulyssesapp.com/styles for full reference*/html { text-rendering: optimizeLegibility !important; }h1, h2, h3 { -webkit-hyphens: none !important; }h1 { page-break-before: always !important; }h1, h2, h3, h4, h5, h6 { page-break-after: avoid !important; }/* p + p { margin:0; text-indent:1.5em; } */

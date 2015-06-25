@@ -1,0 +1,9 @@
+HTML{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizeLegibility!important}BODY{font:112.5% / 1.333em Georgia,'Times New Roman',Times,serif;text-align:left;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.chapter{page-break-after:always}H1,H2,H3,H4,H5,H6{-webkit-hyphens:none!important;page-break-after:avoid!important}H1,H2,H3{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:normal}
+H1{font-size:225%;margin:}H2,H3{page-break-after:always}H2{font-size:187.5%;margin:}H3{color:#8d9094;font-size:150%;margin:}H4,H5,H6{font-size:112.5%!important;margin:0}
+H6{color:#0099bf}A:link,A:visited,A:hover,A:active{background:transparent;border-bottom:1px dotted #66f;-webkit-text-fill-color:#66f;color:#66f!important;text-decoration:none}
+A:active{outline:0}A:link{-webkit-tap-highlight-color:transparent}BLOCKQUOTE{font-style:italic;line-height:1.45;margin:1.333em 0 1.333em;padding:0;position:relative}
+DL,DD{margin:0 0 1.333em}DT{font-weight:bold;margin:0}OL{list-style:decimal;list-style-position:inside;margin:0 0 1.333em;padding:0}UL{list-style-position:outside;margin:0 0 @baseline;padding:0}
+LI UL,LI OL{margin-bottom:0;padding-left:20px}P{margin:0 0 1.333em}VIDEO{text-align:center}FIGURE{margin:0 0 1.333em}FIGCAPTION{color:#8d9094;padding:1.333em 0 0}
+IMG{border:0;display:block;-ms-interpolation-mode:bicubic;margin:0 0 1.333em;height:auto;max-width:100%}FIGURE IMG{margin-bottom:0}DIV.cover,FIGURE.cover{text-align:center}
+IMG.cover{margin:0;vertical-align:middle;max-height:100%}
