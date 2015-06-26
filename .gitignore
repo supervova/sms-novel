@@ -1,7 +1,5 @@
 # Auxiliary Folders
 _notes/
-_stock/
-/_stock/
 a/css/*
 !a/css/styles.css
 !a/css/blog.css
