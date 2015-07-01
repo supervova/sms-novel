@@ -200,35 +200,23 @@ VIDEO { text-align: center; }
 
 /*
 |-------------------------------------------------------------------------------
-| Animation
+| Target Animation
 |-------------------------------------------------------------------------------
 */
 
-@keyframes highfade {
-    0% {
-        background-color: none;
-    }
-    20% {
-        background-color: yellow;
-    }
-    100% {
-        background-color: none;
-    }
-}
-
 @-webkit-keyframes highfade {
-    0% {
-        background-color: none;
-    }
-    20% {
-        background-color: yellow;
-    }
-    100% {
-        background-color: none;
-    }
+    0% { background-color: none; }
+    20% { background-color: yellow; }
+    100% { background-color: none; }
 }
 
-a:target, ol#footnotes li:target, sup a:target  {
+@keyframes highfade {
+    0% { background-color: none; }
+    20% { background-color: yellow; }
+    100% { background-color: none; }
+}
+
+A:target, #footnotes LI:target, SUP A:target  {
     animation-name: highfade;
     animation-duration: 2s;
     animation-iteration-count: 1;
