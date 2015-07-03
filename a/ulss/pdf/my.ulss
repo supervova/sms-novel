@@ -1,0 +1,449 @@
+// http://www.ulyssesapp.com/styles
+
+//------------------------------------------------------------------------------
+// Variables & Mixins
+//------------------------------------------------------------------------------
+
+$baseline =         14.9pt
+$black =            #000000
+$grey =             #727272
+$heading =          "Helvetica Neue"
+$link-color =       #0080cc
+
+@hidden-block {
+    content:            none
+    top-spacing:        0mm
+    bottom-spacing:     0mm
+}
+
+//------------------------------------------------------------------------------
+// Document & Layout Settings
+//------------------------------------------------------------------------------
+
+document-settings {
+
+// For A5 ----------------------------------------------------------------------
+    page-inset-top:    23.33mm;     page-inset-inner:  16.5mm
+    page-inset-bottom: 46.66mm;     page-inset-outer:  33mm
+
+    section-break:  heading-1
+    section-break:  heading-2
+    section-break:  heading-3
+    // always have H1 on a new page
+
+    two-sided:      yes
+    page-binding:   left
+
+    }
+
+
+
+//------------------------------------------------------------------------------
+// Default Typography
+//------------------------------------------------------------------------------
+
+defaults {
+
+    font-family:    "Times New Roman"
+    font-size:      12pt
+    line-height:    $baseline
+
+    text-alignment: justified
+    hyphenation:    yes
+
+    }
+
+
+//------------------------------------------------------------------------------
+// Basic Non-Text-Area Page Layout
+//------------------------------------------------------------------------------
+
+area-header : @hidden-block {
+
+}
+
+area-footnotes : @hidden-block {
+
+}
+
+area-footer {
+
+    content:            page-number
+    top-spacing:        0mm
+    bottom-spacing:     45.5mm
+    text-alignment:     center
+
+    }
+
+area-footer:left-page {
+
+    text-alignment:     left
+
+    }
+
+area-footer:right-page {
+
+    text-alignment:     right
+
+    }
+
+area-footer:first-page {
+
+    content:            none
+
+    }
+
+//------------------------------------------------------------------------------
+// Headers
+//------------------------------------------------------------------------------
+
+heading-all {
+
+    font-weight:    bold
+    keep-with-following:    true
+    text-alignment:         left
+    hyphenation:            no
+
+    }
+
+heading-1 {
+
+    style-title:    "Heading 1"
+    // As shown and used by MS Word
+
+    font-family:    $heading
+    font-size:      50pt
+    line-height:    44.7pt
+
+    margin-top:     64pt
+    // Since H1 is section break, this adds to first page top margin
+
+    margin-bottom:  64pt
+
+    }
+
+
+heading-2 { // Section
+
+    style-title:    "Heading 2"
+    // As shown and used by MS Word
+
+    font-family:    $heading
+    font-size:      31pt
+    line-height:    29.8pt
+    font-weight:    normal
+
+    margin-top:     0
+    margin-bottom:  104.3pt
+
+    }
+
+
+heading-3 { // Chapter
+
+    style-title:    "Heading 3"
+    // As shown and used by MS Word
+
+    color:          $grey
+
+    font-family:    $heading
+    font-size:      19pt
+    line-height:    $baseline * 1.5
+
+    margin-top:     $baseline
+    margin-bottom:  0pt
+
+    }
+
+
+heading-4 { // Day
+
+    style-title:    "Heading 4"
+    // As shown and used by MS Word
+
+    margin-top:     $baseline
+    margin-bottom:  0pt
+
+    }
+
+
+heading-5 { // The same Day
+
+    style-title:    "Heading 5"
+    // As shown and used by MS Word
+
+    color: $grey
+
+    margin-top:     $baseline
+    margin-bottom:  0pt
+
+    }
+
+//------------------------------------------------------------------------------
+// Paragraph styles
+//------------------------------------------------------------------------------
+
+paragraph {
+
+    style-title:        "Paragraph"
+    // As shown and used by MS Word
+
+    first-line-indent:  $baseline
+
+    }
+
+paragraph-divider {
+
+    page-break:     none
+    visibility:     hidden
+    // Set the divider to help with manual page breaks
+
+    }
+
+paragraph-figure {
+
+    margin-top:     0pt
+    margin-bottom:  $baseline
+
+    text-alignment: center
+
+    // Applies to paragraphs that only hold images
+}
+
+
+
+//
+// Block styles
+//
+
+block-all {
+
+    margin-top:     12pt
+    margin-bottom:  12pt
+
+    margin-left:    4em
+    margin-right:   4em
+
+    }
+
+
+block-code paragraph {
+
+    text-alignment:     left
+
+    hyphenation:        no
+
+    default-tab-interval: 6em
+    // Set tab stops
+
+    }
+
+block-quote {
+
+    style-title:    "Blockquote"
+    // As shown and used by MS Word
+
+    font-slant:     italic
+
+    margin-left:    3em
+
+    }
+
+
+block-raw {
+
+    visibility: hidden
+    // kills raw source blocks
+
+    }
+
+
+block-comment {
+
+    visibility: hidden
+
+}
+
+
+
+//
+// List styles
+//
+
+
+list-all {
+
+    margin-left:    3em
+    margin-top:     12pt;
+
+    }
+
+
+list-all list-all {
+
+    margin-top:     0pt;
+    margin-bottom:  0pt;
+    // No extra spacings between nested ordered and unordered lists
+
+    }
+
+
+list-ordered {
+
+    enumeration-format: "%d."
+    text-inset: 3em;
+    // Simulates tab stop justified right
+
+    }
+
+
+list-ordered list-ordered {
+
+    enumeration-format: "%*%d"
+    text-inset: 6em;
+    // Simulates tab stop justified right
+
+    }
+
+
+list-ordered list-ordered list-ordered {
+
+    enumeration-format: "%*.%d"
+    text-inset: 9em;
+    // Simulates tab stop justified right
+
+    }
+
+
+list-unordered {
+
+    enumeration-format: "-"
+    text-inset: 3em;
+    // Simulates tab stop justified right
+
+    }
+
+
+//
+// Inline styles
+//
+
+inline-strong {
+
+    style-title:    "Strong"
+    // As shown and used by MS Word
+
+    font-weight:    bold
+
+    }
+
+
+inline-emphasis {
+
+    style-title:    "Emphasis"
+    // As shown and used by MS Word
+
+    font-slant:     italic;
+
+    }
+
+
+inline-mark {
+
+    style-title:        "Mark"
+    // As shown and used by MS Word
+
+    background-color:   $mark-color
+
+    }
+
+
+inline-citation {
+
+    style-title:    "Inline Cite"
+    // As shown and used by MS Word
+
+    font-slant:     italic;
+
+    }
+
+
+
+inline-link {
+
+    style-title:        "Link"
+    // As shown and used by MS Word
+
+    font-color: $link-color
+    underline:  single
+
+    // Good thing we defined readable colors
+
+    }
+
+
+inline-comment {
+
+    visibility: hidden;
+    // kills comments
+
+    }
+
+
+inline-delete {
+
+    visibility: hidden;
+    // deletes deletions
+
+    }
+
+
+inline-annotation {
+
+    background-color:   $mark-color
+
+    }
+
+
+inline-annotation:anchor {
+
+    background-color:   #ffffff
+
+    }
+
+
+inline-raw {
+
+    visibility: hidden;
+    // kills raw source
+
+    }
+
+
+
+//------------------------------------------------------------------------------
+// Ulysses specific stuff
+//------------------------------------------------------------------------------
+// By default, we are hiding tags (##) etc.
+//
+
+ulysses-tag {
+
+    visibility: hidden
+
+    }
+
+
+inline-link ulysses-tag {
+
+    visibility: hidden
+
+    }
+
+
+list-all ulysses-tag {
+
+    visibility: hidden
+
+    }
+
