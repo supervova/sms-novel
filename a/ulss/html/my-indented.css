@@ -15,9 +15,11 @@ color, heading size, margins, paddings, body line-height are ok
 |-------------------------------------------------------------------------------
 */
 HTML { text-align: center; }
+
 BODY {
     max-width: 44em;
     margin: 0 auto;
+    padding: 0 2em;
 }
 
 
@@ -105,7 +107,10 @@ BLOCKQUOTE {
 }
     BLOCKQUOTE P { margin: 1.706em 0 0; }
     BLOCKQUOTE P:first-of-type, BLOCKQUOTE P:last-of-type { margin: 0; }
-    BLOCKQUOTE P:last-of-type { color: #8d9094; }
+    BLOCKQUOTE P:last-of-type {
+        color: #8d9094;
+        text-indent: 0;
+    }
     BLOCKQUOTE + HR { display: none; }
 
 DL, DD { margin: 0 0 1.706em; }
@@ -157,6 +162,11 @@ P { margin: 0; }
     P + P {
         margin: 0;
         text-indent: 1.706em;
+    }
+
+    .separated {
+        margin: 0 0 1.706em;
+        text-indent: 0;
     }
 
 

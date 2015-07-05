@@ -1,0 +1,61 @@
+/*
+|-------------------------------------------------------------------------------
+| TMP
+|-------------------------------------------------------------------------------
+*/
+HTML { text-align: center; }
+
+BODY {
+    max-width: 44em;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+
+/*
+|-------------------------------------------------------------------------------
+| Page
+|-------------------------------------------------------------------------------
+*/
+
+HTML {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility !important;
+}
+
+BODY {
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*
+|-------------------------------------------------------------------------------
+| Target Animation
+|-------------------------------------------------------------------------------
+*/
+
+@-webkit-keyframes highfade {
+    0% { background-color: none; }
+    20% { background-color: yellow; }
+    100% { background-color: none; }
+}
+
+@keyframes highfade {
+    0% { background-color: none; }
+    20% { background-color: yellow; }
+    100% { background-color: none; }
+}
+
+A:target, #footnotes LI:target, SUP A:target  {
+    animation-name: highfade;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-name: highfade;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+}
