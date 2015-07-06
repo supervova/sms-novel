@@ -4,7 +4,7 @@
 // Variables & Mixins
 //------------------------------------------------------------------------------
 
-$baseline =         14.9pt
+$baseline =         14.6pt
 $black =            #000000
 $grey =             #727272
 $heading =          "Helvetica Neue"
@@ -22,14 +22,17 @@ $link-color =       #0080cc
 
 document-settings {
 
-// For A5 ----------------------------------------------------------------------
-    page-inset-top:    23.33mm;     page-inset-inner:  16.5mm
-    page-inset-bottom: 46.66mm;     page-inset-outer:  33mm
+// t = 1/11h, i = 1/11w,  o = 2/11w, b = 2/11h for A5 --------------------------
+    page-inset-top:    19.09mm;     page-inset-inner:  13.45mm
+    page-inset-bottom: 38.18mm;     page-inset-outer:  26.9mm
+
+// Van der Graaf canon for A5 --------------------------------------------------
+    // page-inset-top:    23.33mm;     page-inset-inner:  16.5mm
+    // page-inset-bottom: 46.66mm;     page-inset-outer:  33mm
 
     section-break:  heading-1
     section-break:  heading-2
     section-break:  heading-3
-    // always have H1 on a new page
 
     two-sided:      yes
     page-binding:   left
