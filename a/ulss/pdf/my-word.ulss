@@ -17,11 +17,9 @@ $link-color =       #0080cc
 document-settings {
 
 // Word for A4 -----------------------------------------------------------------
-    // page-inset-top:    25.4mm;     page-inset-inner:  31.7mm
-    // page-inset-bottom: 25.4mm;     page-inset-outer:  31.7mm
+    page-inset-top:    25.4mm;     page-inset-inner:  31.7mm
+    page-inset-bottom: 25.4mm;     page-inset-outer:  31.7mm
 
-
-    section-break:  heading-1
     section-break:  heading-2
     section-break:  heading-3
 
@@ -97,11 +95,12 @@ heading-1 {
     style-title:    "Heading 1"
     // As shown and used by MS Word
 
-    font-size:      50pt
-    line-height:    44.7pt
+    font-size:      30pt
+    font-weight:    normal
+    line-height:    $baseline * 2
 
     margin-top:     0pt
-    margin-bottom:  64pt
+    margin-bottom:  0pt
     text-alignment: center
 
     }
@@ -112,12 +111,12 @@ heading-2 { // Section
     style-title:    "Heading 2"
     // As shown and used by MS Word
 
-    font-size:      31pt
+    font-size:      24pt
     font-weight:    normal
-    line-height:    29.8pt
+    line-height:    $baseline * 1.5
 
     margin-top:     0pt
-    margin-bottom:  104.3pt
+    margin-bottom:  $baseline
 
     }
 
@@ -127,13 +126,12 @@ heading-3 { // Chapter
     style-title:    "Heading 3"
     // As shown and used by MS Word
 
-    font-color:          $grey
-    font-size:      19pt
+    font-size:      18pt
     font-weight:    normal
-    line-height:    $baseline * 1.5
+    line-height:    $baseline
 
-    margin-top:     $baseline
-    margin-bottom:  0pt
+    margin-top:     0pt
+    margin-bottom:  $baseline
 
     }
 
