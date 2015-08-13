@@ -4,10 +4,9 @@
 // Variables & Mixins
 //------------------------------------------------------------------------------
 
-$baseline =         14.5pt
+$baseline =         18pt
 $black =            #000000
 $grey =             #4c4c4c
-$heading =          "Helvetica Neue"
 $link-color =       #0080cc
 //$mark-color =     #bfed83
 
@@ -17,32 +16,16 @@ $link-color =       #0080cc
 
 document-settings {
 
-// Неформат --------------------------------------------------------------------
-    page-inset-top:    12.75mm;     page-inset-inner:  12.75mm
-    page-inset-bottom: 19.7mm;      page-inset-outer:  19.7mm
-
 // Word for A4 -----------------------------------------------------------------
     // page-inset-top:    25.4mm;     page-inset-inner:  31.7mm
     // page-inset-bottom: 25.4mm;     page-inset-outer:  31.7mm
 
-// t = 1/12w, i = 1/12w,  o = 1/6w, b = 1/6w for A5 ----------------------------
-    // page-inset-top:    12.33mm;     page-inset-inner:  12.33mm
-    // page-inset-bottom: 24.66mm;     page-inset-outer:  24.66mm
-
-
-// t = 1/11h, i = 1/11w,  o = 2/11w, b = 2/11h for A5 --------------------------
-    // page-inset-top:    19.09mm;     page-inset-inner:  13.45mm
-    // page-inset-bottom: 38.18mm;     page-inset-outer:  26.9mm
-
-// Van der Graaf canon for A5 --------------------------------------------------
-    // page-inset-top:    23.33mm;     page-inset-inner:  16.5mm
-    // page-inset-bottom: 46.66mm;     page-inset-outer:  33mm
 
     section-break:  heading-1
     section-break:  heading-2
     section-break:  heading-3
 
-    two-sided:      yes
+    two-sided:      no
     page-binding:   left
 
     }
@@ -114,7 +97,6 @@ heading-1 {
     style-title:    "Heading 1"
     // As shown and used by MS Word
 
-    font-family:    $heading
     font-size:      50pt
     line-height:    44.7pt
 
@@ -130,7 +112,6 @@ heading-2 { // Section
     style-title:    "Heading 2"
     // As shown and used by MS Word
 
-    font-family:    $heading
     font-size:      31pt
     font-weight:    normal
     line-height:    29.8pt
@@ -147,7 +128,6 @@ heading-3 { // Chapter
     // As shown and used by MS Word
 
     font-color:          $grey
-    font-family:    $heading
     font-size:      19pt
     font-weight:    normal
     line-height:    $baseline * 1.5
