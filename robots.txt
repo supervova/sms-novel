@@ -10,8 +10,6 @@ Disallow: /*?
 Disallow: /.git/
 Disallow: /_snips/
 Disallow: /_stock/
-Disallow: /a/css/
-Disallow: /a/js/
 Disallow: /a/less/
 Disallow: /a/type/
 Disallow: /campaign/
@@ -23,6 +21,7 @@ Disallow: /search/
 Disallow: /ac/spring/index.htm
 Disallow: /customize/supervova
 
+Disallow: /tmp.html
 Disallow: /_temp.html
 Disallow: /.gitignore
 Disallow: /BingSiteAuth.xml
@@ -34,3 +33,7 @@ Disallow: *.sublime-project
 Disallow: *.sublime-workspace
 Disallow: /yandex*.html
 Disallow: /nibbler-site-verification.txt
+Disallow: HNIBahQAJotVL1PNANt_aGvV3o.html #Alexa
+
+Disallow: /Gruntfile.js
+Disallow: /package.json

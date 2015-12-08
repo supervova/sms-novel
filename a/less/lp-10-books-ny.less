@@ -1,0 +1,605 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+HTML, BODY { height:100%; }
+
+.p-winter-2015, .p-winter-2015 .page { background-image: url(/a/img/lp/bg-valentine.png); }
+
+.p-winter-2015 .doc-body { padding-bottom: 173px; }
+
+.p-winter-2015 {
+
+    .page {
+        min-height: 100%;
+        height: auto;
+        *height: 100%;
+        max-width: 680px; }
+
+    /* Header */
+    .doc-header {
+        background-position: 0 0;
+        height: 72px;
+
+        NAV { // Third column
+            float: none;
+            position: absolute;
+            top: 24px;
+            right: 0;
+            width: 170px;
+
+            .nav {
+                .mm-buy .mm-label { background-color: #25282c; }
+                .mm-download:hover .mm-label, .mm-download:focus .mm-label, .mm-download:active .mm-label,
+                .mm-buy:hover .mm-label, .mm-buy:focus .mm-label, .mm-buy:active .mm-label
+                { background-color: @blue; }
+            }
+        } // NAV
+    } // .doc-header
+
+    .nameplate { // First column
+        float: none;
+        text-align: center;
+        position: relative;
+        padding: 0 0 0;
+        width: 100%;
+        *zoom: 1;
+
+        &:hover { text-decoration: none; }
+
+        H2 {
+            text-align: left;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            padding: 0;
+        }
+
+        H1 {
+            font-size: 26/@b*100%;
+            padding: 25px 0 0;
+            position: relative;
+            *zoom: 1;
+        }
+
+        .smiley {
+            .inline-block();
+            font-size: 18/26*100%;
+            margin: -10px 0 0 2px;
+            vertical-align: middle;
+            position: static;
+        }
+
+    } // Nameplate
+
+/*
+|---------------------------------------
+| Billboard
+|---------------------------------------
+*/
+    .billboard {
+        text-align: left;
+
+        .hgroup {
+            padding: 0 0 2.529em 226px;
+            position: relative;
+            *zoom: 1;
+
+            H3 {
+                color: #66f2ff;
+                font-family: @font-sans;
+                font-size: 26/@b*100%;
+                font-weight: 200;
+                margin-top: 0;
+                padding: .731em 0 0;
+            }
+        }
+
+        H2 {
+            color: #FFF;
+            font-size: 42/@b*100%;
+            line-height: 1.143;
+            padding: 1.94em 0 0;
+        }
+
+        .txt-first { display: block; }
+        H2 .txt-first { font-weight: bold; }
+    } // billboard
+
+    A.a-cta:after {
+        background-position: -300px -140px;
+    }
+
+    /* Main pic */
+    .box-main-pic {
+        position: absolute;
+        top: 55px;
+        left: -9px;
+
+        FIGURE {
+            height: 268px; // Sinse it's not image we can't make it responsive
+            width: 197px; }
+        }
+}
+
+/*
+|---------------------------------------
+| CTA
+|---------------------------------------
+*/
+
+.sec-cta, .sec-cta UL {
+    list-style-image: none;
+    list-style-type: none;
+}
+
+.sec-cta { padding-top: 37em/@b; }
+
+.btn-prim A, .btn-sec A {
+    .border-radius(24px);
+    .box-sizing(border-box);
+    display: block;
+    font-family: @font-sans;
+    font-size: 16/@b*100%;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    padding-top: 0px;
+    height: 48px;
+    width: 335px;
+}
+
+.btn-prim {
+    float: right;
+
+    A {
+        #gradient > .vertical-three-colors(#a3ce62, #469817, 50%, #61a727);
+        border: 1px solid #408e1b;
+        .box-shadow(inset 0 1px 0 rgba(255, 255, 255, .32), 0 1px 2px rgba(0, 0, 0, .08));
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0,.32);
+        padding-top: 10px;
+
+        &:hover {
+            background-color: #61a727; // Gradient goes up to uncover its dark side
+            background-position: 0 -15px;
+            .transition(background-position 0.2s linear);
+
+            .co { background-position: 0 -30px; }
+        }
+    }
+
+    .co {
+        background: transparent url(/a/img/lp/ico-animated.gif) 0 0 no-repeat;
+        .inline-block();
+        margin: -4px .2em 0 0;
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.btn-sec {
+    float: left;
+    position: relative;
+    *zoom: 1;
+
+    UL {
+        .inline-block();
+        padding: 2px 0 0;
+        vertical-align: middle;
+    }
+
+     A {
+        border: 2px solid #19a6ff;
+        color: #47494c;
+        padding-top: 9px;
+        .transition(background .2s linear);
+
+        &:hover,
+        &:focus { background: #f2f4f7; }
+     }
+
+    .tooltip {
+        .box-shadow(0 1px 3px rgba(0,0,0,0.08));
+        font-family: @font-sans;
+        bottom: 77em/13.8;
+        left: 0;
+    }
+}
+
+    .download-pay-w LI {
+        .ir(0, inline-block);
+        *display: inline; // IE7 inline-block hack
+        margin-left: 12px;
+        height: 18px;
+        width: 18px;
+        *zoom: 1;
+    }
+
+    .btn-sec .download-pay-w-facebook { margin-left: 6px; }
+    .download-pay-w-twitter { background-position: -30px 0; }
+    .download-pay-w-google { background-position: -60px 0; }
+    .download-pay-w-vkontakt { background-position: 0 -80px; }
+
+/*
+|---------------------------------------
+| Footer
+|---------------------------------------
+*/
+
+.p-winter-2015 {
+
+    .doc-footer {
+        text-align: center;
+        margin: 0 0 0 -340px;
+        padding: 0;
+        height: 135px;
+        width: 680px;
+
+        P, UL, H3 { .inline-block(); }
+
+        P, H3 {
+            color: #8a8c8f;
+            font-weight: normal;
+        }
+
+        P {
+            border-right: 1px solid #bbbec2;
+            margin-right: 26px;
+            padding-right: 30px;
+        }
+    }
+
+    .ftr-copyright {
+        padding-left: 46px;
+        width: auto;
+    }
+
+    .ftr-share {
+        height: auto;
+        .fb { margin-right: .5em; }
+
+    }
+}
+
+
+/*
+|---------------------------------------
+| Modal box
+|---------------------------------------
+*/
+
+@modal-md:                  800px;
+
+@mb-padding-mob:            0;
+
+
+// Body class for killing the scroll
+.modal-open { overflow: hidden; }
+
+/* .modal-box is just a container that centered real modal box */
+.modal-box {
+    -webkit-overflow-scrolling: touch;
+    display: none;
+    text-align: center;
+    // Prevent Chrome on Windows from adding a focus outline
+    outline: 0;
+    .fixed-on-top;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    .height-100p;
+    width: 100%;
+    z-index: 444;
+
+    .mb-content, .mb-header, .mb-body {
+        .box-sizing(border-box);
+        *behavior: url(/a/js/boxsizing.htc);
+    }
+
+
+    // Real Modal Box
+    .mb-content {
+        background: #f7fafe;
+        text-align: left;
+        padding-top: 6em;
+        margin: 0 auto;
+        position: relative;
+        max-width: 800px;
+        width: 100%;
+        .height-100p;
+        *zoom: 1;
+    }
+
+    // Real Modal Box — Header
+    .mb-header {
+        background: #edf0f4;
+        border-bottom: 1px solid #dde0e4;
+        .box-shadow(0 4px 12px rgba(0,0,0,.08));
+        position: fixed;
+        top: 0;
+        left: auto;
+        height: 72px;
+        width: 100%;
+        max-width: 800px;
+        z-index: 100;
+        *zoom: 1;
+
+        H2 {
+            color: @c-nt;
+            font-size: 16/@b*100%;
+            font-weight: bold;
+            line-height: 1;
+            text-shadow: 0 1px 0 #fff;
+            .text-overflow;
+            padding: 2.125em 60px 0;
+        }
+    }
+
+    .mb-body {
+        padding: 0 60px 66px;
+        overflow-y: auto;
+        .height-100p;
+        width: 100%;
+    }
+
+    // There are resets in buttons.less
+    .btn-close {
+        background-position: -300px -100px;
+        background-color: transparent;
+        .reset-filter();
+        .box-shadow(none);
+        border: 0 none;
+        .ir();
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 28px;
+        right: 26px;
+        height: 24px;
+        width: 24px;
+        z-index: 2;
+
+        &:focus { outline: 0; }
+
+        &:active, &.active { background-image: url(@base-graphics); }
+    }
+
+}
+
+// Overlay
+.overlay {
+    background: #000;
+    display: none;
+    .opacity(64);
+    .fixed-on-top;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 440;
+}
+
+
+/*
+|---------------------------------------
+| High resolution devices
+|---------------------------------------
+*/
+ @media print,
+        (-o-min-device-pixel-ratio: 5/4),
+        (-webkit-min-device-pixel-ratio: 1.25),
+        (min-resolution: 120dpi) {
+
+    .btn-prim .co
+        {
+            background-image: url(/a/img/lp/ico-animated-x2.gif);
+            .background-size(30px 60px);
+        }
+}
+
+
+/*
+|-------------------------------------------------------------------------------
+| PORTRAIT TABLETS: 768–979px
+|-------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 800px) {
+    HTML, BODY { height: auto; }
+    .mb-content, .mb-header { max-width: none; }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+
+    .doc-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}
+
+
+/*
+|-------------------------------------------------------------------------------
+| PHONES & SMALL PORTRAIT TABLETS: up to 767px
+|-------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 767px) {
+
+    .p-winter-2015, .p-winter-2015 .page { background-position: 0 -30px; }
+    .p-winter-2015 .doc-body { padding-bottom: 66em / 17; }
+
+    .p-winter-2015 {
+
+        .doc-header { // Header
+            height: 42px;
+
+            NAV { // Third column
+                text-align: right;
+                top: 4px;
+                right: 20px;
+                width: auto;
+
+                .nav {
+                    .mm-download { display: none; }
+
+                    .mm-buy .mm-label  {
+                        #gradient > .vertical(@c-btn-mob-header-light, @c-btn-mob-header-dark);
+                        border: 1px solid rgba(0, 0, 0, .64);
+                        .border-radius(5px);
+                        .box-shadow(inset 0 1px 0 #76787A, 0 1px 0 rgba(255, 255, 255, .2));
+                        color: #C9CCD0;
+                        font-size: 75%;
+                        font-weight: bold;
+                        display: inline-block;
+                        line-height: 1;
+                        margin: 0;
+                        padding: 9px 9px 6px;
+                        min-height: 12px;
+                        min-width: 24px;
+                    }
+
+                    .mm-buy:hover .mm-label, .mm-buy:focus .mm-label, .mm-buy:active .mm-label {
+                        background-color: @c-btn-mob-header-dark;
+                        background-position: 0 -12px;
+                        .transition(background-position 0.1s linear);
+                        .transition(background-position 0.1s linear);
+                    }
+                }
+            } // Nav
+        }
+
+        .nameplate { // First column
+
+            H1 {
+                font-size: @bs / @b * 100%;
+                text-align: left;
+                margin: 0;
+                padding: 13px 0 0 20px;
+            }
+        }
+
+        // Billboard
+        .billboard {
+            .hgroup {
+                text-align: center;
+                padding: 0;
+
+                H3 {
+                    font-size: @bs /  @b * 100%;
+                    font-weight: 400;
+                    line-height: @baseline-mob-s;
+                    padding: 0;
+                }
+            }
+
+            H2 {
+                font-size: 22 / @b * 100%;
+                font-weight: bold;
+                line-height: 1;
+                padding: 2em 0 (2em / 22);
+            }
+
+            .box-main-pic {
+                display: block;
+                margin-top: 53em/@bm;
+                position: static;
+
+                FIGURE {
+                    background: transparent url(/a/img/main-pic-mobile.png) no-repeat;
+                    margin: 0 auto;
+                }
+
+                IMG { visibility: hidden; }
+
+                FIGURE, IMG {
+                    height: 104px; // Sinse it's not image we can't make it responsive
+                    width: 183px;
+                }
+            }
+
+        .a-cta { text-align: center;}
+
+        } // billboard
+    }
+
+
+    // Buttons
+    .sec-cta {
+        text-align: center;
+        padding-top: 33em/@b;
+    }
+
+    .btn-prim, .btn-sec {
+        float: none;
+        .inline-block();
+        margin: 0 auto 18em/@b;
+    }
+
+
+    // Modal Box
+    .modal-box {
+
+        .mb-content { padding-top: 49em/17; }
+
+        .mb-body {
+            margin: 0;
+            padding: 22px 20px;
+        }
+
+        .mb-header {
+            height: 42px;
+            H2 { padding: (14em/16) 20px 0; }
+        }
+
+        .btn-close {
+            top: 10px;
+            right: 10px;
+        }
+
+    }
+
+    // Footer
+    .p-winter-2015 .doc-footer {
+        margin: 0;
+        padding: 100px 0 (58em/13);
+        height: auto;
+        width: 100%;
+        *zoom: 1;
+
+        P, UL { display: block; }
+        H3 { display: none; }
+
+        .ftr-copyright {
+            border-right: 0 none;
+            margin: 0 0 (21em/13);
+            padding: 0;
+        }
+
+    }
+}
+
+
+/*
+|-------------------------------------------------------------------------------
+| PORTRAIT PHONES
+|-------------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 479px) {
+
+// CTA
+.btn-prim, .btn-sec,
+.btn-prim A, .btn-sec A {
+    width: 100%;
+}
+
+.download-pay-w LI { margin-left: 4px; }
+
+
+}
+
+

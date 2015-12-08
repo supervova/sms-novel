@@ -1,3 +1,25 @@
+# A leading slash matches the beginning of the pathname.
+# For example, /*.html matches cat.html but not folder/dog.html
+
+# Trailing slash. foo/ will match a directory foo and paths underneath it,
+# but will not match a regular file or a symbolic link foo
+
+# Nested Folders.
+# products/*.html matches products/soap.html
+# but not products/cars/audi.html or branch/products/soap.html
+# *products*.html matches second and third paths:
+# products/cars/audi.html and branch/products/soap.html
+
+# Build System Folders
+.tmp
+node_modules
+bower_components
+# use $ bower install to get components on all local repositories
+
+# dist
+# @TODO: find the way to deploy dist separately w/ the git subtree command to
+# use github pages hosting
+
 # Auxiliary Folders
 _notes/
 a/css/*
