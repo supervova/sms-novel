@@ -32,6 +32,7 @@
     "grunt-svgmin": "^3.1.0",
     "grunt-uncss": "^0.4.4",
     "grunt-usemin": "^3.1.1",
+    "grunt-w3c-validation": "^0.1.16",
     "grunt-wiredep": "^2.0.0",
     "jit-grunt": "^0.9.1",
     "lost": "^6.6.2",

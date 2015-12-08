@@ -1,8 +1,21 @@
 'use strict';
 
+/*
+|-------------------------------------------------------------------------------
+| Install plugins:
+| npm install grunt-postcss grunt-uncss grunt-browser-sync grunt-contrib-cssmin grunt-newer  grunt-contrib-imagemin grunt-svgmin grunt-contrib-htmlmin grunt-contrib-uglify --save-dev
+|
+| The newer task doesn't require any special configuration. To use it, just add
+| newer as the first argument when running other tasks.
+| grunt.registerTask('minify', ['newer:uglify']);
+|-------------------------------------------------------------------------------
+*/
+
 module.exports = function (grunt) {
 
   var config = {
+    src: 'src',
+    dist: './',
     unCSS: 'a/css/lp-winter-2016.css',
     unCSStargetHTML: 'ac/10-knig-novy-god-lyubov/index.html'
   };
@@ -11,7 +24,11 @@ module.exports = function (grunt) {
 
     config: config,
 
-    // PostCSS: github.com/nDmitry/grunt-postcss
+    /*
+    |---------------------------------------------------------------------------
+    | PostCSS: github.com/nDmitry/grunt-postcss
+    |---------------------------------------------------------------------------
+    */
     postcss: {
       options: {
         processors: [
@@ -31,7 +48,11 @@ module.exports = function (grunt) {
       }
     },
 
-    // UnCSS: https://github.com/giakki/uncss/blob/0.12.0/README.md#within-nodejs
+    /*
+    |---------------------------------------------------------------------------
+    | UnCSS: github.com/addyosmani/grunt-uncss
+    |---------------------------------------------------------------------------
+    */
     uncss: {
       dist: {
         options: {
@@ -43,7 +64,11 @@ module.exports = function (grunt) {
       }
     },
 
-    // CSSmin: github.com/gruntjs/grunt-contrib-cssmin
+    /*
+    |---------------------------------------------------------------------------
+    | CSSmin: github.com/gruntjs/grunt-contrib-cssmin
+    |---------------------------------------------------------------------------
+    */
     cssmin: {
       target: {
         files: [{
@@ -55,6 +80,11 @@ module.exports = function (grunt) {
       }
     },
 
+    /*
+    |---------------------------------------------------------------------------
+    | browserSync: github.com/BrowserSync/grunt-browser-sync
+    |---------------------------------------------------------------------------
+    */
     browserSync: {
       options: {
         notify: false,
@@ -76,26 +106,97 @@ module.exports = function (grunt) {
       }
     },
 
-    // browserSync: www.browsersync.io/docs/grunt/
-    // !! Task executed w/o errors but server doesn't run
-    // browserSync: {
-    //   dev: {
-    //     bsFiles: {
-    //       src : 'a/css/*.css'
-    //     },
-    //     options: {
-    //       watchTask: true,
-    //       server: './'
-    //     }
-    //   }
-    // },
-
-    watch: {
-      styles: {
-        files: ['src/css/{,*/}*.css'],
-        tasks: ['postcss']
+    /*
+    |---------------------------------------------------------------------------
+    | Imagemin: github.com/gruntjs/grunt-contrib-imagemin
+    |---------------------------------------------------------------------------
+    */
+    imagemin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'a/img',
+          src: '**/*.{gif,jpeg,jpg,png}',
+          dest: 'a/img'
+        }]
       }
     },
+
+    /*
+    |---------------------------------------------------------------------------
+    | SVGmin
+    |---------------------------------------------------------------------------
+    */
+    svgmin: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'a/img',
+          src: '**/*.svg',
+          dest: 'a/img'
+        }]
+      }
+    },
+
+    /*
+    |---------------------------------------------------------------------------
+    | HTMLmin
+    |---------------------------------------------------------------------------
+    */
+    htmlmin: {
+      dist: {
+        options: {
+          collapseBooleanAttributes: true,
+          collapseWhitespace: true,
+          conservativeCollapse: true,
+          removeEmptyAttributes: true,
+          useShortDoctype: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'ac/',
+          src: '**/*.html',
+          dest: 'ac/'
+
+          // expand: true,
+          // cwd: '<%= config.dist %>',
+          // src: '**/*.html',
+          // dest: '<%= config.dist %>'
+        }]
+      }
+    },
+
+    /*
+    |---------------------------------------------------------------------------
+    | Uglify
+    |---------------------------------------------------------------------------
+    */
+    uglify: {
+      options: {
+        banner: '/*! <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+      },
+      js: {
+        files: {
+          'a/js/scripts-lp.js': ['src/js/*.js']
+        }
+      }
+    },
+
+    /*
+    |---------------------------------------------------------------------------
+    | Watch
+    |---------------------------------------------------------------------------
+    */
+    watch: {
+      css: {
+        files: ['src/css/{,*/}*.css'],
+        tasks: ['postcss']
+      },
+      js: {
+        files: ['src/js/*.js'],
+        tasks: ['uglify']
+      }
+    }
 
   }); // End initial config
 
@@ -104,6 +205,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-newer');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Start the Server
@@ -116,11 +222,30 @@ module.exports = function (grunt) {
     ]);
   });
 
-  // Default
+  // Images
   grunt.registerTask('default', [
+    'newer:imagemin'
+  ]);
+
+  // CSS
+  grunt.registerTask('css', [
     'postcss',
     'uncss',
-    'cssmin'
+    'newer:cssmin'
   ]);
+
+  // Build
+  grunt.registerTask('build', [
+    'postcss',
+    'uncss',
+    'newer:cssmin',
+    'newer:uglify',
+    'newer:imagemin',
+    'newer:svgmin',
+    'newer:htmlmin'
+  ]);
+
+  // Default
+  grunt.registerTask('default', ['watch']);
 
 };
