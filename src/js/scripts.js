@@ -255,6 +255,9 @@ $(function(){
   $('.l-free .a-download-txt').on('click', function() {ga('send', 'event', 'Download', 'TXT');});
   $('.l-free .a-download-ipad').on('click', function() {ga('send', 'event', 'Download', 'iPad');});
 
+  $('.p-winter-2016 .mm-download, .p-winter-2016 .btn-sec').on('click', function() {ga('send', 'event', 'LP Secondary', 'Download');});
+  $('.p-winter-2016 .mm-buy, .p-winter-2016 .btn-prim').on('click', function() {ga('send', 'event', 'LP Primary', 'Buy');});
+
   FastClick.attach(document.body);
 });
 

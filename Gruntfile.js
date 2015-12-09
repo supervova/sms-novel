@@ -154,9 +154,9 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'ac/',
+          cwd: '<%= config.src %>/ac/',
           src: '**/*.html',
-          dest: 'ac/'
+          dest: '<%= config.dist %>/ac/'
 
           // expand: true,
           // cwd: '<%= config.dist %>',
