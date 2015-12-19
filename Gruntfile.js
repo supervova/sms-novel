@@ -61,7 +61,7 @@ module.exports = function (grunt) {
           htmlroot: './'
         },
         files: [
-          {'a/css/<%= config.srcCSS %>': ['<%= config.srcCSStargetHTML %>']},
+          // {'a/css/<%= config.srcCSS %>': ['<%= config.srcCSStargetHTML %>']},
           {'a/css/<%= config.srcCSS2 %>': ['<%= config.srcCSStargetHTML2 %>']}
         ],
       }
