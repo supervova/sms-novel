@@ -16,8 +16,10 @@ module.exports = function (grunt) {
   var config = {
     src: 'src',
     dist: './',
-    unCSS: 'a/css/lp-winter-2016.css',
-    unCSStargetHTML: 'ac/10-knig-novy-god-lyubov/index.html'
+    srcCSS: 'lp-winter-2016.css',
+    srcCSStargetHTML: 'ac/10-knig-novy-god-lyubov/index.html',
+    srcCSS2: 'lp-winter-2016-sem.css',
+    srcCSStargetHTML2: 'ac/romance-2015/index.html'
   };
 
   grunt.initConfig({
@@ -58,9 +60,10 @@ module.exports = function (grunt) {
         options: {
           htmlroot: './'
         },
-        files: {
-          '<%= config.unCSS %>': ['<%= config.unCSStargetHTML %>']
-        }
+        files: [
+          {'a/css/<%= config.srcCSS %>': ['<%= config.srcCSStargetHTML %>']},
+          {'a/css/<%= config.srcCSS2 %>': ['<%= config.srcCSStargetHTML2 %>']}
+        ],
       }
     },
 
@@ -74,7 +77,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'a/css',
-          src: ['lp-winter-2016.css'],
+          src: ['<%= config.srcCSS %>', '<%= config.srcCSS2 %>'],
           dest: 'a/css'
         }]
       }
