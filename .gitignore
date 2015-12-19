@@ -26,6 +26,7 @@ a/css/*
 !a/css/styles.css
 !a/css/blog.css
 !a/css/lp-winter-2016.css
+!a/css/lp-winter-2016-sem.css
 a/img/_tmp/
 # a/less/*
 a/type/
