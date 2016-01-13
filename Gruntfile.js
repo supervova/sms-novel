@@ -55,17 +55,19 @@ module.exports = function (grunt) {
     | UnCSS: github.com/addyosmani/grunt-uncss
     |---------------------------------------------------------------------------
     */
+
     uncss: {
       dist: {
         options: {
           htmlroot: './'
         },
-        files: [
-          // {'a/css/<%= config.srcCSS %>': ['<%= config.srcCSStargetHTML %>']},
-          {'a/css/<%= config.srcCSS2 %>': ['<%= config.srcCSStargetHTML2 %>']}
-        ],
+        files: {
+          'a/css/<%= config.srcCSS %>': ['<%= config.srcCSStargetHTML %>'],
+          'a/css/<%= config.srcCSS2 %>': ['<%= config.srcCSStargetHTML2 %>']
+        }
       }
     },
+
 
     /*
     |---------------------------------------------------------------------------
