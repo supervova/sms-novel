@@ -33,7 +33,9 @@ Disallow: *.sublime-project
 Disallow: *.sublime-workspace
 Disallow: /yandex*.html
 Disallow: /nibbler-site-verification.txt
-Disallow: HNIBahQAJotVL1PNANt_aGvV3o.html #Alexa
+Disallow: /HNIBahQAJotVL1PNANt_aGvV3o.html #Alexa
 
 Disallow: /Gruntfile.js
 Disallow: /package.json
+
+Host: sms-roman.ru
