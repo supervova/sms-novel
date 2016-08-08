@@ -1,7 +1,10 @@
 <!-- <!DOCTYPE html> --><!-- Tumblr insert it -->
-<html lang="ru">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<!--[if IE 9]><html class="oldie" lang="ru" prefix="og: http://ogp.me/ns#"><![endif]-->
+<html lang="ru" prefix="og: http://ogp.me/ns#">
+<head>
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
 
     <title>{block:SearchPage}Результаты поиска — {SearchQuery} | {/block:SearchPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{Title}</title>
 
@@ -63,11 +66,6 @@
     {/block:Permalink}
 
     <meta property="fb:app_id" content="146636692141851"/>
-
-    <!-- Mobile -->
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Use Feedburner feed instead original Tumblr one -->
     <link rel="alternate" href="//feeds.feedburner.com/smsroman" type="application/rss+xml" title="RSS">
