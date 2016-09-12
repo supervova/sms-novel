@@ -21,21 +21,18 @@ bower_components
 # use github pages hosting
 
 # Auxiliary Folders
-_notes/
-a/css/*
-!a/css/styles.css
-!a/css/blog.css
-!a/css/lp-winter-2016.css
-!a/css/lp-winter-2016-sem.css
-a/img/_tmp/
 # a/less/*
+_notes/
+_stock/
+a/css/*
+!a/css/blog.css
+!a/css/lp-winter-2016-sem.css
+!a/css/lp-winter-2016.css
+!a/css/styles.css
+a/img/_tmp/
 a/type/
 campaign/
-campaign/*
-campaign/index.htm
-campaign/mail.htm
-campaign/mail.txt
-campaign/sender-subject-url-placeholder.txt
+src/
 
 # Auxiliary Files
 *.sublime-*
@@ -57,6 +54,4 @@ sms-novel.sublime-workspace
 ehthumbs.db
 Thumbs.db
 
-src/css/_tmp.css
-# Conflict
-_stock/blog.htm
+
