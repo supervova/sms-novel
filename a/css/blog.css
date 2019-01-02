@@ -324,3 +324,5 @@ ABBR:after{content:' (' attr(title) ')'}BLOCKQUOTE,PRE{border:1px solid #999;pag
 BLOCKQUOTE,DL,OL,P,UL{margin-bottom:1.3em}H1,H2{font-family:'Helvetica Neue',Arial,sans-serif}H1{font-size:31pt;font-weight:bold;line-height:1.02em;padding:0 0 .11em}
 H2{font-size:19pt;font-weight:normal;line-height:1.1em;padding:.55em 0 0}H2,H3{page-break-after:avoid}H2,H3,P{orphans:3;widows:3}THEAD{display:table-header-group}
 TR,IMG{page-break-inside:avoid}UL{list-style-image:none;list-style-type:disc}}
+
+.i-search::-webkit-input-placeholder { color: rgba(0, 0, 0, 0) !important; display: none !important; } .i-search:-ms-input-placeholder { color: rgba(0, 0, 0, 0) !important; display: none !important; } .i-search::-ms-input-placeholder { color: rgba(0, 0, 0, 0) !important; display: none !important; } .i-search::placeholder { color: rgba(0, 0, 0, 0) !important; display: none !important; }
