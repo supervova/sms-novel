@@ -187,7 +187,7 @@ function tumblrLike() {
         var command = $(this).hasClass('pft-liked') ? 'unlike' : 'like';
         var oauth = $(this).attr('data-reblog').slice(-8);
         var id = $(this).attr('data-id');
-        var frameAttr = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
+        var frameAttr = 'https://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
         $('#likeit').attr('src', frameAttr);
         $(this).hasClass('pft-liked') ? $(this).removeClass('pft-liked') : $(this).addClass('pft-liked');
         return false;
@@ -203,7 +203,7 @@ function tumblrLike() {
 */
 $(document).ready(function(){
     // $('.i-search').css( 'border-color', 'transparent');
-    $('iframe[src^="http://player.vimeo.com"], iframe[src^="http://www.youtube.com"], iframe[src*="dailymotion.com"], iframe[src*="//instagram.com/"], iframe[src^="http://coub.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
+    $('iframe[src^="https://player.vimeo.com"], iframe[src^="https://www.youtube.com"], iframe[src*="dailymotion.com"], iframe[src*="//instagram.com/"], iframe[src^="https://coub.com"], object:not([class*="not-video"]):not(:has(embed)), embed:not([class*="not-video"])').wrap('<figure class="video" />');
     $('ol, ul').prev('p').css('margin-bottom', '0'); //lists captions
     dropDowns();
     tooltip();

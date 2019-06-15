@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: http://sms-roman.ru/sitemap.xml
+Sitemap: https://sms-roman.ru/sitemap.xml
 
 Crawl-delay: 10
 
