@@ -31,7 +31,6 @@ Disallow: *.DS_Store
 Disallow: /google*.html
 Disallow: *.sublime-project
 Disallow: *.sublime-workspace
-Disallow: /yandex*.html
 Disallow: /nibbler-site-verification.txt
 Disallow: /HNIBahQAJotVL1PNANt_aGvV3o.html #Alexa
 
