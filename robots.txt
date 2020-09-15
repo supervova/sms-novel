@@ -33,7 +33,6 @@ Disallow: /_temp.html
 Disallow: /google*.html
 Disallow: /nibbler-site-verification.txt
 Disallow: /tmp.html
-Disallow: /yandex_*.html
 
 Disallow: /Gruntfile.js
 Disallow: /package.json
