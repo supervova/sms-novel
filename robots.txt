@@ -21,18 +21,19 @@ Disallow: /search/
 Disallow: /ac/spring/index.htm
 Disallow: /customize/supervova
 
-Disallow: /tmp.html
-Disallow: /_temp.html
-Disallow: /.gitignore
-Disallow: /BingSiteAuth.xml
-Disallow: /.nojekyll
-Disallow: /CNAME
 Disallow: *.DS_Store
-Disallow: /google*.html
 Disallow: *.sublime-project
 Disallow: *.sublime-workspace
-Disallow: /nibbler-site-verification.txt
+Disallow: /.gitignore
+Disallow: /.nojekyll
+Disallow: /BingSiteAuth.xml
+Disallow: /CNAME
 Disallow: /HNIBahQAJotVL1PNANt_aGvV3o.html #Alexa
+Disallow: /_temp.html
+Disallow: /google*.html
+Disallow: /nibbler-site-verification.txt
+Disallow: /tmp.html
+Disallow: /yandex_*.html
 
 Disallow: /Gruntfile.js
 Disallow: /package.json
